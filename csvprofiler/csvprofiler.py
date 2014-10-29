@@ -50,7 +50,7 @@ def profileCSV(content, header, ):
     ##we only try the chardet
     content_encoded = content.decode(encoding=results['enc']['lib_chardet']['encoding'])
 
-    results['delimiter'] = dialect.guessDialect(content_encoded)
+    results['dialect'] = dialect.guessDialect(content_encoded)
 
     results['deviation'] = deviations.deviations(content_encoded)
 
@@ -186,6 +186,7 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+
 
 
 
