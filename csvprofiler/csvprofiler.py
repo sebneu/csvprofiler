@@ -29,10 +29,32 @@ from util import utils
 import csv
 
 #python twisted multiprocessing
-from twisted.internet.defer import DeferredSemaphore, gatherResults
-from twisted.internet import reactor
-from twisted.internet.threads import deferToThread
+#from twisted.internet.defer import DeferredSemaphore, gatherResults
+#from twisted.internet import reactor
+#from twisted.internet.threads import deferToThread
 import gzip
+
+
+def save_local(url, download_dir='temp/', max_bytes=None):
+    if download_dir[-1] != '/':
+        download_dir += '/'
+    if not os.path.exists(download_dir):
+        os.makedirs(download_dir)
+    filename = download_dir + str(os.getpid())
+    with open(filename, 'wb') as handle:
+        response = requests.get(url, stream=True)
+        if not response.ok:
+            return None
+        size = 0
+        block_size = 1024
+        for block in response.iter_content(block_size):
+            if not block:
+                break
+            handle.write(block)
+            size += block_size
+            if max_bytes and size >= max_bytes:
+                break
+    return filename
 
 
 def profileCSV(content, header, ):
@@ -92,7 +114,12 @@ def getContentAndHeader(file=None, url=None, datamonitor=None):
             #get file content and header from data monitor
             logger.debug('TODO')
         else:
-            resp= requests.get(args.url)
+            # head lookup
+            header = requests.head(url)
+            # save file to local directory
+            local_file = save_local(url, max_bytes=4096)
+            # process local file
+            content = getContentFromDisk(local_file, max_bytes=4096)
 
     return content, header
 
