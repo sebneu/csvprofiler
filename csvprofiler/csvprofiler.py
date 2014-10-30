@@ -57,7 +57,7 @@ def save_local(url, download_dir='temp/', max_bytes=None):
     return filename
 
 
-def profileCSV(content, header, ):
+def profileCSV(content, header):
     '''
         1) guess encoding
         2) proper content encoding
@@ -74,24 +74,39 @@ def profileCSV(content, header, ):
 
     results['dialect'] = dialect.guessDialect(content_encoded)
 
-    results['deviation'] = deviations.deviations(content_encoded)
+    results['deviation'] = deviations.deviations(content_encoded,
+                                                 delimiter=results['dialect']['lib_csv']['delimiter'])
 
     pprint(results)
 
 
 
-def getContentFromDisk(fname_csv, max_bytes = None):
+def getContentFromDisk(fname_csv, max_lines = None):
     if fname_csv[-3:] == '.gz':
         with gzip.open(fname_csv, 'rb') as f:
-            if max_bytes:
-                file_content = f.read(max_bytes)
+            if max_lines:
+                i = 0
+                file_content = ''
+                for line in f:
+                    if i < max_lines:
+                        file_content += line
+                        i += 1
+                    else:
+                        break
             else:
                 file_content = f.read()
 
     else:
         with open(fname_csv, 'rb') as f:
-            if max_bytes:
-                file_content = f.read(max_bytes)
+            if max_lines:
+                i = 0
+                file_content = ''
+                for line in f:
+                    if i < max_lines:
+                        file_content += line
+                        i += 1
+                    else:
+                        break
             else:
                 file_content = f.read()
 
@@ -104,8 +119,7 @@ def getContentAndHeader(file=None, url=None, datamonitor=None):
 
     if file:
         #process local file
-        content = getContentFromDisk(file, max_bytes=4096)
-
+        content = getContentFromDisk(file, max_lines=100)
 
     elif url:
         #we have an URL, either download it or get the content from the datamonitor
@@ -120,7 +134,7 @@ def getContentAndHeader(file=None, url=None, datamonitor=None):
             # save file to local directory
             local_file = save_local(url, max_bytes=4096)
             # process local file
-            content = getContentFromDisk(local_file, max_bytes=4096)
+            content = getContentFromDisk(local_file, max_lines=100)
 
     return content, header
 
@@ -209,7 +223,7 @@ def main(argv):
         #dbm = DBManager(args.db, args.host)
 
 
-    file_content, header = getContentAndHeader(args.file, args.url, args.datamonitor)
+    file_content, header, local_file = getContentAndHeaderAndLocalFile(args.file, args.url, args.datamonitor)
     profileCSV( file_content, header)
 
 if __name__ == "__main__":
