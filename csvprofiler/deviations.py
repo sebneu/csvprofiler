@@ -12,8 +12,12 @@ def parse_using_pandas(file_content, delimiter):
     results = {}
     input = StringIO.StringIO(file_content)
     table = pd.read_csv(input, sep=delimiter)
-    return
+    results['rows'] = table.shape[0]
+    results['cols'] = table.shape[1]
+    return results
 
 
 def deviations(file_content, delimiter=','):
-    parse_using_pandas(file_content, delimiter)
+    results = {}
+    results['pandas'] = parse_using_pandas(file_content, delimiter)
+    return results
