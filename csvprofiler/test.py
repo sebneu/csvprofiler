@@ -15,3 +15,6 @@ csvprofiler.profileCSV(content, header)
 
 content, header = csvprofiler.getContentAndHeader(url='http://donnees.ville.sherbrooke.qc.ca/storage/f/2014-03-10T17%3A43%3A58.925Z/matieres-residuelles.csv')
 csvprofiler.profileCSV(content, header)
+
+content, header = csvprofiler.getContentAndHeader(url='http://www.a-trust.at/registrierungsstellen/data/')
+csvprofiler.profileCSV(content, header)

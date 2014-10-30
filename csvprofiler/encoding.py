@@ -4,9 +4,9 @@ __author__ = 'jumbrich'
     TODO consider header for
 '''
 
-from pprint import  pprint
+from pprint import pprint
 
-#from chardet import chardetect
+# from chardet import chardetect
 from chardet.chardetect import UniversalDetector
 import bs4
 import cchardet
@@ -20,13 +20,33 @@ if not 'cchardet' in bs4.dammit.__dict__:
     bs4.dammit.chardet_dammit = lambda string: None
 
 
-def guessEncoding( content, header = None):
+def get_header_encoding(header):
+    cont_type = None
+    if 'Content-Type' in header:
+        cont_type = header['Content-Type']
+    elif 'content-type' in header:
+        cont_type = header['content-type']
+
+    header_encoding = None
+    if cont_type and len(cont_type.split(';')) > 1:
+        header_encoding = cont_type.split(';')[1]
+        header_encoding = header_encoding.strip()
+        if 'charset=' in header_encoding:
+            header_encoding = header_encoding[8:]
+        elif 'charset = ' in header_encoding:
+            header_encoding = header_encoding[10:]
+        elif 'charset =' in header_encoding:
+            header_encoding = header_encoding[9:]
+    return header_encoding
+
+
+def guessEncoding(content, header=None):
     results = {}
     results['lib_chardet'] = guessWithChardet(content)
 
-    #TODO
-    #if header:
-        #results['header']
+    if header:
+        header_encoding = get_header_encoding(header)
+        results['header'] = {'encoding': header_encoding}
 
     return results
 
@@ -65,7 +85,7 @@ def intelligent_decode(fname):
     # which seems at least less reliable to me than the declared encoding.)
     potential_encodings = \
         filter(bool, [detector.sniffed_encoding, detector.declared_encoding]
-                     + list(detector.override_encodings)) \
+               + list(detector.override_encodings)) \
         or ['utf-8']
     contains_replacement_characters = False
     tried_encodings = []

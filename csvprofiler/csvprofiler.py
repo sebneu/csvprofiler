@@ -115,7 +115,8 @@ def getContentAndHeader(file=None, url=None, datamonitor=None):
             logger.debug('TODO')
         else:
             # head lookup
-            header = requests.head(url)
+            head = requests.head(url)
+            header = dict(head.headers)
             # save file to local directory
             local_file = save_local(url, max_bytes=4096)
             # process local file
