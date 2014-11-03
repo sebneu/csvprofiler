@@ -3,7 +3,7 @@ __author__ = 'jumbrich'
 
 import csvprofiler
 
-files = ['t_whitespace.csv', 'simple.csv', 'spielplatzdaten.csv']
+files = ['t_whitespace.csv', 'simple.csv', 'spielplatzdaten.csv', 'comma_in_quotes.csv']
 
 for f in files:
     print f

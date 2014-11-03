@@ -38,11 +38,13 @@ def parse_using_csv(file_content, delimiter, dialects = None):
 
     t = {
         'r_len': [],
-        'r_val': []
+        'r_val': [],
+        'r_types': []
     }
     for row in rows:
         t['r_len'].append(len(row))
         t['r_val'].append(row)
+        t['r_types'].append(determine_types(row))
 
     #group table by length element
 
@@ -107,6 +109,9 @@ def parse_using_csv(file_content, delimiter, dialects = None):
                     ts.append(tab)
                     tab ={}
                     print 'whitespaces in the middle, indication for a multi table'
+            elif grouped_L[i][0] == 1:
+                #TODO Description line
+                pass
             else:
                 if new_t:
                     tab['s']=line
@@ -128,10 +133,12 @@ def parse_using_csv(file_content, delimiter, dialects = None):
 
         for i in range(tab['s'], tab['e']):
             row = t['r_val'][i]
+            r_types = t['r_types'][i]
             print 'row',i
             print row
-            r_types = determine_types(row)
-            print r_types
+
+            print
+
             print '--'
             if p_header :
                 com_type = most_common_oneliner(r_types)
@@ -142,7 +149,10 @@ def parse_using_csv(file_content, delimiter, dialects = None):
                 if set(p_row_t) == set(r_types):
                     print 'still header'
                 else:
-                    print 'header change'
+                    print 'types change'
+                    if p_header:
+                        p_header = False
+
 
             p_row_t = r_types
 
@@ -154,7 +164,8 @@ def parse_using_csv(file_content, delimiter, dialects = None):
 
 
 
-
+    # TODO move to other place
+    results['ermilov'] = calc_ermilov_deviations(results, grouped_L, rows)
 
 
     return results
@@ -179,3 +190,37 @@ def determine_types(row):
                 pass
 
     return r_types
+
+
+def calc_ermilov_deviations(csv_results, grouped_L, rows):
+    results = {}
+
+    # T-Whitespace
+    if csv_results['whitespaces']['pre'] > 0 or csv_results['whitespaces']['suc'] > 0:
+        results['T-Whitespace'] = True
+    else:
+        results['T-Whitespace'] = False
+
+    # T-Multiple
+    results['T-Multiple'] = _multiple_tables(grouped_L)
+
+    # T-Metadata
+    results['T-Metadata'] = _metadata(csv_results)
+
+    return results
+
+
+def _multiple_tables(grouped_L):
+    # TODO improved heuristic, description would also be multiple table
+    if len([group for group in grouped_L if group[0] != 0]) > 1:
+        return True
+    else:
+        return False
+
+
+def _metadata(csv_results):
+    # TODO metadata embedded below the table
+    if len(csv_results['description']) > 0:
+        return True
+    else:
+        return False

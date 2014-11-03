@@ -217,7 +217,7 @@ def main(argv):
         #dbm = DBManager(args.db, args.host)
 
 
-    file_content, header, local_file = getContentAndHeaderAndLocalFile(args.file, args.url, args.datamonitor)
+    file_content, header, local_file = getContentAndHeader(args.file, args.url, args.datamonitor)
     profileCSV( file_content, header)
 
 if __name__ == "__main__":
