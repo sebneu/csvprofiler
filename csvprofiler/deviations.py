@@ -122,16 +122,22 @@ def parse_using_csv(file_content, delimiter, dialects = None):
             line = grouped_L[i][1]
 
 
-
+    tables = []
 
     for tab in ts:
+        current_table = {}
+        current_table['s'] = tab['s']
+        current_table['e'] = tab['e']
+
         p_header = True
         h_rows = []
         p_row_t = None
         #r_types = type_guess(t['r_val'])
         #print r_types
+        still_header_count = 0
 
         for i in range(tab['s'], tab['e']):
+
             row = t['r_val'][i]
             r_types = t['r_types'][i]
             print 'row',i
@@ -140,10 +146,12 @@ def parse_using_csv(file_content, delimiter, dialects = None):
             print
 
             print '--'
-            if p_header :
+            if p_header:
                 com_type = most_common_oneliner(r_types)
                 print 'comtype', com_type
+
                 #lets assume we have a header
+                still_header_count += 1
 
             if p_row_t is not None:
                 if set(p_row_t) == set(r_types):
@@ -157,9 +165,20 @@ def parse_using_csv(file_content, delimiter, dialects = None):
             p_row_t = r_types
 
 
+        # subtract last header count
+        still_header_count -= 1
+        # all lines have the same type => no header
+        if still_header_count == len(range(tab['s'], tab['e'])):
+            current_table['header'] = 0
+
+        # header is between 1 and 3 lines, but length of table is > header
+        if 1 <= still_header_count <= 3 and len(range(tab['s'], tab['e'])) > still_header_count:
+            current_table['header'] = still_header_count
+
+        tables.append(current_table)
 
 
-
+    results['tables'] = tables
 
 
 
@@ -206,6 +225,9 @@ def calc_ermilov_deviations(csv_results, grouped_L, rows):
 
     # T-Metadata
     results['T-Metadata'] = _metadata(csv_results)
+
+    # D-Duplicate
+#    results['D-Duplicate'] =
 
     return results
 
