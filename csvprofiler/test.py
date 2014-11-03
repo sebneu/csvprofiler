@@ -1,9 +1,13 @@
+import os
+
 __author__ = 'jumbrich'
 
 
 import csvprofiler
 
-files = ['spielplatzdaten.csv', 'comma_in_quotes.csv']
+#files = ['t_whitespace.csv', 'simple.csv', 'spielplatzdaten.csv', 'comma_in_quotes.csv']
+files = [f for f in os.listdir("../resources/") if f.endswith(".csv")]
+
 
 for f in files:
     print f

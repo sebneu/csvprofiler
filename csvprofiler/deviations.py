@@ -137,43 +137,50 @@ def parse_using_csv(file_content, delimiter, dialects = None):
         still_header_count = 0
 
         for i in range(tab['s'], tab['e']):
-
+            header_types = []
             row = t['r_val'][i]
             r_types = t['r_types'][i]
-            print 'row',i
+            com_type = most_common_oneliner(r_types)
+            print 'row', i, ': comtype', com_type
             print row
 
-            print
-
-            print '--'
             if p_header:
-                com_type = most_common_oneliner(r_types)
-                print 'comtype', com_type
-
                 #lets assume we have a header
                 still_header_count += 1
+                #store types of the header
+                header_types = r_types
 
             if p_row_t is not None:
-                if set(p_row_t) == set(r_types):
-                    print 'still header'
-                else:
+                if set(p_row_t) != set(r_types):
                     print 'types change'
                     if p_header:
                         p_header = False
 
-
             p_row_t = r_types
 
+            print '--'
+
+
+        # check if all types in header are strings
+        header_all_str = False
+        if len(set(header_types)) == 1 and 'str' in header_types:
+            header_all_str = True
 
         # subtract last header count
         still_header_count -= 1
-        # all lines have the same type => no header
-        if still_header_count == len(range(tab['s'], tab['e'])):
+        # all lines have the same type, but the only type is strings: guess that first line is header
+        if still_header_count == len(range(tab['s'], tab['e'])) and header_all_str:
+            current_table['header'] = 1
+        # all lines have same type and not all of them are strings: assume that there is no header
+        elif still_header_count == len(range(tab['s'], tab['e'])) and not header_all_str:
             current_table['header'] = 0
-
         # header is between 1 and 3 lines, but length of table is > header
-        if 1 <= still_header_count <= 3 and len(range(tab['s'], tab['e'])) > still_header_count:
+        elif 1 <= still_header_count <= 3 and len(range(tab['s'], tab['e'])) > still_header_count:
             current_table['header'] = still_header_count
+        # as default use the most common: first line is header
+        else:
+            current_table['header'] = 1
+
 
         tables.append(current_table)
 
