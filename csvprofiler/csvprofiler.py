@@ -70,43 +70,37 @@ def profileCSV(content, header):
     results['enc'] = encoding.guessEncoding(content, header)
 
     ##we only try the chardet
+    print results['enc']['lib_chardet']['encoding']
     content_encoded = content.decode(encoding=results['enc']['lib_chardet']['encoding'])
+
 
     results['dialect'] = dialect.guessDialect(content_encoded)
 
     results['deviation'] = deviations.deviations(content_encoded,
-                                                 delimiter=results['dialect']['lib_csv']['delimiter'])
-
+                                                 delimiter=results['dialect']['lib_csv']['delimiter'],
+                                                 dialects= results['dialect'])
     pprint(results)
 
 
 
-def getContentFromDisk(fname_csv, max_lines = None):
+
+def getContentFromDisk(fname_csv, max_lines=None):
     if fname_csv[-3:] == '.gz':
         with gzip.open(fname_csv, 'rb') as f:
             if max_lines:
-                i = 0
                 file_content = ''
-                for line in f:
-                    if i < max_lines:
-                        file_content += line
-                        i += 1
-                    else:
-                        break
+                for line in f.readlines(max_lines):
+                    file_content += line
+
             else:
                 file_content = f.read()
 
     else:
         with open(fname_csv, 'rb') as f:
             if max_lines:
-                i = 0
                 file_content = ''
-                for line in f:
-                    if i < max_lines:
-                        file_content += line
-                        i += 1
-                    else:
-                        break
+                for line in f.readlines(max_lines):
+                    file_content += line
             else:
                 file_content = f.read()
 
