@@ -9,7 +9,6 @@ from pprint import pprint
 # from chardet import chardetect
 from chardet.chardetect import UniversalDetector
 import bs4
-import cchardet
 
 # UnicodeDammit was refactored a lot recently.
 # It now falls back on cchardet if its in the path.
