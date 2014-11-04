@@ -43,7 +43,7 @@ from multiprocessing import Process, Queue, current_process
 import gzip
 
 
-def save_local(url, download_dir='temp/', max_bytes=None):
+def save_local(url, download_dir, max_bytes=None):
     if download_dir[-1] != '/':
         download_dir += '/'
     if not os.path.exists(download_dir):
@@ -121,7 +121,7 @@ def getContentFromDisk(fname_csv, max_lines=None):
 
     return file_content
 
-def getContentAndHeader(file=None, url=None, datamonitor=None):
+def getContentAndHeader(file=None, url=None, datamonitor=None, download_dir=None):
      #input
     content = None
     header = None
@@ -156,7 +156,7 @@ def getContentAndHeader(file=None, url=None, datamonitor=None):
 
                 if not file:
                     # save file to local directory
-                    local_file = save_local(url, max_bytes=4096)
+                    local_file = save_local(url, max_bytes=4096, download_dir=download_dir)
                     if local_file:
                         # process local file
                         content = getContentFromDisk(local_file, max_lines=100)
@@ -173,7 +173,7 @@ def run_job(p, args, dbm):
         logger.info("(%s) running job", url)
         status = ''.join(url)
 
-        content, header, file_extension, status_code = getContentAndHeader(file=file, url=url)
+        content, header, file_extension, status_code = getContentAndHeader(file=file, url=url, download_dir=args.downdir)
         csv_entry = CsvMetaData(url)
         csv_entry.time = datetime.datetime.now()
         csv_entry.header = header
@@ -215,6 +215,7 @@ def parseArgs(pa):
     group.add_argument('--file', help='local file')
     group.add_argument('--url', help='URL of CSV file')
     group.add_argument('--urllist', help='List of CSV URLs')
+    group.add_argument('-d', '--downdir', help='Directory for downloads', default='temp/', type=str)
 
     group1 = pa.add_argument_group('env')
     group1.add_argument('--datamonitor', help='Datamonitor REST API URL')
