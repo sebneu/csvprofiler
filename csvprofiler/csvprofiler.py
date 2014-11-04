@@ -79,6 +79,9 @@ def profileCSV(content, header):
         results['enc'] = encoding.guessEncoding(content, header)
 
         ##we only try the chardet
+        if not results['enc']['lib_chardet']['encoding']:
+            raise Exception('chardet: encoding not detected')
+
         logger.debug('chardet encoding: %s', results['enc']['lib_chardet']['encoding'])
         content_encoded = content.decode(encoding=results['enc']['lib_chardet']['encoding'])
 
