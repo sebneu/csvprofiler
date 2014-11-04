@@ -281,13 +281,13 @@ def calc_ermilov_deviations(csv_results, grouped_L, t):
                 results['H-Incomplete'] = True
 
         # H-Cardinality
-        results['H-Cardinality'] = True
+        results['H-Cardinality'] = False
         if table['header'] >= 1:
             header = t['r_val'][table['s']]
             for i in range(table['s'] + 1, table['e']):
                 row = t['r_val'][i]
                 if len(header) != len(row):
-                    results['H-Cardinality'] = False
+                    results['H-Cardinality'] = True
                     break
 
     # D-Duplicate
@@ -327,12 +327,12 @@ def calc_ermilov_deviations(csv_results, grouped_L, t):
             break
 
     # D-Cardinality
-    results['D-Cardinality'] = True
+    results['D-Cardinality'] = False
     for i in range(table['s'] + table['header'], table['e']):
         row = t['r_val'][i]
         if prev_row:
             if len(row) != len(prev_row):
-                results['D-Cardinality'] = False
+                results['D-Cardinality'] = True
                 break
         prev_row = row
 

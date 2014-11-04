@@ -6,6 +6,7 @@ class CsvMetaData:
             self.__dict__ = dict_string
         else:
             self.url = url
+            self.filename = None
             self.header = None
             self.results = None
             self.time = None

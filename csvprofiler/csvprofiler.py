@@ -104,8 +104,12 @@ def getContentFromDisk(fname_csv, max_lines=None):
         with gzip.open(fname_csv, 'rb') as f:
             if max_lines:
                 file_content = ''
-                for line in f.readlines(max_lines):
+                c =0
+                for line in f:
                     file_content += line
+                    c+=1
+                    if c>=max_lines:
+                        break
 
             else:
                 file_content = f.read()
@@ -175,6 +179,7 @@ def run_job(p, args, dbm):
 
         content, header, file_extension, status_code = getContentAndHeader(file=file, url=url, download_dir=args.downdir)
         csv_entry = CsvMetaData(url)
+        csv_entry.filename = file
         csv_entry.time = datetime.datetime.now()
         csv_entry.header = header
         csv_entry.extension = file_extension
