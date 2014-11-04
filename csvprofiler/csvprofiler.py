@@ -1,4 +1,10 @@
 #!/usr/bin/python
+import csv
+from pprint import pprint
+import datetime
+from DBManager import DBManager
+from CsvMetaData import CsvMetaData
+
 __author__ = 'Juergen Umbrich'
 
 '''
@@ -23,15 +29,17 @@ LOGGING_CONF = os.path.join(os.path.dirname(__file__),
 logging.config.fileConfig(LOGGING_CONF)
 logger = logging.getLogger()
 
-# own modules
-from pprint import pprint
-from util import utils
-import csv
 
-#python twisted multiprocessing
-#from twisted.internet.defer import DeferredSemaphore, gatherResults
-#from twisted.internet import reactor
-#from twisted.internet.threads import deferToThread
+def get_file_extension(filename):
+    file_extension = None
+    f, long_file_extension = os.path.splitext(filename)
+    if long_file_extension == '.gz':
+        f, long_file_extension = os.path.splitext(filename[:-3])
+    if len(long_file_extension) < 10:
+        file_extension = long_file_extension[1:]
+    return file_extension
+
+from multiprocessing import Process, Queue, current_process
 import gzip
 
 
@@ -67,20 +75,24 @@ def profileCSV(content, header):
     '''
 
     results = {}
-    results['enc'] = encoding.guessEncoding(content, header)
+    try:
+        results['enc'] = encoding.guessEncoding(content, header)
 
-    ##we only try the chardet
-    print results['enc']['lib_chardet']['encoding']
-    content_encoded = content.decode(encoding=results['enc']['lib_chardet']['encoding'])
+        ##we only try the chardet
+        logger.debug('chardet encoding: %s', results['enc']['lib_chardet']['encoding'])
+        content_encoded = content.decode(encoding=results['enc']['lib_chardet']['encoding'])
 
 
-    results['dialect'] = dialect.guessDialect(content_encoded)
+        results['dialect'] = dialect.guessDialect(content_encoded)
 
-    results['deviation'] = deviations.deviations(content_encoded,
-                                                 delimiter=results['dialect']['lib_csv']['delimiter'],
-                                                 dialects= results['dialect'])
-    pprint(results)
-
+        results['deviation'] = deviations.deviations(content_encoded,
+                                                     delimiter=results['dialect']['lib_csv']['delimiter'],
+                                                     dialects= results['dialect'])
+    except Exception as inst:
+        logger.exception(inst, exc_info=True)
+        results['error'] = inst.message
+    finally:
+        return results
 
 
 
@@ -96,7 +108,7 @@ def getContentFromDisk(fname_csv, max_lines=None):
                 file_content = f.read()
 
     else:
-        with open(fname_csv, 'rb') as f:
+        with open(fname_csv, 'rU') as f:
             if max_lines:
                 file_content = ''
                 for line in f.readlines(max_lines):
@@ -110,61 +122,85 @@ def getContentAndHeader(file=None, url=None, datamonitor=None):
      #input
     content = None
     header = None
+    file_extension = None
+    status_code = None
 
     if file:
-        #process local file
-        content = getContentFromDisk(file, max_lines=100)
+        file_extension = get_file_extension(file)
 
-    elif url:
+        if os.path.exists(file):
+            #process local file
+            content = getContentFromDisk(file, max_lines=100)
+        else:
+            logger.exception('(%s) No such file: %s', url, file)
+            file = None
+
+    if url:
+        if not file_extension:
+            file_extension = get_file_extension(url)
+
         #we have an URL, either download it or get the content from the datamonitor
-
         if datamonitor:
             #get file content and header from data monitor
             logger.debug('TODO')
         else:
-            # head lookup
-            head = requests.head(url)
-            header = dict(head.headers)
-            # save file to local directory
-            local_file = save_local(url, max_bytes=4096)
-            # process local file
-            content = getContentFromDisk(local_file, max_lines=100)
+            # put requests into try block
+            try:
+                # head lookup
+                head = requests.head(url)
+                status_code = head.status_code
+                header = dict(head.headers)
 
-    return content, header
+                if not file:
+                    # save file to local directory
+                    local_file = save_local(url, max_bytes=4096)
+                    if local_file:
+                        # process local file
+                        content = getContentFromDisk(local_file, max_lines=100)
+            except Exception as e:
+                logger.exception(e, exc_info=True)
 
-def runJob(pObj, args, dbm):
-    pURL = pObj['pURL']
-    url = pObj['url']
-    logger.info("(%s) running job", url)
-    status = ''.join(url)
+    return content, header, file_extension, status_code
 
-    portal = dbm.getPortal(url, pURL)
+
+def run_job(p, args, dbm):
+    try:
+        url = p['url']
+        file = p['file']
+        logger.info("(%s) running job", url)
+        status = ''.join(url)
+
+        content, header, file_extension, status_code = getContentAndHeader(file=file, url=url)
+        csv_entry = CsvMetaData(url)
+        csv_entry.time = datetime.datetime.now()
+        csv_entry.header = header
+        csv_entry.extension = file_extension
+        csv_entry.status_code = status_code
+
+        if content:
+            results = profileCSV(content, header)
+            csv_entry.results = results
+
+        dbm.storeCsvMetaData(csv_entry)
+    except Exception as e:
+        logger.exception(e, exc_info=True)
 
     return status
 
 
+def worker(work_queue, done_queue, args, dbm):
+    try:
+        for p in iter(work_queue.get, 'STOP'):
+            url = p['url']
+            logger.info('START#%s (process %s)', url, current_process().name)
+            status = run_job(p, args, dbm)
+            done_queue.put("%s - done %s" % (current_process().name, status))
+            logger.info('END#%s (process %s)', url, current_process().name)
+    except Exception, e:
+        logger.exception('%s - %s:%s (process %s)', url, type(e), e.message, current_process().name)
+        done_queue.put("%s failed on %s with: %s" % (current_process().name, url, e.message))
+    return True
 
-
-def run(urls, num_of_processes, args, dbm):
-    sem = DeferredSemaphore(num_of_processes)
-    jobs = []
-
-    for url_obj in urls:
-        jobs.append(sem.run(async, url_obj, args, dbm))
-
-    d = gatherResults(jobs)
-    d.addBoth(done)
-    reactor.run()
-
-
-def async(url_obj, args, dbm):
-    return deferToThread(runJob, url_obj, args, dbm)
-
-
-def done(*args, **kwargs):
-    print args
-    print kwargs
-    reactor.stop()
 
 
 def parseArgs(pa):
@@ -202,27 +238,43 @@ def main(argv):
     pa = argparse.ArgumentParser(description='CSVprofiler toolset.')
     args = parseArgs(pa)
 
-    url_list = []
+    pa = argparse.ArgumentParser(description='Open Portal Resources toolset.')
+    args = parseArgs(pa)
 
-    #env
+    work_queue = Queue()
+    done_queue = Queue()
+    processes = []
 
+    c = 0
+    #populate work queue
+    if args.urllist:
+        with open(args.urllist) as f:
+            reader = csv.reader(f, delimiter=' ')
+            for row in reader:
+                if row[0].startswith("http"):
+                    c += 1
+                    if len(row[1]) > 1:
+                        work_queue.put({"url": row[0], "file": row[1]})
 
-    #output
-    if args.out:
-        #output handling
-        logger.debug("TODO")
+    if args.url and args.file:
+        c += 1
+        work_queue.put({"file": args.file, "url": args.url})
 
-    if args.db:
-        logger.debug("establishing connection to MongoDB")
-        #dbm = DBManager(args.db, args.host)
+    logger.debug("establishing connection to MongoDB")
+    dbm = DBManager(args.db)
 
+    logger.info("Processing %s url(s)", c)
+    for w in xrange(args.processors):
+        p = Process(target=worker, args=(work_queue, done_queue, args, dbm))
+        p.start()
+        processes.append(p)
+        work_queue.put('STOP')
 
-    file_content, header, local_file = getContentAndHeader(args.file, args.url, args.datamonitor)
-    profileCSV( file_content, header)
+    for p in processes:
+        p.join()
+
+    done_queue.put('STOP')
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
-
-
-
-

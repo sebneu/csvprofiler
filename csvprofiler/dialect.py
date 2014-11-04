@@ -26,6 +26,9 @@ def guessDialectWithLibCSV(file_content):
     """
     dialect = sniffer.sniff_dialect(file_content)
 
+    if dialect is None:
+        raise Exception('cannot guess dialect')
+
     return {
         'delimiter': dialect.delimiter,
         'doublequote': dialect.doublequote,

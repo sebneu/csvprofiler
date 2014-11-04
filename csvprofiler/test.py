@@ -6,13 +6,14 @@ __author__ = 'jumbrich'
 import csvprofiler
 
 #files = ['t_whitespace.csv', 'simple.csv', 'spielplatzdaten.csv', 'comma_in_quotes.csv']
-files = [f for f in os.listdir("../resources/") if f.endswith(".csv")]
+#files = [f for f in os.listdir("../resources/") if f.endswith(".csv")]
+files = ['all_deviations.csv']
 
 
 for f in files:
     print f
     print '__________'
-    content, header = csvprofiler.getContentAndHeader(file="../resources/"+f)
+    content, header, file_extension = csvprofiler.getContentAndHeader(file="../resources/"+f)
     csvprofiler.profileCSV(content, header)
     print '___________'
 
