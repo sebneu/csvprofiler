@@ -12,8 +12,9 @@ class DBManager:
             self.db = con["csv"]
 
 
-    def storeCsvMetaData(self, csv_meta):
-        self.db['portal_core'].save(csv_meta.__dict__)
+    def storeCsvMetaData(self, csv_meta, collection):
+        self.db[collection].save(csv_meta.__dict__)
+
 
 
     def getCsvMetaData(self):

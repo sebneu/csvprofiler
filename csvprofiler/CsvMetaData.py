@@ -12,3 +12,6 @@ class CsvMetaData:
             self.time = None
             self.status_code = None
             self.extension = None
+            self.portal_id = None
+            self.dm_header = None
+            self.datamonitor = False

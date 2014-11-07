@@ -139,6 +139,7 @@ def parse_using_csv(file_content, delimiter, dialects=None):
         #r_types = type_guess(t['r_val'])
         #print r_types
         still_header_count = 0
+        header_all_str = False
 
         for i in range(tab['s'], tab['e']):
             header_types = []
@@ -290,52 +291,52 @@ def calc_ermilov_deviations(csv_results, grouped_L, t):
                     results['H-Cardinality'] = True
                     break
 
-    # D-Duplicate
-    results['D-Duplicate'] = False
-    prev_row = None
-    for i in range(table['s'] + table['header'], table['e']):
-        row = t['r_val'][i]
-        if prev_row:
-            if row == prev_row:
-                results['D-Duplicate'] = True
+        # D-Duplicate
+        results['D-Duplicate'] = False
+        prev_row = None
+        for i in range(table['s'] + table['header'], table['e']):
+            row = t['r_val'][i]
+            if prev_row:
+                if row == prev_row:
+                    results['D-Duplicate'] = True
+                    break
+            prev_row = row
+
+        # D-Incomplete
+        results['D-Incomplete'] = False
+        for i in range(table['s'] + table['header'], table['e']):
+            row = t['r_val'][i]
+            if len([x for x in row if len(x) == 0]) > 0:
+                results['D-Incomplete'] = True
                 break
-        prev_row = row
 
-    # D-Incomplete
-    results['D-Incomplete'] = False
-    for i in range(table['s'] + table['header'], table['e']):
-        row = t['r_val'][i]
-        if len([x for x in row if len(x) == 0]) > 0:
-            results['D-Incomplete'] = True
-            break
-
-    # D-Missing
-    results['D-Missing'] = False
-    for i in range(table['s'] + table['header'], table['e']):
-        row = t['r_val'][i]
-        if len([x for x in row if len(x) == 0]) == len(row):
-            results['D-Missing'] = True
-            break
-
-    # D-Multiple-column-cell
-    results['D-Multiple-column-cell'] = False
-    for i in range(table['s'] + table['header'], table['e']):
-        row = t['r_val'][i]
-        count = Counter(row)
-        if len([x for x in count if count[x] > 1]) > 0:
-            results['D-Multiple-column-cell'] = True
-            break
-
-    # D-Cardinality
-    results['D-Cardinality'] = False
-    for i in range(table['s'] + table['header'], table['e']):
-        row = t['r_val'][i]
-        if prev_row:
-            if len(row) != len(prev_row):
-                results['D-Cardinality'] = True
+        # D-Missing
+        results['D-Missing'] = False
+        for i in range(table['s'] + table['header'], table['e']):
+            row = t['r_val'][i]
+            if len([x for x in row if len(x) == 0]) == len(row):
+                results['D-Missing'] = True
                 break
-        prev_row = row
 
+        # D-Multiple-column-cell
+        # TODO empty cells???
+        results['D-Multiple-column-cell'] = False
+        for i in range(table['s'] + table['header'], table['e']):
+            row = t['r_val'][i]
+            count = Counter(row)
+            if len([x for x in count if count[x] > 1]) > 0:
+                results['D-Multiple-column-cell'] = True
+                break
+
+        # D-Cardinality
+        results['D-Cardinality'] = False
+        for i in range(table['s'] + table['header'], table['e']):
+            row = t['r_val'][i]
+            if prev_row:
+                if len(row) != len(prev_row):
+                    results['D-Cardinality'] = True
+                    break
+            prev_row = row
 
     # D-Multiple-row-cell
     # TODO
