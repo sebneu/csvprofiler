@@ -15,3 +15,8 @@ class DBManager:
     def storeCsvMetaData(self, csv_meta):
         self.db['profiler'].save(csv_meta.__dict__)
 
+
+    def getCsvMetaData(self):
+        return self.db['profiler'].find(timeout=False)
+
+

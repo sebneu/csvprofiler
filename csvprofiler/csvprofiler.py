@@ -23,6 +23,8 @@ import encoding
 import dialect
 import deviations
 
+from multiprocessing import Process, Queue, current_process
+import gzip
 
 LOGGING_CONF = os.path.join(os.path.dirname(__file__),
                             "logging.ini")
@@ -39,8 +41,7 @@ def get_file_extension(filename):
         file_extension = long_file_extension[1:]
     return file_extension
 
-from multiprocessing import Process, Queue, current_process
-import gzip
+
 
 
 def save_local(url, download_dir, max_bytes=None):
@@ -247,8 +248,6 @@ def main(argv):
     pa = argparse.ArgumentParser(description='CSVprofiler toolset.')
     args = parseArgs(pa)
 
-    pa = argparse.ArgumentParser(description='Open Portal Resources toolset.')
-    args = parseArgs(pa)
 
     work_queue = Queue()
     done_queue = Queue()

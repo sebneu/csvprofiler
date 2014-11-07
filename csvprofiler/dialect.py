@@ -11,10 +11,6 @@ def guessDialect(file_content):
     result['lib_csv'] = guessDialectWithLibCSV(file_content)
 
 
-
-
-
-
     return result
 
 

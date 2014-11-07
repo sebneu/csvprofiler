@@ -1,0 +1,182 @@
+\documentclass{scrartcl}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[pdfusetitle]{hyperref}
+\usepackage{xcolor}
+\colorlet{linkcolour}{blue!50!black}
+\colorlet{urlcolour}{magenta}
+\hypersetup{colorlinks=true, linkcolor=linkcolour, citecolor=linkcolour, urlcolor=urlcolour,}
+
+%equation numbering
+
+%\mathtoolset{
+%showonlyrefs=true % or false in draft mode
+%}
+\usepackage{subfig}
+
+\usepackage[l2tabu, orthodox]{nag}
+\usepackage[utf8]{inputenc}
+\usepackage[defernumbers=true, url=false, doi=false, maxnames=8,style=numeric,backend=bibtex]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+
+\usepackage{listings}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+
+
+\title{Profiling CSV documents on the Web}
+\subtitle{}
+\author{Sebastian Neumaier and J\"urgen Umbrich \\\emph{Institute for
+Information Business}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\section{Introduction}
+A widespread method to manage and publish information in an intuitive manner is to represent the information in form of tabular data.
+In fact, many institutions handle their data in spreadsheets ( e.g. MS Excel, or other OpenOffice spreadsheet) and use the tabular format to exchange data between different systems (e.g. a simpler form compared to the XML format).
+A simple plain text format for the exchange of such spreadsheets is the comma-separate-values format (CSV).\footnote{RFC4180: \url{http://www.ietf.org/rfc/rfc4180.txt}} 
+%\footnote{\url{http://edoceo.com/utilitas/csv-file-format}}.
+While the RFC specification of the CSV format is well defined
+%, e.g., it defines the ',' as delimiter symbol and requires that each row has the same number of values, 
+we observe many deviations from the originally specification. 
+For example, various spreadsheet software exports their data into the CSV format using different delimiter symbols ( n comparison to the ',' delimiter) or there exists CSV files with unsymmetrical column numbers for different rows. 
+We can observe a large number of such "exported" CSV-like documents with the Open Data movement. 
+
+This report attempts to analyse to which degree documents on the Web, that are defined as CSV files (e.g. via Header content type definition or file extension), follow the RFC4180 specification.
+The results will help to better understand the various deviations which provides the consumers with valuable information about what to expect when processing CSV files from the Web. 
+
+
+To do so, we analyse CSV files published as Open Data by CKAN portals. 
+The CKAN Open Data portal software acts as a catalog for mostly government data and is one of the main frameworks used. 
+A CKAN portal hosts several datasets which can consist of one to several resources. Each resource is described by some meta data, including a field to specify the format. 
+We used those resource format information to derive a our seed list of potential CSV files. 
+
+In the following we will briefly highlight our methodology and tools to profile CSV files and report on our findings. 
+
+\section{Methodology}
+
+We download each document and store its content and the response header information.
+For each document, we extract the following information:
+\begin{itemize}
+	\item File extension: \\
+	\textit{the last three or four characters after the period in the file name or URL}
+
+	\item Header content-type: \\
+	\textit{value of the \texttt{HTTP Response header} ``Content-Type'' field}
+
+	\item Header encoding\\
+	\textit{value of the ``charset'' suffix in the \texttt{HTTP Response header} ``Content-Type'' field}
+	
+	\item Content encoding: \\
+	\textit{guessing the encoding using the Python chardet library\footnote{\url{https://pypi.python.org/pypi/chardet}}}
+	
+	\item CSV dialect: \\
+	\textit{A CSV dialect contains information about the used delimiter, line terminator or quote characters. We guess the dialect using the Python csvkit library\footnote{\url{http://csvkit.readthedocs.org/en/0.9.0/}} (a slight modification of the original CSV library\footnote{\url{https://docs.python.org/2/library/csv.html}}).
+}
+
+\item CSV Deviation:\\
+\textit{A CSV file is well defined, consisting of a optional header row and several data rows, each of them with the same number of columns. %Ermilov et. al~
+\Citeauthor*{ermilov:2013aa} define a canonical model for tabular data and a set of deviations which provide interesting insights~\cite{ermilov:2013aa}. The deviations are grouped into three categories: 
+\begin{itemize}
+\item the table level, this is, leading whitespaces or multi-tables),
+\item  the header level, this is, duplicate header values, missing header values, or a inconsistent number of header columns compared to the data columns) 
+\item the data level, this is, duplicate data rows or missing or incomplete data values
+\end{itemize}
+}
+	
+\end{itemize}
+
+Those information allow us to get basic insights about the landscape of CSV-like data on the Web. 
+
+\section{Findings}
+\begin{table}[t]
+\centering
+\input{overviewTable.tex}
+\caption{General statistics\label{tab:overview}}
+\end{table}
+We conducted the latest profiling consisting of $TOTALDOCS$ on $DATE$.
+A total of $SUC$ could be downloaded and analysed, while we received for $404$ files a \texttt{404 NOT FOUND} HTTP status code and for $PARSERERROR$ documents a parser error (mainly due to wrong detected encodings or malformed formats) (cf. \autoref{tab:overview}). \autoref{tab:fext} shows the extracted file extensions together with the number of documents.
+We can see that most documents use the ``.csv'' file extension as specified in the RFC. The other interesting observation is that around 2100 documents do not have a file extensions, mainly due to the reason that those documents are exposed via APIs \todo{service urls? maybe we need to strip of the query terms} .
+\begin{table}
+\centering
+\input{fextTable.tex}
+\caption{File extensions\label{tab:fext}}
+\end{table}
+
+\subsection{HTTP Header field:}
+Next, we analyse the values of the \texttt{content-type} fields in the \textsc{HTTP Headers} for successful downloads.
+\autoref{tab:conttype} shows the results for the specified content-type, where~\autoref{tab:hCharset} lists the findings for the optional charset.
+The good news are that most documents are correctly identified as CSV files with the a specified content type of ``text/csv`` \todo{highly bias since we extracted the URLs based on this mime-type. Interesting that there are also text/html values}. On the other hand, most documents do not provide any information about the charset and encoding of the CSV content.
+
+
+\begin{table}[!ht]
+\centering
+\input{hctTable.tex}
+\caption{\texttt{Content-Type} \textsc{HTTP} Header\label{tab:conttype}}
+\end{table}
+\begin{table}
+\centering
+\input{h_charset.tex}
+\caption{Encoding specified in  \texttt{Content-Type} \textsc{HTTP} Header\label{tab:hCharset}}
+\end{table}
+
+\subsection{Detected encoding:}
+The problem with the missing Header encoding information is obvious once we inspect the actual content encoding of the downloaded files.
+\autoref{tab:dCharset} lists our guessed charsets based on inspecting the first lines of each documents.  Surprisingly, we find a many different encodings across the documents with no clear dominating charset used. 
+
+\begin{table}[!ht]
+\centering
+\input{d_charset.tex}
+\caption{Detected encoding\label{tab:dCharset}}
+\end{table}
+
+\subsection{Usage of delimiteres:}
+We used the detected encoding to correctly parse the documents to identify the used delimiters for each CSV file. 
+The results in~\autoref{tab:delim} show again that most documents follow the RFC specification of using the ',' as delimiter.
+\begin{table}
+\centering
+\input{delimTable.tex}
+\caption{Identified delimiters\label{tab:delim}}
+\end{table}
+
+\subsection{Detected encoding:}
+\begin{table}[!ht]
+\centering
+\input{deviations.tex}
+\caption{Deviations according to the definition of~\cite{ermilov:2013aa}\label{tab:deviations}.}
+\end{table}
+
+
+
+\section*{Appendix}
+\begin{table}[!ht]
+\centering
+\input{errors.tex}
+\caption{Deviations according to the definition of~\cite{ermilov:2013aa}\label{tab:deviations}.}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+\printbibliography 
+
+
+\end{document}
