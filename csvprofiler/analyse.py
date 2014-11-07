@@ -141,7 +141,7 @@ def main(argv):
         else:
             #no_res +=1
             overview['no_res'] +=1
-        if overview['total']%1000 == 0:
+        if overview['total']%5001 == 0:
             #break;
             print 'processed ',overview['total'],'files'
 
@@ -191,7 +191,7 @@ def main(argv):
     #      'fname':'d_delim.png'
     #     }
     # ]
-    pprint(stats)
+
 
     pprint(charset)
 
@@ -199,6 +199,9 @@ def main(argv):
     report = Report(stats, args.out)
     report.generateReport()
 
+
+
+    pprint(stats)
 
     for p in plots:
 

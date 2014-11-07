@@ -13,10 +13,10 @@ class DBManager:
 
 
     def storeCsvMetaData(self, csv_meta):
-        self.db['profiler'].save(csv_meta.__dict__)
+        self.db['portal_core'].save(csv_meta.__dict__)
 
 
     def getCsvMetaData(self):
-        return self.db['profiler'].find(timeout=False)
+        return self.db['portal_core'].find(timeout=False)
 
 
