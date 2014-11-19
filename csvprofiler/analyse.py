@@ -1,3 +1,5 @@
+
+
 __author__ = 'jumbrich'
 
 import argparse
@@ -7,11 +9,15 @@ import logging.config
 import os.path
 from DBManager import DBManager
 from pprint import pprint
-
+from urlparse import urlparse
 import pandas
+import csv
 import plot
 from reporting import Report
 import operator
+
+from model.CSVProfileStats import CSVProfileStats
+
 LOGGING_CONF = os.path.join(os.path.dirname(__file__),
                             "logging.ini")
 logging.config.fileConfig(LOGGING_CONF)
@@ -26,24 +32,21 @@ def printlist(dict):
     # display result
     pprint(freq_list2)
 
-def update(count, key ):
-    if key and isinstance(key, basestring):
-        key = key.lower()
-    if key is None:
-        key = 'None'
-    count[key] = count.get(key , 0) + 1
 
 def parseArgs(pa):
     pa.add_argument('-v', '--verbose', help='verbose', action='store_true', default=False)
     pa.add_argument('-p', '--processors', help='Number of processors', default=1, type=int)
 
-
-
-
     group2 = pa.add_argument_group('output')
     group2.add_argument('--out', help='Output')
     group2.add_argument('--db', help='database name')
     group2.add_argument('--host', help='MongoDBhost', default="localhost")
+    group2.add_argument('--agg', help='Aggregate the results')
+
+    group1 = pa.add_argument_group('input')
+    group1.add_argument('--url', help='CKAN Portal API URL')
+    group1.add_argument('--urllist', help='CKAN Portal API URL list')
+
 
     args = pa.parse_args()
 
@@ -56,13 +59,14 @@ def parseArgs(pa):
     #    pa.error("option --analysecsv needs option --downloaddir")
     return args
 
-def get_header_charset(cont_type):
 
-    header_encoding = cont_type
-    if cont_type and len(cont_type.split(';')) > 1:
-        header_encoding = cont_type.split(';')[0]
-        header_encoding = header_encoding.strip()
-    return header_encoding
+def get_portal_id_from_url(api):
+    print api
+    domain = urlparse(api).netloc
+    portal_id = ""
+    for t in domain.split("."):
+        portal_id = portal_id + t[:2]
+    return portal_id
 
 def main(argv):
     pa = argparse.ArgumentParser(description='Open Portal Watch toolset.')
@@ -72,97 +76,53 @@ def main(argv):
     logger.debug("establishing connection to MongoDB")
     dbm = DBManager(args.db, args.host)
 
+    portals = []
+    if args.url:
+        portals.append(get_portal_id_from_url(args.url))
+    elif args.urllist:
+        with open(args.urllist) as f:
+            reader = csv.reader(f, delimiter='\t')
+            for row in reader:
+                if row[0].startswith("http"):
+                    if len(row[1]) > 1:
+                        portals.append(row[0])
 
-    stats={'overview':{'total':0, 'suc':0, 'no_res':0, '404':0, 'errors':0}}
-    overview = stats['overview']
-
-    fC={
-        'f_ext': {},
-        'devs':{},
-        'h_charset' : {},
-        'd_charset' : {},
-        'd_delim' : {},
-        'errors': {},
-        'h_ctype': {}
-    }
-
-
-    charset={}
+    else:
+        portals.append(None)
 
 
 
     c = 0
-    for csvm in dbm.getCsvMetaData():
-        overview['total']+=1
+    agg = None
+    if args.agg:
+        aggID = args.agg
+        agg = dbm.getCSVProfilStatis("",aggID)
 
-
-        update(fC['f_ext'], csvm['extension'])
-
-        if csvm['results']:
-            res = csvm['results']
-
-            if 'error' not in res:
-                if csvm['header']:
-                    deviations = res['deviation']['csv']['ermilov']
-                    for dev in deviations:
-                        if dev not in fC['devs']:
-                            fC['devs'][dev] = {}
-                        update(fC['devs'][dev], deviations[dev])
-
-                    overview['suc']+=1
-
-                    update(fC['d_delim'],res['dialect']['lib_csv']['delimiter'])
-                    enc = res['enc']['lib_chardet']['encoding']
-                    update(fC['d_charset'],enc)
-
-                    if 'content-type' in csvm['header']:
-                        update(fC['h_ctype'], get_header_charset(csvm['header']['content-type']))
-                    else:
-                        update(fC['h_ctype'], 'missing')
-                    update(fC['h_charset'],res['enc']['header']['encoding'])
-
-
-                    if enc is None:
-                        enc = 'mis'
-
-                    h_enc = charset.get(enc, {})
-                    if res['enc']['header']['encoding'] is None:
-                        update(h_enc, 'mis')
-                    else:
-                        update(h_enc, res['enc']['header']['encoding'])
-                    charset[enc] = h_enc
-
-                else:
-                    overview['404'] +=1
-
-            else:
-                overview['errors'] +=1
-                update(fC['errors'], res['error'])
+    for portal in portals:
+        if portal == None:
+            stats = dbm.getCSVProfilStatis("",'ALL')
         else:
-            #no_res +=1
-            overview['no_res'] +=1
-        if overview['total']%5001 == 0:
-            #break;
-            print 'processed ',overview['total'],'files'
+            stats = dbm.getCSVProfilStatis(portal, get_portal_id_from_url(portal))
 
+        for csvm in dbm.getCsvMetaData(portal, get_portal_id_from_url(portal)):
+            c+=1
+            stats.update(csvm)
 
-    stats['freqDist']={}
-    for fc in fC:
+        if agg is not None:
+            agg.aggregate(stats)
 
-        if fc is 'devs':
-            t = {k:v[True] for (k,v) in fC[fc].iteritems()}.values()
-            f = {k:v[False] for (k,v) in fC[fc].iteritems()}.values()
+        #report = Report(stats, args.out)
+        #report.generateReport()
 
-            df = pandas.DataFrame(dict(graph=fC[fc].keys(),
-                           value=t, F=f))
-            df = df.sort(['value'], ascending=False)
-        else:
-            df = pandas.DataFrame(dict(graph=fC[fc].keys(),
-                           value=fC[fc].values()))
-            df = df.sort(['value'], ascending=False)
-        #print fc
-        #print df
-        stats['freqDist'][fc]=df
+        dbm.storeCSVProfilStatis(stats)
+
+    if agg:
+        report = Report(agg, args.out)
+        report.generateReport()
+        pprint(agg.__dict__)
+
+    print "Analysed in total ",c," CSV files"
+
 
 
 
@@ -193,37 +153,32 @@ def main(argv):
     # ]
 
 
-    pprint(charset)
-
-
-    report = Report(stats, args.out)
-    report.generateReport()
+#    pprint(charset)
 
 
 
-    pprint(stats)
 
-    for p in plots:
-
-        printlist(p['d'])
-        freq_list2 = [(val, key) for key, val in p['d'].items()]
-        # sort by val or frequency
-        freq_list2.sort(reverse=True)
-
-        sorted_x = sorted(p['d'].items(), key=operator.itemgetter(1),reverse=True)
-
-        print 'sort',sorted_x
-        data = {}
-        for v,k in sorted_x:
-            if v is None:
-                v = 'mis'
-            data[v.encode('utf-8')] = k
-
-        print 'data',data
-
-        df = pandas.DataFrame(dict(graph=data.keys(),
-                           n=data.values()))
-        plot.hbarchart(df,p['xl'] , p['yl'], '', args.out, p['fname'])
+    # for p in plots:
+    #
+    #     printlist(p['d'])
+    #     freq_list2 = [(val, key) for key, val in p['d'].items()]
+    #     # sort by val or frequency
+    #     freq_list2.sort(reverse=True)
+    #
+    #     sorted_x = sorted(p['d'].items(), key=operator.itemgetter(1),reverse=True)
+    #
+    #     print 'sort',sorted_x
+    #     data = {}
+    #     for v,k in sorted_x:
+    #         if v is None:
+    #             v = 'mis'
+    #         data[v.encode('utf-8')] = k
+    #
+    #     print 'data',data
+    #
+    #     df = pandas.DataFrame(dict(graph=data.keys(),
+    #                        n=data.values()))
+    #     plot.hbarchart(df,p['xl'] , p['yl'], '', args.out, p['fname'])
 
 
 if __name__ == "__main__":

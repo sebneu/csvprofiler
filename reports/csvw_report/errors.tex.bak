@@ -1,4 +1,4 @@
-\begin{tabular}{lrr} 
+\begin{tabular}{p{7cm}rr} 
  \toprule 
  & \textsc{\#docs} & \\ 
  \midrule 

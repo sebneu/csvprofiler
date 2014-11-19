@@ -35,7 +35,7 @@
 
 \title{Profiling CSV documents on the Web}
 \subtitle{}
-\author{Sebastian Neumaier and J\"urgen Umbrich \\\textit{Vienna University of Economics and Business}\\ \textit{Welthandelsplatz 1; 1020 Vienna; Austria}}
+\author{J\"urgen Umbrich and Sebastian Neumaier\\\textit{Vienna University of Economics and Business}\\ \textit{Welthandelsplatz 1; 1020 Vienna; Austria}}
 %\affil{}
 \date{}
 
@@ -43,9 +43,10 @@
 
 \maketitle
 \begin{abstract}
-This study reports on our findings about the landscape of 68044 CSV files published on the Web as Open Data.
+This study reports on our findings about 74395 CSV files published on the Web as Open Data.
 The documents are extracted from 91 Open Data CKAN portals for which the meta data indicate a comma/character-separate-values file.
-Our analysis includes the inspection of the HTTP response headers, encoding detection and guessing of used delimiters, but we also determine the deviation of data tables compared to a canonical form~\cite{ermilov:2013aa}.
+Our analysis includes the inspection of the HTTP response headers, encoding detection and guessing of used delimiters. 
+We also determine the deviation of data tables compared to a canonical form~\cite{ermilov:2013aa}.
 
 Our findings show that the majority of the CSV files adhere to the RFC4180 specification, meaning the use of \textit{csv} as file extension, \texttt{text/csv} as the HTTP response header \texttt{content-type} , and ',' as delimiter.
 We also show that there exists nearly no information about the content encoding in the HTTP headers.
@@ -61,11 +62,11 @@ A widespread method to manage and publish information in an intuitive manner is 
 In fact, many institutions handle their data in spreadsheets ( e.g. MS Excel, or other OpenOffice spreadsheet) and use the tabular format to exchange data between different systems (e.g. a simpler form compared to the XML format).
 A simple plain text format for the exchange of such spreadsheets is the comma-separate-values format (CSV).\footnote{RFC4180: \url{http://www.ietf.org/rfc/rfc4180.txt}} 
 %\footnote{\url{http://edoceo.com/utilitas/csv-file-format}}.
-While the RFC specification of the CSV format is well defined
+While the RFC specification of the CSV format is well defined,
 %, e.g., it defines the ',' as delimiter symbol and requires that each row has the same number of values, 
 we observe many deviations from the originally specification. 
-For example, various spreadsheet software exports their data into the CSV format using different delimiter symbols in comparison to the default ',' delimiter, or there exists CSV files with unsymmetrical column numbers for different rows. 
-We can observe a large number of such "exported" CSV-like documents with the Open Data movement and mostly those files are rather character-separate-values than comma-separate-values.
+For example, various spreadsheet software exports their data into the CSV format using different delimiter symbols (in comparison to the default ',' delimiter), or there exists CSV files with unsymmetrical column numbers for different rows. 
+We can observe a large number of such "exported" CSV-like documents with the Open Data movement and one can declare such files as rather character-separate-values than comma-separate-values.
 
 This report attempts to analyse to which degree documents on the Web, that are defined as CSV files (e.g. via header \texttt{content-type} definition or file extension), follow the RFC4180 specification.
 The results will help to better understand the various deviations which provides the consumers with valuable information about what to expect when processing CSV files from the Web. 
@@ -103,15 +104,15 @@ For each document, we extract the following information:
 \textit{A CSV file is well defined, consisting of a optional header row and several data rows, each of them with the same number of columns. 
 \Citeauthor*{ermilov:2013aa} define a canonical model for tabular data and a set of deviations which provide interesting insights~\cite{ermilov:2013aa}. The deviations are grouped into three categories: 
 \begin{itemize}
-\item the table level, this is, leading whitespaces or multi-tables),
-\item  the header level, this is, duplicate header values, missing header values, or a inconsistent number of header columns compared to the data columns) 
-\item the data level, this is, duplicate data rows or missing or incomplete data values
+\item the table level, that is, leading whitespaces or multi-tables),...
+\item  the header level, that is, duplicate or missing header values, or a inconsistent number of header columns compared to the data columns) , ... 
+\item the data level, that is, duplicate data rows, missing or incomplete data values, ... 
 \end{itemize}
 }
 	
 \end{itemize}
 
-Those information allow us to get basic insights about the landscape of CSV-like data on the Web. 
+%Those information allow us to get basic insights about the landscape of CSV-like data on the Web. 
 
 \section{Findings}
 \begin{table}[h]
@@ -125,9 +126,9 @@ Those information allow us to get basic insights about the landscape of CSV-like
 \input{fextTable.tex}
 \caption{File extensions\label{tab:fext}}
 \end{table}
-We conducted the latest profiling consisting of 68044 on November, the 9th 2014.
-A total of 49221 could be downloaded and analysed, while we received for 1671 files a \texttt{404 NOT FOUND} HTTP status code and for 12947 documents a parser error (mainly due to wrong detected encodings or malformed formats) (cf. \autoref{tab:overview}). \autoref{tab:fext} shows the extracted file extensions together with the number of documents.
-We can see that most documents use the ``.csv'' file extension as specified in the RFC. The other interesting observation is that around 2100 documents do not have a file extensions, mainly due to the reason that those documents are exposed via APIs \todo{service urls? maybe we need to strip of the query terms} .
+We conducted the latest profiling consisting of 74395 on November, the 9th 2014.
+A total of 56528 could be downloaded and analysed, while we received for 1653 files a \texttt{404 NOT FOUND} HTTP status code and for 16214 documents a parser error (mainly due to wrong detected encodings or malformed formats) (cf. \autoref{tab:overview} and \autoref{tab:errors} for parser errors). \autoref{tab:fext} shows the extracted file extensions together with the number of documents.
+We can see that most documents use the ``.csv'' file extension as specified in the RFC. The other interesting observation is that around 4421 documents do not have a file extensions, mainly due to the reason that those documents are exposed via APIs \todo{service urls? maybe we need to strip of the query terms} .
 
 
 \subsection{HTTP Header field:}
@@ -136,20 +137,21 @@ We can see that most documents use the ``.csv'' file extension as specified in t
 \input{hctTable.tex}
 \caption{\texttt{Content-Type} \textsc{HTTP} Header\label{tab:conttype}}
 \end{table}
-Next, we analyse the values of the \texttt{content-type} fields in the \textsc{HTTP Headers} for successful downloads.
+Next, we analyse the values of the \texttt{content-type} fields in the \textsc{HTTP Headers} for the successful downloaded documents.
 \autoref{tab:conttype} shows the results for the extracted content-types, with the RFC recommended content type in bold. 
-The good news are that most documents are correctly identified as CSV files with the a specified content type of ``text/csv`` \todo{highly bias since we extracted the URLs based on this mime-type. Interesting that there are also text/html values}. 
-
-~\autoref{tab:hCharset} lists how many documents had an optional charset information in the \texttt{content-type} field. 
-Unfortunately, we cannot find a specific encoding information in most of the headers for the documents. 
-This is especially problematic since many of those CSV files contain specific characters ( e.g. ``Umlauts'' as found in the German alphabet). 
-One needs to inspect and guess the encoding without that clear declaration in the header fields. 
+The good news are that most documents are correctly identified as CSV files with the a specified content type of ``text/csv``. 
 
 \begin{table}[h]
 \centering
 \input{h_charset.tex}
 \caption{Encoding specified in  \texttt{Content-Type} \textsc{HTTP} Header\label{tab:hCharset}}
 \end{table}
+\autoref{tab:hCharset} lists the amount of documents that had an optional charset information in the \texttt{content-type} field. 
+A total of 48474 documents do not define a specific encoding. 
+This is especially problematic since many of those CSV files contain specific characters (e.g. ``Umlauts'' as found in the German alphabet). 
+One needs to inspect and guess the encoding without that clear declaration in the header fields. 
+
+
 
 \subsection{Content Encoding:}
 \begin{table}[h]
@@ -159,8 +161,9 @@ One needs to inspect and guess the encoding without that clear declaration in th
 \end{table}
 
 Next, we inspect the actual content encoding of the downloaded files by guessing the right encoding based on the first hundreds of lines. 
-\autoref{tab:dCharset} lists our guessed charsets based on inspecting the first lines of each documents.  
-We observe a mix of  many different encodings across the documents with no clear dominating ones. 
+\autoref{tab:dCharset} lists our guessed charsets by inspecting the first 100 lines of each documents.  
+Naturally, we observe a mix of different encodings across the documents with the ``ascii'' encoding as dominating ones. 
+Note, we did not verify the correctness of the encoding in this step and purely report on the results obtained by using the the Python library.
 
 
 \subsection{Usage of delimiteres:}
@@ -171,11 +174,13 @@ The results in~\autoref{tab:delim} show again that most documents follow the RFC
 \input{delimTable.tex}
 \caption{Identified delimiters\label{tab:delim}}
 \end{table}
+Please note, that we did not verify the correctness of the guessed delimiters at this stage and purely report the guessed delimiters from the Python library. 
 
 \subsection{Deviations}
 Eventually, we inspected the content of the CSV files and determined the deviation of the tables compared the canonical model as defined in~\cite{ermilov:2013aa}.
 To do so, we parsed the content using the guessed delimiters and encoding and inspected the table, headers and data for the various defined deviations. 
-We added one more deviation to indicate that the cardinality of the data rows do are not the same, indicated with ``D-Cardinality''.
+We added one more deviation to check if the cardinality of the data rows differ between different rows, indicated with ``D-Cardinality''.
+An observed D-Cardinality deviation might indicate that we a) either have two tables, b) have the wrong delimiter or c) the table does not follow the strict requirements that each row has the same number of columns as specified in the RFC.
 
 \begin{table}[h]
 \centering
@@ -184,25 +189,31 @@ We added one more deviation to indicate that the cardinality of the data rows do
 \end{table}
 
 \section{Conclusion}
-In this study, we profiled 68044 CSV-like files published on the Web as Open Data. The main focus so far is on extract some core features common to CSV files, such as, the used file extension, the defined content-type and used delimiter. In addition, we determine the content-encoding and data deviations. 
+In this study, we profiled 74395 CSV-like files published on the Web as Open Data in CKAN portals. 
+The main focus  of this study is to extract some core features common to CSV files, such as, the used file extension, the defined content-type and used delimiter. 
+In addition, we determine the content-encoding and table deviations. 
 
-Our findings show that the majority of the CSV files adhere to the RFC4180 specification, meaning the use of \textit{csv} as file extension, \texttt{text/csv} as the HTTP response header \texttt{content-type} , and ',' as delimiter.
-We also show that there exists nearly no information about the content encoding in the HTTP headers.
-The major observed deviations are that data tables contain rows in which one or several data cells occupy multiple columns and that one or several data cells are empty.
+Our findings show that the majority of the CSV files adhere to the RFC4180 specification, that is, the use of \textit{.csv} as file extension, \texttt{text/csv} as the HTTP response header \texttt{content-type} , and ',' as delimiter.
+The findings also show that there exists for the majority of the documents no information about the content encoding in the HTTP headers.
+Regarding deviations, the major observed deviations are that data tables contain rows in which one or several data cells occupy multiple columns and that one or several data cells are empty.
+In addition, we detected in 46662 documents ($~82\%$) at least one type of deviation. 
 
-However, further work is necessary to get a full picture of the landscape for the CSV files on the Web. 
-Firstly, we did no verify that the delimiters and encoding are correctly guessed which can have an impact on the deviation analysis. 
-Secondly, we plan to extend our profiling to report on the shapes and types of tables we find on the Web. 
-Thirdly, we will analyse the content and header information to see what kind of data is published and how ``easy'' it is for a machine to understand the internal structure and meaning of the information. 
-Very often, the data in tables can be of tree shape, where branch nodes represent categories ( e.g., ``male'' vs ``female``).
+While this report presents some general and potentially interesting findings, further work is necessary to get a full picture of the landscape for the CSV files on the Web. 
+Firstly, we did no verify that the delimiters and encoding are correctly guessed which potentially has an impact on the deviation analysis. 
+Secondly, we plan to extend our profiling to report on the shapes and types of tables we find on the Web and provide a more comprehensive deviation analysis.  
+Thirdly, we will analyse the content and header information to see ``what'' kind of data is published and how ``easy'' it is for a machine to understand the internal structure and meaning of the information. 
+Very often, the data in tables can be of tree shape, where branch nodes represent categories ( e.g., ``male'' vs ``female``), or the used headers can be mapped to a public knowledge graph ( e.g. freebase, dbpedia or wikidata). 
 
 
-%\section*{Appendix}
-%\begin{table}[!ht]
-%\centering
-%\input{errors.tex}
-%\caption{Deviations according to the definition of~\cite{ermilov:2013aa}\label{tab:deviations}.}
-%\end{table}
+\paragraph*{Acknowledgments}
+
+This work was partially funded by the ``Jubil\"aumsfond der Stadt Wien''.
+
+\begin{table}[!ht]
+\centering
+\input{errors.tex}
+\caption{Parser error messages\label{tab:errors}.}
+\end{table}
 
 
 
