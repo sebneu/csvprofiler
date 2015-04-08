@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 __author__ = 'sebastian'
 
 
-def _build_datatables(f, max_rows=-1):
-    table_set = any_tableset(f)
+def _build_datatables(handle, max_rows=-1):
+    table_set = any_tableset(handle)
 
     tables = []
     # Build meta data objects
@@ -47,17 +47,17 @@ def _build_datatables(f, max_rows=-1):
 
         # TODO find better solution!
         # copy the rows into the datatable object
-        t1 = time.time()
-        row_count = 0
-        rows = []
-        for row in row_set:
-            rows.append(copy.deepcopy(row))
-            if 0 < max_rows < row_count:
-                break
-        t2 = time.time()
-        logger.debug('copy rows duration: %s', t2 - t1)
+        # t1 = time.time()
+        # row_count = 0
+        # rows = []
+        # for row in row_set:
+        #     rows.append(copy.deepcopy(row))
+        #     if 0 < max_rows < row_count:
+        #         break
+        # t2 = time.time()
+        # logger.debug('copy rows duration: %s', t2 - t1)
 
-        datatable = DataTable(headers, rows, types)
+        datatable = DataTable(handle, headers, row_set, types)
         tables.append(datatable)
 
     logger.debug('num of tables: %s', len(tables))
@@ -70,10 +70,10 @@ def from_path(path):
     :param path: The local file name of the resource
     :return: A DataTable object
     """
-    with open(path, 'rb') as f:
-        # Load a file object
-        logger.debug('parse file from local path: %s', path)
-        datatables = _build_datatables(f)
+    f = open(path, 'rb')
+    # Load a file object
+    logger.debug('parse file from local path: %s', path)
+    datatables = _build_datatables(f)
     return datatables
 
 
