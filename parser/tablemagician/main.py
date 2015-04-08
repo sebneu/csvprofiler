@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 __author__ = 'sebastian'
 
 
-def _build_datatables(handle, max_rows=-1):
+def _build_datatables(handle, name):
     table_set = any_tableset(handle)
 
     tables = []
@@ -33,6 +33,8 @@ def _build_datatables(handle, max_rows=-1):
         row_set.register_processor(offset_processor(offset + 1))
 
         # guess column types:
+        messytables.types.BoolType.true_values = ['true', 'True', 'TRUE']
+        messytables.types.BoolType.false_values = ['false', 'False', 'FALSE']
         types = type_guess(row_set.sample, types=[messytables.types.StringType,
                                                   messytables.types.DecimalType,
                                                   messytables.types.IntegerType,
@@ -45,19 +47,7 @@ def _build_datatables(handle, max_rows=-1):
         # each row when traversing the iterator:
         row_set.register_processor(types_processor(types))
 
-        # TODO find better solution!
-        # copy the rows into the datatable object
-        # t1 = time.time()
-        # row_count = 0
-        # rows = []
-        # for row in row_set:
-        #     rows.append(copy.deepcopy(row))
-        #     if 0 < max_rows < row_count:
-        #         break
-        # t2 = time.time()
-        # logger.debug('copy rows duration: %s', t2 - t1)
-
-        datatable = DataTable(handle, headers, row_set, types)
+        datatable = DataTable(handle, headers, row_set, types, name, row_set._dialect.delimiter)
         tables.append(datatable)
 
     logger.debug('num of tables: %s', len(tables))
@@ -73,7 +63,7 @@ def from_path(path):
     f = open(path, 'rb')
     # Load a file object
     logger.debug('parse file from local path: %s', path)
-    datatables = _build_datatables(f)
+    datatables = _build_datatables(f, path)
     return datatables
 
 
@@ -86,5 +76,5 @@ def from_url(url):
     # TODO add max num of lines to download
     response = urllib2.urlopen(url)
     f = StringIO(response.read())
-    datatables = _build_datatables(f)
+    datatables = _build_datatables(f, url)
     return datatables
