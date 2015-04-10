@@ -1,3 +1,4 @@
+from ftfy import fix_text
 import copy
 import logging
 from tablemagician.analyser_table import AnalyserTable
@@ -64,11 +65,18 @@ class DataTable:
         rows = []
         for r in self._rows:
             col_index = 0
+            # make a deep copy of a row (which is a list of messytables-cells)
             row = copy.deepcopy(r)
-            rows.append(row)
             for c in row:
-                cols[col_index].append(c)
+                # use ftfy fix_text if the type is string
+                if c.value and c.type and c.type.result_type == basestring:
+                    c.value = fix_text(c.value)
+                if col_index < len(self.headers):
+                    cols[col_index].append(c)
+                else:
+                    logger.error('%s: contains a row with more cells than the header', self.name)
                 col_index += 1
+            rows.append(row)
             row_count += 1
 
             if 0 < max_lines <= row_count:

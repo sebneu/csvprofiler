@@ -39,8 +39,9 @@ def _build_datatables(handle, name):
                                                   messytables.types.DecimalType,
                                                   messytables.types.IntegerType,
                                                   messytables.types.DateUtilType,
-                                                  messytables.types.BoolType],
-                           strict=True)
+                                                  messytables.types.BoolType]
+                           #strict=True
+                           )
         logger.debug('types: %s', types)
 
         # and tell the row set to apply these types to
