@@ -9,6 +9,9 @@ class AnalyserTable:
         self.types = types
         self.name = name
         self.delimiter = delimiter
+        # dict for storing analyser results
+        self.analysers = {}
 
     def __repr__(self):
         return "AnalyserTable (%s x %s)" % (len(self.columns), len(self.rows))
+
