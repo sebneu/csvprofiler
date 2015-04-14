@@ -16,6 +16,7 @@ class AnalyserEngine:
         else:
             analyser.process(analyser_table)
 
+
 class Analyser:
     def __init__(self):
         pass

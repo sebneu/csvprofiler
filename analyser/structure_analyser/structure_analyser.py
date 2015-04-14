@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class StructureAnalyser(Analyser):
     def process(self, analyser_table):
-        logger.debug('(%s) Structural analysis')
+        logger.debug('(%s) Structural analysis', analyser_table.name)
 
         dataset = []
         for row in analyser_table.rows:
