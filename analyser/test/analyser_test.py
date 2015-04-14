@@ -26,10 +26,9 @@ class MyTestCase(unittest.TestCase):
 
         self.assertEqual(len(analyser_table.analysers), 2)
 
-
     def test_structure_analyser(self):
         # build analyser table
-        data_tables = tablemagician.from_path('testdata/39.csv')
+        data_tables = tablemagician.from_path('testdata/nuts/101.csv')
         analyser_table = data_tables[0].process(max_lines=100)
         data_tables[0].close()
 

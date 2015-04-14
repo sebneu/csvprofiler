@@ -1,0 +1,35 @@
+Wiener Linien – Autobus seit 2001;;;;;;;; ;;;;;;;
+NUTS1;NUTS2;NUTS3;DISTRICT_CODE;SUB-DISTRICT_CODE;PAS;PAG;LIN;LLT;LLN;HSA;LAL;KMH;HST;BUS;REF_YEAR
+AT1;AT13;AT130;0;0;109,7;39.172;80;382,4;240,8;412;7,8;18,3;3.137;497;2001
+AT1;AT13;AT130;0;0;108,8;38.912;80;384,8;240,8;413;7,8;18,4;3.143;496;2002
+AT1;AT13;AT130;0;0;108,6;39.506;80;391,3;240,9;338;7,9;17,7;3.135;495;2003
+AT1;AT13;AT130;0;0;110,5;38.944;81;396,8;240,9;404;7,9;17,8;3.156;483;2004
+AT1;AT13;AT130;0;0;111,7;39.834;81;397,6;240,9;404,3;7,9;17,7;3.163;492;2005
+AT1;AT13;AT130;0;0;117,5;37.677;83;391,6;277;402,8;8,1;17,6;3.320;487;2006
+AT1;AT13;AT130;0;0;116;38.421;83;392,1;277;400,5;8,1;17,5;3.341;478;2007
+AT1;AT13;AT130;0;0;115;38.071;84;391,2;258,8;396,8;7,7;16,9;3.276;473;2008
+AT1;AT13;AT130;0;0;114,7;40.131;83;382,6;258,8;393,3;7,7;16,8;3.261;500;2009
+AT1;AT13;AT130;0;0;114,4;41.228;85;384,2;237,3;384,7;7,3;16,7;3.231;496;2010
+AT1;AT13;AT130;0;0;113,6;40.196;90;411,1;237,3;390,6;7,2;17;3.320;480;2011
+AT1;AT13;AT130;0;0;167,1;39.303;98;479,9;237,4;395,6;7,3;17,3;3.626;469;2012
+;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;
+Datenblatt;;;;;;;;;;;;;;;
+NUTS1;NUTS1-Region (Gruppen von Bundesländern);;;;;;;;;;;;;;
+NUTS2;NUTS2-Region (Bundesland);;;;;;;;;;;;;;
+NUTS3;NUTS3-Region (Gruppe von Bezirken);;;;;;;;;;;;;;
+DISTRICT_CODE;Gemeindebezirkskennzahl;;;;;;;;;;;;;;
+SUB_DISTRICT_CODE;Zählbezirkskennzahl;;;;;;;;;;;;;;
+PAS;Fahrgäste (in Mio.);;;;;;;;;;;;;;
+PAG;Platzangebot (Anzahl);;;;;;;;;;;;;;
+LIN;Linien (Anzahl);;;;;;;;;;;;;;
+LLT;Linienlänge bei Tag (km);;;;;;;;;;;;;;
+LLN;Linienlänge bei Nacht (km);;;;;;;;;;;;;;
+HSA;Haltestellenabstand (m);;;;;;;;;;;;;;
+LAL;Längenlinie (km);;;;;;;;;;;;;;
+KMH;Mittlere Geschwindigkeit (km/h);;;;;;;;;;;;;;
+HST;Haltestellen (Anzahl);;;;;;;;;;;;;;
+BUS;Autobusse (Anzahl);;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;
+Quelle: ;Wiener Linien GmbH & Co KG – Abteilung Unternehmenscontrolling.;;;;;;;;;;;;;;

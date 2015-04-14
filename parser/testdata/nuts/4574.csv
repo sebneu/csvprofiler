@@ -1,0 +1,35 @@
+Wiener Linien ñ Straﬂenbahn seit 2001;;;;;;;; ;;;;;;;
+NUTS1;NUTS2;NUTS3;DISTRICT_CODE;SUB-DISTRICT_CODE;PAS;PAG;LIN;LLG;HSA;LAL;KMH;HAST;STW;SBW;REF_YEAR
+AT1;AT13;AT130;0;0;206,7;93.022;32;232,5;404;7,3;15,3;1.133;569;369;2001
+AT1;AT13;AT130;0;0;204;90.721;32;232,5;404;7,3;15,3;1.133;548;350;2002
+AT1;AT13;AT130;0;0;203,8;92.545;32;231,7;398;7,2;15,2;1.135;566;335;2003
+AT1;AT13;AT130;0;0;204,7;91.759;32;231,7;398;7,2;15,2;1.135;552;321;2004
+AT1;AT13;AT130;0;0;207,7;91.424;33;231,6;397,2;7;15,2;1.137;549;304;2005
+AT1;AT13;AT130;0;0;204,7;88.949;32;227,3;393;7,1;15,2;1.128;534;292;2006
+AT1;AT13;AT130;0;0;200,4;87.555;32;227,3;393;7,1;15,2;1.128;526;278;2007
+AT1;AT13;AT130;0;0;190,5;87.953;28;214,9;392,5;7,7;15,3;1.033;528;271;2008
+AT1;AT13;AT130;0;0;186,9;86.244;28;214,9;392,5;7,7;15,3;1.033;513;262;2009
+AT1;AT13;AT130;0;0;189,9;88.197;28;214,8;393;7,7;15,3;1.031;521;251;2010
+AT1;AT13;AT130;0;0;193,8;89.104;28;214,8;393;7,7;15,3;1.031;520;240;2011
+AT1;AT13;AT130;0;0;295,1;89.060;29;221,5;396,3;7,6;15,4;1.056;516;230;2012
+;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;
+Datenblatt;;;;;;;;;;;;;;;
+NUTS1;NUTS1-Region (Gruppen von Bundesl‰ndern);;;;;;;;;;;;;;
+NUTS2;NUTS2-Region (Bundesland);;;;;;;;;;;;;;
+NUTS3;NUTS3-Region (Gruppe von Bezirken);;;;;;;;;;;;;;
+DISTRICT_CODE;Gemeindebezirkskennzahl;;;;;;;;;;;;;;
+SUB_DISTRICT_CODE;Z‰hlbezirkskennzahl;;;;;;;;;;;;;;
+PAS;Fahrg‰ste (in Mio.);;;;;;;;;;;;;;
+PAG;Platzangebot (Anzahl);;;;;;;;;;;;;;
+LIN;Linien (Anzahl);;;;;;;;;;;;;;
+LLG;Linienl‰nge insgesamt (km);;;;;;;;;;;;;;
+HSA;Haltestellenabstand (m);;;;;;;;;;;;;;
+LAL;L‰ngenlinie (km);;;;;;;;;;;;;;
+KMH;Mittlere Geschwindigkeit (km/h);;;;;;;;;;;;;;
+HAST;Haltestellen (Anzahl);;;;;;;;;;;;;;
+STW;Straﬂenbahn Triebwagen (Anzahl);;;;;;;;;;;;;;
+SBW;Straﬂenbahn Beiwagen (Anzahl);;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;
+Quelle: ;Wiener Linien GmbH & Co KG ñ Abteilung Unternehmenscontrolling.;;;;;;;;;;;;;;

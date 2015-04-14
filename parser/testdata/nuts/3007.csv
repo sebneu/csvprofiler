@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<link href="./WebResource.axd?d=ABHMTGyekMNvKMG6E2L91SypbyAPio3e2ysN-gqnp-u-RmIf0SIsuTeW3YRfxliSANwc4NpLGlTFa4lSlaoJDjVUoZuZtx4GGtPbMcw-EPXuxuSEXpLMbAJPSa30qbc2W3ZTnR7KE_JySdTnF0Iflg2&amp;t=635461104453731815" rel="stylesheet" type="text/css" />
+<link href="./WebResource.axd?d=R-mgwqu1FdLaHqMRPExsJC2NdSk2ztLlQhB0mM6X-4SrenINOlEKCcxJysoC_qIaCHoQSqXeuiAxA1r9UY36eXiQEfREy4-VMrK8ntlBviXgxg8NL6hWcQfKL-KS6r0YUISKSJZc2AY4FxWIrvXkeg2&amp;t=635461104453731815" rel="stylesheet" type="text/css" />
+<link href="./WebResource.axd?d=xmm2U2G7U1jyut27Zd-LhrqHCvwlTKNVfP9_Y3paO9eP5cMTIi7ONig4VPMN-ii7whU7mR5RtLUjuZch7_hxIWwsxp5YoihL3medoa0pPqf8ERvg9_MtBc53Zypp6iialM58nliJE0Ov1RjJohldYg2&amp;t=635461104453731815" rel="stylesheet" type="text/css" />
+<link href="./WebResource.axd?d=coctWUaJAxzDADmdFU9A7McvkWDQ33BsX7GjcvQ1kMHnDF4FDe3Y8GRKC0OimwBHndAKjSoIYpcfu31reIR5Xc5mSPo3hc_1HwZJBLqOTQ135BIAzE6eobDQ-ug81xXoindu52CdARtNm40uexEgLg2&amp;t=635461104453731815" rel="stylesheet" type="text/css" />
+
+
+<link href="./WebResource.axd?d=OjIHGV0CN3iTyht54hL1EH-20lec7mhcwwQQtrMqRSRfqnEW61z2Z46sBWd_OJJBE5FWmd_Qp8a7XAEs9b3UDa2sYt2K6YdPwG6B_NozSyhVcf0_ZLEkm-vxGvXuHiX9jGyYMG5171J4ApFWKB7nWXy9CugsRU0LXIzxJMkv3k81&amp;t=635461104463097709" rel="stylesheet" type="text/css" />
+<link href="http://www.vorarlberg.at/cmsinclude/vorarlberg.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://www.vorarlberg.at/cmsinclude/vorarlberg.css" rel="stylesheet" type="text/css" media="print" />
+<link href="http://www.vorarlberg.at/cmsinclude/wappen.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="VlrStatistik.css" rel="stylesheet" type="text/css" /><title>
+	Land Vorarlberg – Bevölkerungsstatistik
+</title></head><body class="" >
+<form name="Form1" method="post" action="Default.aspx" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MWQYAgUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFC05VVFMzX2NoZWNrBQxCRVpJUktfY2hlY2sFDFJFR0lPTl9jaGVjawUOR0VNRUlOREVfY2hlY2sFClJlc3VsdFZpZXcPZ2RllHpmj5dWrCCHZZ8ZeteZbelMYJgFMWb+ZI115bl+nA==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="943FB098" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" /><div>
+	<div class="Kopfzeile">
+		<div class="FuellerRot">
+
+		</div><div class="FuellerSchwarz">
+
+		</div><div class="Logo">
+
+		</div><div class="Themenbild">
+
+		</div>
+	</div>
+</div><div>
+	<div style="float:left;">
+		<span class="Header1">Bevölkerungsstatistik</span>
+	</div><div style="float:right;text-align:right;margin-right:2%;">
+		<a href="Meta/Definition.pdf" target="_blank" style="vertical-align:middle;"><img src="Images/help.png" alt="Hilfe Link" border="0" /></a><a href="Meta/Definition.pdf" target="_blank" style="padding-left:4px;vertical-align:top;"><b>Hilfe</b></a>
+	</div>
+</div><div>
+	<div class="DefinitionPanel">
+		<div>
+			<div class="SelectionPanel">
+				<div class="LeftPanel">
+					<label for="DefDropDown">Statistik wählen</label>
+				</div><div class="RightPanel">
+					<select name="DefDropDown" id="DefDropDown">
+						<option selected="selected" value="Jahresstatistik">Jahresstatistik</option>
+						<option value="Quartalsstatistik">Quartalsstatistik</option>
+
+					</select>
+				</div>
+			</div><div class="ClassificationPanel">
+				<div class="LeftPanel">
+					<label for="ClassDropDown">Klassifizierung wählen</label>
+				</div><div class="RightPanel">
+					<select name="ClassDropDown" id="ClassDropDown">
+						<option selected="selected" value="wohnsitz">Wohnsitzqualit&#228;t</option>
+						<option value="GESCHLECHT">Geschlecht</option>
+						<option value="JGR_05">Altersklasse (5 Jahre)</option>
+						<option value="JGR_10">Altersklasse (10 Jahre)</option>
+						<option value="JGR_15">Altersklasse (15 Jahre)</option>
+						<option value="IN_AUS">Staatsangeh&#246;rigkeit (&#214;sterreich,Andere)</option>
+						<option value="Staatsangehoerigkeit">Staatsangeh&#246;rigkeit (&#214;sterreich,EU27,Andere)</option>
+
+					</select>
+				</div>
+			</div>
+		</div><div>
+			<div class="GroupPanel">
+				<div class="LeftPanel">
+					<span>Gruppierungen wählen</span>
+				</div><div class="RightPanel">
+					<span style="display:inline-block;"><input id="NUTS3_check" type="checkbox" name="NUTS3_check" /><label for="NUTS3_check">&nbsp;&nbsp;NUTS 3 Regionen</label></span><span style="display:inline-block;"><input id="BEZIRK_check" type="checkbox" name="BEZIRK_check" /><label for="BEZIRK_check">&nbsp;&nbsp;Bezirke</label></span><span style="display:inline-block;"><input id="REGION_check" type="checkbox" name="REGION_check" /><label for="REGION_check">&nbsp;&nbsp;Regionen</label></span><span style="display:inline-block;"><input id="GEMEINDE_check" type="checkbox" name="GEMEINDE_check" /><label for="GEMEINDE_check">&nbsp;&nbsp;Gemeinden</label></span>
+				</div>
+			</div><div class="FilterPanel">
+				<div class="LeftPanel">
+					<span>Filter wählen</span>
+				</div><div class="RightPanel">
+					<span style="display:inline-block;">Wohnsitz</span><select name="wohnsitz_filters" id="wohnsitz_filters">
+						<option value="">Hauptwohnsitz und weitere Wohnsitze</option>
+						<option value="HWS">Hauptwohnsitz</option>
+						<option value="WWS">weiterer Wohnsitz</option>
+
+					</select><span style="display:inline-block;">Von</span><select name="JAHR_filters_von" id="JAHR_filters_von">
+						<option value="2014">2014</option>
+						<option value="2013">2013</option>
+						<option value="2012">2012</option>
+						<option value="2011">2011</option>
+						<option value="2010">2010</option>
+						<option value="2009">2009</option>
+						<option value="2008">2008</option>
+						<option value="2007">2007</option>
+						<option value="2006">2006</option>
+						<option value="">-- alle Jahre --</option>
+
+					</select><span style="display:inline-block;">&nbsp;&nbsp;Bis</span><select name="JAHR_filters_bis" id="JAHR_filters_bis">
+						<option value=""></option>
+						<option value="2014">2014</option>
+						<option value="2013">2013</option>
+						<option value="2012">2012</option>
+						<option value="2011">2011</option>
+						<option value="2010">2010</option>
+						<option value="2009">2009</option>
+						<option value="2008">2008</option>
+						<option value="2007">2007</option>
+						<option value="2006">2006</option>
+						<option value="">-- alle Jahre --</option>
+
+					</select><span style="display:inline-block;">NUTS 3 Regionen</span><select name="NUTS3_filters" id="NUTS3_filters">
+						<option value="">-- alle NUTS 3 Regionen --</option>
+						<option value="Bludenz-Bregenzerwald">Bludenz-Bregenzerwald</option>
+						<option value="Rheintal-Bodenseegebiet">Rheintal-Bodenseegebiet</option>
+
+					</select><span style="display:inline-block;">Bezirke</span><select name="BEZIRK_filters" id="BEZIRK_filters">
+						<option value="">-- alle Bezirke --</option>
+						<option value="801">Bludenz</option>
+						<option value="802">Bregenz</option>
+						<option value="803">Dornbirn</option>
+						<option value="804">Feldkirch</option>
+
+					</select><span style="display:inline-block;">Regionen</span><select name="REGION_filters" id="REGION_filters">
+						<option value="">-- alle Regionen --</option>
+						<option value="Arlberggebiet">Arlberggebiet</option>
+						<option value="Brandnertal">Brandnertal</option>
+						<option value="Bregenzerwald">Bregenzerwald</option>
+						<option value="Großes Walsertal">Gro&#223;es Walsertal</option>
+						<option value="Kleinwalsertal">Kleinwalsertal</option>
+						<option value="Leiblachtal">Leiblachtal</option>
+						<option value="Montafon">Montafon</option>
+						<option value="Rheintal">Rheintal</option>
+						<option value="Walgau">Walgau</option>
+
+					</select><span style="display:inline-block;">Gemeinden</span><select name="GEMEINDE_filters" id="GEMEINDE_filters">
+						<option value="">-- alle Gemeinden --</option>
+						<option value="80101">Bartholom&#228;berg</option>
+						<option value="80102">Blons</option>
+						<option value="80103">Bludenz</option>
+						<option value="80104">Bludesch</option>
+						<option value="80105">Brand</option>
+						<option value="80106">B&#252;rs</option>
+						<option value="80107">B&#252;rserberg</option>
+						<option value="80108">Dalaas</option>
+						<option value="80109">Fontanella</option>
+						<option value="80110">Gaschurn</option>
+						<option value="80111">Innerbraz</option>
+						<option value="80112">Kl&#246;sterle</option>
+						<option value="80113">Lech</option>
+						<option value="80114">Lor&#252;ns</option>
+						<option value="80115">Ludesch</option>
+						<option value="80116">Nenzing</option>
+						<option value="80117">N&#252;ziders</option>
+						<option value="80118">Raggal</option>
+						<option value="80119">St. Anton i. M.</option>
+						<option value="80120">St. Gallenkirch</option>
+						<option value="80121">St. Gerold</option>
+						<option value="80122">Schruns</option>
+						<option value="80123">Silbertal</option>
+						<option value="80124">Sonntag</option>
+						<option value="80125">Stallehr</option>
+						<option value="80126">Th&#252;ringen</option>
+						<option value="80127">Th&#252;ringerberg</option>
+						<option value="80128">Tschagguns</option>
+						<option value="80129">Vandans</option>
+						<option value="80201">Alberschwende</option>
+						<option value="80202">Andelsbuch</option>
+						<option value="80203">Au</option>
+						<option value="80204">Bezau</option>
+						<option value="80205">Bildstein</option>
+						<option value="80206">Bizau</option>
+						<option value="80207">Bregenz</option>
+						<option value="80208">Buch</option>
+						<option value="80209">Dam&#252;ls</option>
+						<option value="80210">Doren</option>
+						<option value="80211">Egg</option>
+						<option value="80212">Eichenberg</option>
+						<option value="80213">Fu&#223;ach</option>
+						<option value="80214">Gai&#223;au</option>
+						<option value="80215">Hard</option>
+						<option value="80216">Hittisau</option>
+						<option value="80217">H&#246;chst</option>
+						<option value="80218">H&#246;rbranz</option>
+						<option value="80219">Hohenweiler</option>
+						<option value="80220">Kennelbach</option>
+						<option value="80221">Krumbach</option>
+						<option value="80222">Langen bei Bregenz</option>
+						<option value="80223">Langenegg</option>
+						<option value="80224">Lauterach</option>
+						<option value="80225">Lingenau</option>
+						<option value="80226">Lochau</option>
+						<option value="80227">Mellau</option>
+						<option value="80228">Mittelberg</option>
+						<option value="80229">M&#246;ggers</option>
+						<option value="80230">Reuthe</option>
+						<option value="80231">Riefensberg</option>
+						<option value="80232">Schnepfau</option>
+						<option value="80233">Schoppernau</option>
+						<option value="80234">Schr&#246;cken</option>
+						<option value="80235">Schwarzach</option>
+						<option value="80236">Schwarzenberg</option>
+						<option value="80237">Sibratsgf&#228;ll</option>
+						<option value="80238">Sulzberg</option>
+						<option value="80239">Warth</option>
+						<option value="80240">Wolfurt</option>
+						<option value="80301">Dornbirn</option>
+						<option value="80302">Hohenems</option>
+						<option value="80303">Lustenau</option>
+						<option value="80401">Altach</option>
+						<option value="80402">D&#252;ns</option>
+						<option value="80403">D&#252;nserberg</option>
+						<option value="80404">Feldkirch</option>
+						<option value="80405">Frastanz</option>
+						<option value="80406">Fraxern</option>
+						<option value="80407">G&#246;fis</option>
+						<option value="80408">G&#246;tzis</option>
+						<option value="80409">Klaus</option>
+						<option value="80410">Koblach</option>
+						<option value="80411">Laterns</option>
+						<option value="80412">M&#228;der</option>
+						<option value="80413">Meiningen</option>
+						<option value="80414">Rankweil</option>
+						<option value="80415">R&#246;ns</option>
+						<option value="80416">R&#246;this</option>
+						<option value="80417">Satteins</option>
+						<option value="80418">Schlins</option>
+						<option value="80419">Schnifis</option>
+						<option value="80420">Sulz</option>
+						<option value="80421">&#220;bersaxen</option>
+						<option value="80422">Viktorsberg</option>
+						<option value="80423">Weiler</option>
+						<option value="80424">Zwischenwasser</option>
+
+					</select>
+				</div>
+			</div>
+		</div><div class="ButtonPanel">
+			&nbsp;&nbsp;<input type="submit" name="SearchButton" value="Suche starten" id="SearchButton" />
+		</div>
+	</div><div class="ResultPanel">
+		<br/><br/><br/><div>
+
+		</div><br/><br/>
+	</div>
+</div><div class="Fusszeile">
+	<span class="CopyrightSpan">&nbsp;&#xA9;&#xA0;Land Vorarlberg</span><span class="LinkSpan"><a href="http://www.vorarlberg.at/vorarlberg/geschichte_statistik/statistik/landesstatistik/kontakt/landesstellefuerstatistik.htm" target="_blank">Kontakt</a></span><span class="LinkSpan"><a href="http://www.vorarlberg.at/impressum_statistik" target="_blank">Impressum</a></span>
+</div></form></body></html>

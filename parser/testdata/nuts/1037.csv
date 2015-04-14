@@ -1,0 +1,1720 @@
+NUTS2;LAU2_CODE;LAU2_NAME;LIVEBIRTHS_TOTAL;LIVEBIRTHS_MALE;LIVEBIRTHS_FEMALE;YEAR
+AT12;30101;Krems an der Donau;185;88;97;2013
+AT12;30201;St. Pölten;485;244;241;2013
+AT12;30301;Waidhofen an der Ybbs;108;62;46;2013
+AT12;30401;Wiener Neustadt;458;234;224;2013
+AT12;30501;Allhartsberg;20;6;14;2013
+AT12;30502;Amstetten;256;137;119;2013
+AT12;30503;Ardagger;44;28;16;2013
+AT12;30504;Aschbach-Markt;49;25;24;2013
+AT12;30506;Behamberg;34;15;19;2013
+AT12;30507;Biberbach;22;10;12;2013
+AT12;30508;Ennsdorf;29;14;15;2013
+AT12;30509;Ernsthofen;12;3;9;2013
+AT12;30510;Ertl;12;8;4;2013
+AT12;30511;Euratsfeld;30;16;14;2013
+AT12;30512;Ferschnitz;22;13;9;2013
+AT12;30514;Haag;41;25;16;2013
+AT12;30515;Haidershofen;23;12;11;2013
+AT12;30516;Hollenstein an der Ybbs;13;9;4;2013
+AT12;30517;Kematen an der Ybbs;34;12;22;2013
+AT12;30520;Neuhofen an der Ybbs;33;14;19;2013
+AT12;30521;Neustadtl an der Donau;24;12;12;2013
+AT12;30522;Oed-Oehling;15;5;10;2013
+AT12;30524;Opponitz;19;13;6;2013
+AT12;30526;St. Georgen am Reith;8;6;2;2013
+AT12;30527;St. Georgen am Ybbsfelde;21;8;13;2013
+AT12;30529;St. Pantaleon-Erla;28;13;15;2013
+AT12;30530;St. Peter in der Au;48;23;25;2013
+AT12;30531;St. Valentin;80;44;36;2013
+AT12;30532;Seitenstetten;35;16;19;2013
+AT12;30533;Sonntagberg;34;20;14;2013
+AT12;30534;Strengberg;20;9;11;2013
+AT12;30536;Viehdorf;25;16;9;2013
+AT12;30538;Wallsee-Sindelburg;23;14;9;2013
+AT12;30539;Weistrach;24;12;12;2013
+AT12;30541;Winklarn;11;4;7;2013
+AT12;30542;Wolfsbach;20;8;12;2013
+AT12;30543;Ybbsitz;33;16;17;2013
+AT12;30544;Zeillern;19;6;13;2013
+AT12;30601;Alland;14;7;7;2013
+AT12;30602;Altenmarkt an der Triesting;28;11;17;2013
+AT12;30603;Bad Vöslau;86;35;51;2013
+AT12;30604;Baden;203;113;90;2013
+AT12;30605;Berndorf;79;43;36;2013
+AT12;30607;Ebreichsdorf;98;53;45;2013
+AT12;30608;Enzesfeld-Lindabrunn;34;16;18;2013
+AT12;30609;Furth an der Triesting;13;7;6;2013
+AT12;30612;Günselsdorf;13;6;7;2013
+AT12;30613;Heiligenkreuz;9;7;2;2013
+AT12;30614;Hernstein;11;4;7;2013
+AT12;30615;Hirtenberg;24;13;11;2013
+AT12;30616;Klausen-Leopoldsdorf;15;9;6;2013
+AT12;30618;Kottingbrunn;56;18;38;2013
+AT12;30620;Leobersdorf;55;29;26;2013
+AT12;30621;Mitterndorf an der Fischa;21;9;12;2013
+AT12;30623;Oberwaltersdorf;33;18;15;2013
+AT12;30625;Pfaffstätten;33;21;12;2013
+AT12;30626;Pottendorf;54;24;30;2013
+AT12;30627;Pottenstein;30;17;13;2013
+AT12;30629;Reisenberg;8;5;3;2013
+AT12;30631;Schönau an der Triesting;17;12;5;2013
+AT12;30633;Seibersdorf;15;9;6;2013
+AT12;30635;Sooß;7;5;2;2013
+AT12;30636;Tattendorf;13;6;7;2013
+AT12;30637;Teesdorf;12;6;6;2013
+AT12;30639;Traiskirchen;179;99;80;2013
+AT12;30641;Trumau;37;18;19;2013
+AT12;30645;Weissenbach an der Triesting;11;5;6;2013
+AT12;30646;Blumau-Neurißhof;20;15;5;2013
+AT12;30701;Au am Leithaberge;5;2;3;2013
+AT12;30702;Bad Deutsch-Altenburg;14;7;7;2013
+AT12;30703;Berg;3;0;3;2013
+AT12;30704;Bruck an der Leitha;69;36;33;2013
+AT12;30706;Enzersdorf an der Fischa;26;10;16;2013
+AT12;30708;Göttlesbrunn-Arbesthal;19;7;12;2013
+AT12;30709;Götzendorf an der Leitha;17;11;6;2013
+AT12;30710;Hainburg a. d. Donau;64;28;36;2013
+AT12;30711;Haslau-Maria Ellend;23;10;13;2013
+AT12;30712;Höflein;8;3;5;2013
+AT12;30713;Hof am Leithaberge;9;4;5;2013
+AT12;30715;Hundsheim;1;0;1;2013
+AT12;30716;Mannersdorf am Leithagebirge;26;18;8;2013
+AT12;30718;Petronell-Carnuntum;8;4;4;2013
+AT12;30719;Prellenkirchen;8;2;6;2013
+AT12;30721;Rohrau;12;3;9;2013
+AT12;30722;Scharndorf;10;5;5;2013
+AT12;30724;Sommerein;19;8;11;2013
+AT12;30726;Trautmannsdorf an der Leitha;18;10;8;2013
+AT12;30728;Wolfsthal;13;7;6;2013
+AT12;30801;Aderklaa;1;0;1;2013
+AT12;30802;Andlersdorf;0;0;0;2013
+AT12;30803;Angern an der March;19;11;8;2013
+AT12;30804;Auersthal;19;8;11;2013
+AT12;30805;Bad Pirawarth;12;8;4;2013
+AT12;30808;Deutsch-Wagram;64;34;30;2013
+AT12;30810;Drösing;13;5;8;2013
+AT12;30811;Dürnkrut;20;10;10;2013
+AT12;30812;Ebenthal;10;4;6;2013
+AT12;30813;Eckartsau;9;6;3;2013
+AT12;30814;Engelhartstetten;17;10;7;2013
+AT12;30817;Gänserndorf;121;63;58;2013
+AT12;30819;Glinzendorf;2;1;1;2013
+AT12;30821;Groß-Enzersdorf;80;39;41;2013
+AT12;30822;Großhofen;0;0;0;2013
+AT12;30824;Groß-Schweinbarth;10;4;6;2013
+AT12;30825;Haringsee;11;9;2;2013
+AT12;30826;Hauskirchen;10;6;4;2013
+AT12;30827;Hohenau an der March;11;6;5;2013
+AT12;30828;Hohenruppersdorf;11;5;6;2013
+AT12;30829;Jedenspeigen;7;3;4;2013
+AT12;30830;Lassee;27;14;13;2013
+AT12;30831;Leopoldsdorf im Marchfelde;25;13;12;2013
+AT12;30834;Mannsdorf an der Donau;0;0;0;2013
+AT12;30835;Marchegg;15;5;10;2013
+AT12;30836;Markgrafneusiedl;8;6;2;2013
+AT12;30838;Matzen-Raggendorf;19;9;10;2013
+AT12;30841;Neusiedl an der Zaya;8;5;3;2013
+AT12;30842;Obersiebenbrunn;11;6;5;2013
+AT12;30844;Orth an der Donau;21;11;10;2013
+AT12;30845;Palterndorf-Dobermannsdorf;11;5;6;2013
+AT12;30846;Parbasdorf;3;2;1;2013
+AT12;30848;Prottes;13;4;9;2013
+AT12;30849;Raasdorf;2;1;1;2013
+AT12;30850;Ringelsdorf-Niederabsdorf;5;2;3;2013
+AT12;30852;Schönkirchen-Reyersdorf;20;8;12;2013
+AT12;30854;Spannberg;10;5;5;2013
+AT12;30856;Strasshof an der Nordbahn;78;42;36;2013
+AT12;30857;Sulz im Weinviertel;5;4;1;2013
+AT12;30858;Untersiebenbrunn;7;5;2;2013
+AT12;30859;Velm-Götzendorf;6;0;6;2013
+AT12;30860;Weikendorf;19;8;11;2013
+AT12;30863;Zistersdorf;31;18;13;2013
+AT12;30865;Weiden an der March;12;3;9;2013
+AT12;30902;Amaliendorf-Aalfang;5;2;3;2013
+AT12;30903;Brand-Nagelberg;10;7;3;2013
+AT12;30904;Eggern;7;2;5;2013
+AT12;30906;Eisgarn;10;6;4;2013
+AT12;30908;Gmünd;31;14;17;2013
+AT12;30909;Großdietmanns;32;16;16;2013
+AT12;30910;Bad Großpertholz;11;7;4;2013
+AT12;30912;Großschönau;14;7;7;2013
+AT12;30913;Moorbad Harbach;7;3;4;2013
+AT12;30915;Haugschlag;5;4;1;2013
+AT12;30916;Heidenreichstein;32;19;13;2013
+AT12;30917;Hirschbach;4;2;2;2013
+AT12;30920;Hoheneich;8;5;3;2013
+AT12;30921;Kirchberg am Walde;9;4;5;2013
+AT12;30925;Litschau;14;5;9;2013
+AT12;30929;Reingers;10;5;5;2013
+AT12;30932;St. Martin;7;2;5;2013
+AT12;30935;Schrems;32;16;16;2013
+AT12;30939;Unserfrau-Altweitra;4;1;3;2013
+AT12;30940;Waldenstein;12;7;5;2013
+AT12;30942;Weitra;24;12;12;2013
+AT12;31001;Alberndorf im Pulkautal;7;3;4;2013
+AT12;31008;Göllersdorf;20;13;7;2013
+AT12;31009;Grabern;13;7;6;2013
+AT12;31014;Guntersdorf;9;3;6;2013
+AT12;31015;Hadres;8;7;1;2013
+AT12;31016;Hardegg;11;4;7;2013
+AT12;31018;Haugsdorf;6;3;3;2013
+AT12;31019;Heldenberg;6;3;3;2013
+AT12;31021;Hohenwarth-Mühlbach a. M.;11;5;6;2013
+AT12;31022;Hollabrunn;89;49;40;2013
+AT12;31025;Mailberg;0;0;0;2013
+AT12;31026;Maissau;25;15;10;2013
+AT12;31028;Nappersdorf-Kammersdorf;7;6;1;2013
+AT12;31033;Pernersdorf;10;3;7;2013
+AT12;31035;Pulkau;12;6;6;2013
+AT12;31036;Ravelsbach;11;5;6;2013
+AT12;31037;Retz;40;25;15;2013
+AT12;31038;Retzbach;8;3;5;2013
+AT12;31041;Schrattenthal;6;4;2;2013
+AT12;31042;Seefeld-Kadolz;3;2;1;2013
+AT12;31043;Sitzendorf an der Schmida;13;6;7;2013
+AT12;31051;Wullersdorf;30;12;18;2013
+AT12;31052;Zellerndorf;23;8;15;2013
+AT12;31053;Ziersdorf;27;16;11;2013
+AT12;31101;Altenburg;8;3;5;2013
+AT12;31102;Brunn an der Wild;6;3;3;2013
+AT12;31103;Burgschleinitz-Kühnring;13;9;4;2013
+AT12;31104;Drosendorf-Zissersdorf;12;4;8;2013
+AT12;31105;Eggenburg;23;10;13;2013
+AT12;31106;Gars am Kamp;16;9;7;2013
+AT12;31107;Geras;21;11;10;2013
+AT12;31109;Horn;44;24;20;2013
+AT12;31110;Irnfritz-Messern;12;4;8;2013
+AT12;31111;Japons;2;0;2;2013
+AT12;31113;Langau;5;1;4;2013
+AT12;31114;Meiseldorf;7;3;4;2013
+AT12;31117;Pernegg;6;3;3;2013
+AT12;31119;Röhrenbach;4;4;0;2013
+AT12;31120;Röschitz;8;7;1;2013
+AT12;31121;Rosenburg-Mold;3;1;2;2013
+AT12;31123;St. Bernhard-Frauenhofen;8;7;1;2013
+AT12;31124;Sigmundsherberg;18;8;10;2013
+AT12;31129;Weitersfeld;11;6;5;2013
+AT12;31130;Straning-Grafenberg;8;8;0;2013
+AT12;31201;Bisamberg;30;16;14;2013
+AT12;31202;Enzersfeld im Weinviertel;13;6;7;2013
+AT12;31203;Ernstbrunn;21;10;11;2013
+AT12;31204;Großmugl;9;3;6;2013
+AT12;31205;Großrußbach;16;7;9;2013
+AT12;31206;Hagenbrunn;19;12;7;2013
+AT12;31207;Harmannsdorf;29;15;14;2013
+AT12;31208;Hausleiten;35;18;17;2013
+AT12;31213;Korneuburg;105;51;54;2013
+AT12;31214;Langenzersdorf;59;30;29;2013
+AT12;31215;Leitzersdorf;7;3;4;2013
+AT12;31216;Leobendorf;39;19;20;2013
+AT12;31224;Rußbach;11;5;6;2013
+AT12;31226;Sierndorf;32;23;9;2013
+AT12;31227;Spillern;23;7;16;2013
+AT12;31228;Stetteldorf am Wagram;10;5;5;2013
+AT12;31229;Stetten;7;5;2;2013
+AT12;31230;Stockerau;158;85;73;2013
+AT12;31234;Niederhollabrunn;10;7;3;2013
+AT12;31301;Aggsbach;4;2;2;2013
+AT12;31302;Albrechtsberg an der Großen Krems;13;8;5;2013
+AT12;31303;Bergern im Dunkelsteinerwald;5;3;2;2013
+AT12;31304;Dürnstein;7;3;4;2013
+AT12;31308;Grafenegg;28;16;12;2013
+AT12;31309;Furth bei Göttweig;27;14;13;2013
+AT12;31310;Gedersdorf;16;7;9;2013
+AT12;31311;Gföhl;22;13;9;2013
+AT12;31315;Hadersdorf-Kammern;18;8;10;2013
+AT12;31319;Jaidhof;18;9;9;2013
+AT12;31321;Krumau am Kamp;4;0;4;2013
+AT12;31322;Langenlois;68;35;33;2013
+AT12;31323;Lengenfeld;13;3;10;2013
+AT12;31324;Lichtenau im Waldviertel;16;6;10;2013
+AT12;31326;Maria Laach am Jauerling;8;4;4;2013
+AT12;31327;Mautern an der Donau;26;11;15;2013
+AT12;31330;Mühldorf;7;6;1;2013
+AT12;31333;Paudorf;18;12;6;2013
+AT12;31336;Rastenfeld;22;11;11;2013
+AT12;31337;Rohrendorf bei Krems;17;9;8;2013
+AT12;31338;Rossatz-Arnsdorf;2;2;0;2013
+AT12;31340;St. Leonhard am Hornerwald;5;1;4;2013
+AT12;31343;Senftenberg;9;2;7;2013
+AT12;31344;Spitz;8;1;7;2013
+AT12;31346;Straß im Straßertale;9;4;5;2013
+AT12;31347;Stratzing;6;0;6;2013
+AT12;31350;Weinzierl am Walde;4;3;1;2013
+AT12;31351;Weißenkirchen in der Wachau;12;5;7;2013
+AT12;31355;Schönberg am Kamp;16;9;7;2013
+AT12;31356;Droß;9;6;3;2013
+AT12;31401;Annaberg;3;1;2;2013
+AT12;31402;Eschenau;9;5;4;2013
+AT12;31403;Hainfeld;38;16;22;2013
+AT12;31404;Hohenberg;15;8;7;2013
+AT12;31405;Kaumberg;6;5;1;2013
+AT12;31406;Kleinzell;11;6;5;2013
+AT12;31407;Lilienfeld;22;15;7;2013
+AT12;31408;Mitterbach am Erlaufsee;1;1;0;2013
+AT12;31409;Ramsau;1;1;0;2013
+AT12;31410;Rohrbach an der Gölsen;9;1;8;2013
+AT12;31411;St. Aegyd am Neuwalde;12;6;6;2013
+AT12;31412;St. Veit an der Gölsen;30;9;21;2013
+AT12;31413;Traisen;21;11;10;2013
+AT12;31414;Türnitz;15;7;8;2013
+AT12;31502;Artstetten-Pöbring;11;5;6;2013
+AT12;31503;Bergland;20;9;11;2013
+AT12;31504;Bischofstetten;5;3;2;2013
+AT12;31505;Blindenmarkt;28;16;12;2013
+AT12;31506;Dorfstetten;7;2;5;2013
+AT12;31507;Dunkelsteinerwald;15;11;4;2013
+AT12;31508;Erlauf;9;5;4;2013
+AT12;31509;Golling an der Erlauf;6;5;1;2013
+AT12;31511;Hofamt Priel;13;5;8;2013
+AT12;31513;Hürm;18;11;7;2013
+AT12;31514;Kilb;29;11;18;2013
+AT12;31515;Kirnberg an der Mank;19;12;7;2013
+AT12;31516;Klein-Pöchlarn;7;4;3;2013
+AT12;31517;Krummnußbaum;8;4;4;2013
+AT12;31519;Leiben;14;7;7;2013
+AT12;31520;Loosdorf;36;19;17;2013
+AT12;31521;Mank;37;23;14;2013
+AT12;31522;Marbach an der Donau;12;6;6;2013
+AT12;31523;Maria Taferl;12;3;9;2013
+AT12;31524;Melk;45;22;23;2013
+AT12;31525;Münichreith-Laimbach;8;3;5;2013
+AT12;31527;Neumarkt an der Ybbs;24;10;14;2013
+AT12;31528;Nöchling;19;12;7;2013
+AT12;31530;Persenbeug-Gottsdorf;16;7;9;2013
+AT12;31531;Petzenkirchen;12;8;4;2013
+AT12;31533;Pöchlarn;36;21;15;2013
+AT12;31534;Pöggstall;25;16;9;2013
+AT12;31535;Raxendorf;9;6;3;2013
+AT12;31537;Ruprechtshofen;28;17;11;2013
+AT12;31539;St. Leonhard am Forst;24;13;11;2013
+AT12;31540;St. Martin-Karlsbach;19;10;9;2013
+AT12;31541;St. Oswald;7;4;3;2013
+AT12;31542;Schönbühel-Aggsbach;1;1;0;2013
+AT12;31543;Schollach;14;6;8;2013
+AT12;31546;Weiten;10;5;5;2013
+AT12;31549;Ybbs an der Donau;40;17;23;2013
+AT12;31550;Zelking-Matzleinsdorf;10;5;5;2013
+AT12;31551;Texingtal;24;11;13;2013
+AT12;31552;Yspertal;22;9;13;2013
+AT12;31553;Emmersdorf an der Donau;14;7;7;2013
+AT12;31601;Altlichtenwarth;6;3;3;2013
+AT12;31603;Asparn an der Zaya;13;6;7;2013
+AT12;31604;Bernhardsthal;7;5;2;2013
+AT12;31605;Bockfließ;13;7;6;2013
+AT12;31606;Drasenhofen;5;1;4;2013
+AT12;31608;Falkenstein;1;0;1;2013
+AT12;31609;Fallbach;4;0;4;2013
+AT12;31611;Gaubitsch;8;4;4;2013
+AT12;31612;Gaweinstal;33;14;19;2013
+AT12;31613;Gnadendorf;13;6;7;2013
+AT12;31614;Großebersdorf;14;9;5;2013
+AT12;31615;Großengersdorf;14;6;8;2013
+AT12;31616;Großharras;4;4;0;2013
+AT12;31617;Großkrut;12;4;8;2013
+AT12;31620;Hausbrunn;3;3;0;2013
+AT12;31621;Herrnbaumgarten;8;6;2;2013
+AT12;31622;Hochleithen;4;2;2;2013
+AT12;31627;Kreuttal;9;7;2;2013
+AT12;31628;Kreuzstetten;12;6;6;2013
+AT12;31629;Laa an der Thaya;50;24;26;2013
+AT12;31630;Ladendorf;15;9;6;2013
+AT12;31633;Mistelbach;96;46;50;2013
+AT12;31634;Neudorf bei Staatz;11;5;6;2013
+AT12;31636;Niederleis;4;0;4;2013
+AT12;31642;Pillichsdorf;14;9;5;2013
+AT12;31644;Poysdorf;47;25;22;2013
+AT12;31645;Rabensburg;12;5;7;2013
+AT12;31646;Schrattenberg;4;2;2;2013
+AT12;31649;Staatz;13;7;6;2013
+AT12;31650;Stronsdorf;13;8;5;2013
+AT12;31651;Ulrichskirchen-Schleinbach;21;12;9;2013
+AT12;31652;Unterstinkenbrunn;4;2;2;2013
+AT12;31653;Wildendürnbach;17;13;4;2013
+AT12;31654;Wilfersdorf;21;14;7;2013
+AT12;31655;Wolkersdorf im Weinviertel;72;31;41;2013
+AT12;31658;Ottenthal;6;2;4;2013
+AT12;31701;Achau;12;3;9;2013
+AT12;31702;Biedermannsdorf;20;10;10;2013
+AT12;31703;Breitenfurt bei Wien;30;14;16;2013
+AT12;31704;Brunn am Gebirge;122;65;57;2013
+AT12;31706;Gaaden;11;7;4;2013
+AT12;31707;Gießhübl;18;8;10;2013
+AT12;31709;Gumpoldskirchen;39;24;15;2013
+AT12;31710;Guntramsdorf;91;48;43;2013
+AT12;31711;Hennersdorf;3;2;1;2013
+AT12;31712;Hinterbrühl;32;14;18;2013
+AT12;31713;Kaltenleutgeben;22;8;14;2013
+AT12;31714;Laab im Walde;11;8;3;2013
+AT12;31715;Laxenburg;21;9;12;2013
+AT12;31716;Maria Enzersdorf;74;41;33;2013
+AT12;31717;Mödling;185;91;94;2013
+AT12;31718;Münchendorf;33;12;21;2013
+AT12;31719;Perchtoldsdorf;107;52;55;2013
+AT12;31723;Vösendorf;54;25;29;2013
+AT12;31725;Wiener Neudorf;69;33;36;2013
+AT12;31726;Wienerwald;15;7;8;2013
+AT12;31801;Altendorf;2;0;2;2013
+AT12;31802;Aspang-Markt;11;8;3;2013
+AT12;31803;Aspangberg-St. Peter;15;10;5;2013
+AT12;31804;Breitenau;14;4;10;2013
+AT12;31805;Breitenstein;0;0;0;2013
+AT12;31806;Buchbach;2;0;2;2013
+AT12;31807;Edlitz;9;5;4;2013
+AT12;31808;Enzenreith;16;8;8;2013
+AT12;31809;Feistritz am Wechsel;13;5;8;2013
+AT12;31810;Gloggnitz;47;26;21;2013
+AT12;31811;Grafenbach-St.Valentin;22;10;12;2013
+AT12;31812;Grimmenstein;12;6;6;2013
+AT12;31813;Grünbach am Schneeberg;13;5;8;2013
+AT12;31814;Kirchberg am Wechsel;22;11;11;2013
+AT12;31815;Mönichkirchen;5;3;2;2013
+AT12;31817;Natschbach-Loipersbach;15;7;8;2013
+AT12;31818;Neunkirchen;91;45;46;2013
+AT12;31820;Otterthal;8;2;6;2013
+AT12;31821;Payerbach;16;14;2;2013
+AT12;31823;Pitten;17;10;7;2013
+AT12;31825;Prigglitz;1;0;1;2013
+AT12;31826;Puchberg am Schneeberg;28;16;12;2013
+AT12;31827;Raach am Hochgebirge;7;3;4;2013
+AT12;31829;Reichenau an der Rax;28;11;17;2013
+AT12;31830;St. Corona am Wechsel;4;2;2;2013
+AT12;31831;St. Egyden am Steinfeld;16;11;5;2013
+AT12;31832;Scheiblingkirchen-Thernberg;11;4;7;2013
+AT12;31833;Schottwien;1;0;1;2013
+AT12;31834;Schrattenbach;2;1;1;2013
+AT12;31835;Schwarzau am Steinfeld;18;10;8;2013
+AT12;31836;Schwarzau im Gebirge;6;3;3;2013
+AT12;31837;Seebenstein;16;6;10;2013
+AT12;31838;Semmering;4;3;1;2013
+AT12;31839;Ternitz;128;67;61;2013
+AT12;31840;Thomasberg;17;6;11;2013
+AT12;31841;Trattenbach;5;2;3;2013
+AT12;31842;Bürg-Vöstenhof;2;1;1;2013
+AT12;31843;Warth;15;7;8;2013
+AT12;31844;Wartmannstetten;15;7;8;2013
+AT12;31845;Willendorf;4;2;2;2013
+AT12;31846;Wimpassing im Schwarzatale;15;10;5;2013
+AT12;31847;Würflach;10;2;8;2013
+AT12;31848;Zöbern;7;3;4;2013
+AT12;31849;Höflein an der Hohen Wand;8;2;6;2013
+AT12;31901;Altlengbach;25;15;10;2013
+AT12;31902;Asperhofen;23;18;5;2013
+AT12;31903;Böheimkirchen;58;34;24;2013
+AT12;31904;Brand-Laaben;13;7;6;2013
+AT12;31905;Eichgraben;28;15;13;2013
+AT12;31906;Frankenfels;21;11;10;2013
+AT12;31907;Gerersdorf;4;2;2;2013
+AT12;31909;Hofstetten-Grünau;25;13;12;2013
+AT12;31910;Hafnerbach;15;10;5;2013
+AT12;31911;Haunoldstein;4;1;3;2013
+AT12;31912;Herzogenburg;64;30;34;2013
+AT12;31913;Inzersdorf-Getzersdorf;19;13;6;2013
+AT12;31915;Kapelln;14;6;8;2013
+AT12;31916;Karlstetten;18;10;8;2013
+AT12;31917;Kasten bei Böheimkirchen;14;9;5;2013
+AT12;31918;Kirchberg an der Pielach;30;18;12;2013
+AT12;31919;Kirchstetten;18;11;7;2013
+AT12;31920;Loich;3;2;1;2013
+AT12;31921;Maria-Anzbach;16;10;6;2013
+AT12;31922;Markersdorf-Haindorf;19;8;11;2013
+AT12;31923;Michelbach;7;4;3;2013
+AT12;31925;Neidling;16;10;6;2013
+AT12;31926;Neulengbach;69;35;34;2013
+AT12;31927;Neustift-Innermanzing;14;7;7;2013
+AT12;31928;Nußdorf ob der Traisen;16;10;6;2013
+AT12;31929;Ober-Grafendorf;42;18;24;2013
+AT12;31930;Obritzberg-Rust;17;9;8;2013
+AT12;31932;Prinzersdorf;18;7;11;2013
+AT12;31934;Pyhra;30;11;19;2013
+AT12;31935;Rabenstein an der Pielach;21;12;9;2013
+AT12;31938;St. Margarethen an der Sierning;10;5;5;2013
+AT12;31939;Schwarzenbach an der Pielach;3;3;0;2013
+AT12;31940;Statzendorf;13;7;6;2013
+AT12;31941;Stössing;7;4;3;2013
+AT12;31943;Traismauer;47;24;23;2013
+AT12;31945;Weinburg;14;7;7;2013
+AT12;31946;Weißenkirchen an der Perschling;17;8;9;2013
+AT12;31947;Wilhelmsburg;52;31;21;2013
+AT12;31948;Wölbling;24;10;14;2013
+AT12;32001;Gaming;25;13;12;2013
+AT12;32002;Göstling an der Ybbs;13;9;4;2013
+AT12;32003;Gresten;18;8;10;2013
+AT12;32004;Gresten-Land;14;10;4;2013
+AT12;32005;Lunz am See;19;11;8;2013
+AT12;32006;Oberndorf an der Melk;35;17;18;2013
+AT12;32007;Puchenstuben;3;2;1;2013
+AT12;32008;Purgstall an der Erlauf;56;32;24;2013
+AT12;32009;Randegg;24;13;11;2013
+AT12;32010;Reinsberg;13;7;6;2013
+AT12;32011;St. Anton an der Jeßnitz;8;4;4;2013
+AT12;32012;St. Georgen an der Leys;16;10;6;2013
+AT12;32013;Scheibbs;37;17;20;2013
+AT12;32014;Steinakirchen am Forst;24;14;10;2013
+AT12;32015;Wang;11;9;2;2013
+AT12;32016;Wieselburg;40;21;19;2013
+AT12;32017;Wieselburg-Land;30;17;13;2013
+AT12;32018;Wolfpassing;23;12;11;2013
+AT12;32101;Absdorf;14;4;10;2013
+AT12;32104;Atzenbrugg;24;11;13;2013
+AT12;32106;Fels am Wagram;15;8;7;2013
+AT12;32107;Grafenwörth;21;9;12;2013
+AT12;32109;Großriedenthal;11;2;9;2013
+AT12;32110;Großweikersdorf;29;15;14;2013
+AT12;32112;Judenau-Baumgarten;14;3;11;2013
+AT12;32114;Kirchberg am Wagram;35;22;13;2013
+AT12;32115;Königsbrunn am Wagram;13;4;9;2013
+AT12;32116;Königstetten;24;15;9;2013
+AT12;32119;Langenrohr;21;13;8;2013
+AT12;32120;Michelhausen;24;12;12;2013
+AT12;32131;Sieghartskirchen;55;28;27;2013
+AT12;32132;Sitzenberg-Reidling;16;7;9;2013
+AT12;32134;Tulbing;17;6;11;2013
+AT12;32135;Tulln an der Donau;149;70;79;2013
+AT12;32139;Würmla;11;4;7;2013
+AT12;32140;Zeiselmauer-Wolfpassing;18;11;7;2013
+AT12;32141;Zwentendorf an der Donau;22;12;10;2013
+AT12;32142;St. Andrä-Wördern;47;23;24;2013
+AT12;32143;Muckendorf-Wipfing;14;7;7;2013
+AT12;32202;Dietmanns;4;2;2;2013
+AT12;32203;Dobersberg;10;2;8;2013
+AT12;32206;Gastern;8;3;5;2013
+AT12;32207;Groß-Siegharts;16;10;6;2013
+AT12;32209;Karlstein an der Thaya;13;7;6;2013
+AT12;32210;Kautzen;6;2;4;2013
+AT12;32212;Ludweis-Aigen;10;5;5;2013
+AT12;32214;Pfaffenschlag bei Waidhofen an der Thaya;3;3;0;2013
+AT12;32216;Raabs an der Thaya;17;9;8;2013
+AT12;32217;Thaya;9;4;5;2013
+AT12;32219;Vitis;25;14;11;2013
+AT12;32220;Waidhofen an der Thaya;41;22;19;2013
+AT12;32221;Waidhofen an der Thaya-Land;9;5;4;2013
+AT12;32222;Waldkirchen an der Thaya;4;2;2;2013
+AT12;32223;Windigsteig;9;2;7;2013
+AT12;32301;Bad Fischau-Brunn;27;12;15;2013
+AT12;32302;Bad Schönau;7;3;4;2013
+AT12;32304;Ebenfurth;27;12;15;2013
+AT12;32305;Eggendorf;27;15;12;2013
+AT12;32306;Bad Erlach;28;15;13;2013
+AT12;32307;Felixdorf;43;23;20;2013
+AT12;32308;Gutenstein;11;5;6;2013
+AT12;32309;Hochneukirchen-Gschaidt;9;3;6;2013
+AT12;32310;Hochwolkersdorf;6;3;3;2013
+AT12;32311;Hohe Wand;19;8;11;2013
+AT12;32312;Hollenthon;8;3;5;2013
+AT12;32313;Katzelsdorf;22;14;8;2013
+AT12;32314;Kirchschlag in der Buckligen Welt;25;15;10;2013
+AT12;32315;Krumbach;17;9;8;2013
+AT12;32316;Lanzenkirchen;40;21;19;2013
+AT12;32317;Lichtenegg;10;4;6;2013
+AT12;32318;Lichtenwörth;14;10;4;2013
+AT12;32319;Markt Piesting;41;19;22;2013
+AT12;32320;Matzendorf-Hölles;12;7;5;2013
+AT12;32321;Miesenbach;6;2;4;2013
+AT12;32322;Muggendorf;3;1;2;2013
+AT12;32323;Pernitz;17;7;10;2013
+AT12;32324;Rohr im Gebirge;6;6;0;2013
+AT12;32325;Bromberg;11;6;5;2013
+AT12;32326;Schwarzenbach;11;5;6;2013
+AT12;32327;Sollenau;36;14;22;2013
+AT12;32330;Theresienfeld;35;19;16;2013
+AT12;32331;Waidmannsfeld;9;5;4;2013
+AT12;32332;Waldegg;19;9;10;2013
+AT12;32333;Walpersbach;7;4;3;2013
+AT12;32334;Weikersdorf am Steinfelde;7;4;3;2013
+AT12;32335;Wiesmath;16;6;10;2013
+AT12;32336;Winzendorf-Muthmannsdorf;20;10;10;2013
+AT12;32337;Wöllersdorf-Steinabrückl;45;20;25;2013
+AT12;32338;Zillingdorf;13;6;7;2013
+AT12;32401;Ebergassing;37;19;18;2013
+AT12;32402;Fischamend;51;26;25;2013
+AT12;32403;Gablitz;32;16;16;2013
+AT12;32404;Gerasdorf bei Wien;69;38;31;2013
+AT12;32405;Gramatneusiedl;31;13;18;2013
+AT12;32406;Himberg;70;42;28;2013
+AT12;32407;Klein-Neusiedl;8;5;3;2013
+AT12;32408;Klosterneuburg;176;80;96;2013
+AT12;32409;Lanzendorf;8;5;3;2013
+AT12;32410;Leopoldsdorf;39;20;19;2013
+AT12;32411;Maria-Lanzendorf;12;5;7;2013
+AT12;32412;Mauerbach;26;11;15;2013
+AT12;32413;Moosbrunn;11;5;6;2013
+AT12;32415;Pressbaum;52;23;29;2013
+AT12;32416;Purkersdorf;91;49;42;2013
+AT12;32417;Rauchenwarth;5;4;1;2013
+AT12;32418;Schwadorf;14;6;8;2013
+AT12;32419;Schwechat;130;75;55;2013
+AT12;32421;Tullnerbach;20;10;10;2013
+AT12;32423;Wolfsgraben;17;10;7;2013
+AT12;32424;Zwölfaxing;7;4;3;2013
+AT12;32501;Allentsteig;11;5;6;2013
+AT12;32502;Arbesbach;13;5;8;2013
+AT12;32503;Bärnkopf;4;2;2;2013
+AT12;32504;Echsenbach;7;2;5;2013
+AT12;32505;Göpfritz an der Wild;17;9;8;2013
+AT12;32506;Grafenschlag;8;3;5;2013
+AT12;32508;Groß Gerungs;48;28;20;2013
+AT12;32509;Großgöttfritz;11;8;3;2013
+AT12;32511;Gutenbrunn;4;1;3;2013
+AT12;32514;Kirchschlag;5;1;4;2013
+AT12;32515;Kottes-Purk;11;6;5;2013
+AT12;32516;Langschlag;22;11;11;2013
+AT12;32517;Martinsberg;10;9;1;2013
+AT12;32518;Ottenschlag;7;3;4;2013
+AT12;32519;Altmelon;7;3;4;2013
+AT12;32520;Pölla;10;3;7;2013
+AT12;32521;Rappottenstein;23;15;8;2013
+AT12;32522;Sallingberg;14;6;8;2013
+AT12;32523;Schönbach;3;1;2;2013
+AT12;32524;Schwarzenau;11;3;8;2013
+AT12;32525;Schweiggers;15;10;5;2013
+AT12;32528;Bad Traunstein;11;8;3;2013
+AT12;32529;Waldhausen;16;6;10;2013
+AT12;32530;Zwettl-Niederösterreich;92;50;42;2013
+AT12;30101;Krems an der Donau;195;96;99;2012
+AT12;30201;St. Pölten;465;222;243;2012
+AT12;30301;Waidhofen an der Ybbs;126;61;65;2012
+AT12;30401;Wiener Neustadt;413;199;214;2012
+AT12;30501;Allhartsberg;26;13;13;2012
+AT12;30502;Amstetten;216;114;102;2012
+AT12;30503;Ardagger;36;18;18;2012
+AT12;30504;Aschbach-Markt;37;20;17;2012
+AT12;30506;Behamberg;39;15;24;2012
+AT12;30507;Biberbach;13;10;3;2012
+AT12;30508;Ennsdorf;30;15;15;2012
+AT12;30509;Ernsthofen;17;7;10;2012
+AT12;30510;Ertl;6;1;5;2012
+AT12;30511;Euratsfeld;29;16;13;2012
+AT12;30512;Ferschnitz;15;8;7;2012
+AT12;30514;Haag;57;29;28;2012
+AT12;30515;Haidershofen;35;19;16;2012
+AT12;30516;Hollenstein an der Ybbs;12;7;5;2012
+AT12;30517;Kematen an der Ybbs;30;13;17;2012
+AT12;30520;Neuhofen an der Ybbs;29;14;15;2012
+AT12;30521;Neustadtl an der Donau;20;9;11;2012
+AT12;30522;Oed-Oehling;27;13;14;2012
+AT12;30524;Opponitz;16;8;8;2012
+AT12;30526;St. Georgen am Reith;7;4;3;2012
+AT12;30527;St. Georgen am Ybbsfelde;34;19;15;2012
+AT12;30529;St. Pantaleon-Erla;16;11;5;2012
+AT12;30530;St. Peter in der Au;59;29;30;2012
+AT12;30531;St. Valentin;81;43;38;2012
+AT12;30532;Seitenstetten;36;18;18;2012
+AT12;30533;Sonntagberg;29;17;12;2012
+AT12;30534;Strengberg;22;9;13;2012
+AT12;30536;Viehdorf;14;10;4;2012
+AT12;30538;Wallsee-Sindelburg;29;17;12;2012
+AT12;30539;Weistrach;25;14;11;2012
+AT12;30541;Winklarn;10;3;7;2012
+AT12;30542;Wolfsbach;21;10;11;2012
+AT12;30543;Ybbsitz;37;18;19;2012
+AT12;30544;Zeillern;22;11;11;2012
+AT12;30601;Alland;17;6;11;2012
+AT12;30602;Altenmarkt an der Triesting;20;8;12;2012
+AT12;30603;Bad Vöslau;68;31;37;2012
+AT12;30604;Baden;199;92;107;2012
+AT12;30605;Berndorf;75;36;39;2012
+AT12;30607;Ebreichsdorf;99;63;36;2012
+AT12;30608;Enzesfeld-Lindabrunn;29;13;16;2012
+AT12;30609;Furth an der Triesting;9;5;4;2012
+AT12;30612;Günselsdorf;20;11;9;2012
+AT12;30613;Heiligenkreuz;16;9;7;2012
+AT12;30614;Hernstein;14;9;5;2012
+AT12;30615;Hirtenberg;27;8;19;2012
+AT12;30616;Klausen-Leopoldsdorf;22;10;12;2012
+AT12;30618;Kottingbrunn;45;26;19;2012
+AT12;30620;Leobersdorf;37;17;20;2012
+AT12;30621;Mitterndorf an der Fischa;30;18;12;2012
+AT12;30623;Oberwaltersdorf;38;19;19;2012
+AT12;30625;Pfaffstätten;30;22;8;2012
+AT12;30626;Pottendorf;63;36;27;2012
+AT12;30627;Pottenstein;25;15;10;2012
+AT12;30629;Reisenberg;19;6;13;2012
+AT12;30631;Schönau an der Triesting;12;8;4;2012
+AT12;30633;Seibersdorf;11;8;3;2012
+AT12;30635;Sooß;9;6;3;2012
+AT12;30636;Tattendorf;16;8;8;2012
+AT12;30637;Teesdorf;10;5;5;2012
+AT12;30639;Traiskirchen;207;111;96;2012
+AT12;30641;Trumau;42;23;19;2012
+AT12;30645;Weissenbach an der Triesting;17;8;9;2012
+AT12;30646;Blumau-Neurißhof;18;10;8;2012
+AT12;30701;Au am Leithaberge;8;8;0;2012
+AT12;30702;Bad Deutsch-Altenburg;12;4;8;2012
+AT12;30703;Berg;6;2;4;2012
+AT12;30704;Bruck an der Leitha;63;36;27;2012
+AT12;30706;Enzersdorf an der Fischa;23;14;9;2012
+AT12;30708;Göttlesbrunn-Arbesthal;7;2;5;2012
+AT12;30709;Götzendorf an der Leitha;23;14;9;2012
+AT12;30710;Hainburg a. d. Donau;81;39;42;2012
+AT12;30711;Haslau-Maria Ellend;12;5;7;2012
+AT12;30712;Höflein;9;5;4;2012
+AT12;30713;Hof am Leithaberge;11;5;6;2012
+AT12;30715;Hundsheim;7;2;5;2012
+AT12;30716;Mannersdorf am Leithagebirge;40;21;19;2012
+AT12;30718;Petronell-Carnuntum;11;9;2;2012
+AT12;30719;Prellenkirchen;14;8;6;2012
+AT12;30721;Rohrau;13;6;7;2012
+AT12;30722;Scharndorf;8;5;3;2012
+AT12;30724;Sommerein;16;7;9;2012
+AT12;30726;Trautmannsdorf an der Leitha;17;10;7;2012
+AT12;30728;Wolfsthal;12;2;10;2012
+AT12;30801;Aderklaa;1;0;1;2012
+AT12;30802;Andlersdorf;3;0;3;2012
+AT12;30803;Angern an der March;30;16;14;2012
+AT12;30804;Auersthal;14;7;7;2012
+AT12;30805;Bad Pirawarth;17;8;9;2012
+AT12;30808;Deutsch-Wagram;63;29;34;2012
+AT12;30810;Drösing;5;3;2;2012
+AT12;30811;Dürnkrut;16;7;9;2012
+AT12;30812;Ebenthal;8;7;1;2012
+AT12;30813;Eckartsau;9;5;4;2012
+AT12;30814;Engelhartstetten;21;12;9;2012
+AT12;30817;Gänserndorf;101;52;49;2012
+AT12;30819;Glinzendorf;0;0;0;2012
+AT12;30821;Groß-Enzersdorf;86;37;49;2012
+AT12;30822;Großhofen;3;2;1;2012
+AT12;30824;Groß-Schweinbarth;12;7;5;2012
+AT12;30825;Haringsee;8;1;7;2012
+AT12;30826;Hauskirchen;6;2;4;2012
+AT12;30827;Hohenau an der March;22;9;13;2012
+AT12;30828;Hohenruppersdorf;10;6;4;2012
+AT12;30829;Jedenspeigen;6;5;1;2012
+AT12;30830;Lassee;18;9;9;2012
+AT12;30831;Leopoldsdorf im Marchfelde;16;11;5;2012
+AT12;30834;Mannsdorf an der Donau;3;2;1;2012
+AT12;30835;Marchegg;19;10;9;2012
+AT12;30836;Markgrafneusiedl;7;5;2;2012
+AT12;30838;Matzen-Raggendorf;22;12;10;2012
+AT12;30841;Neusiedl an der Zaya;6;3;3;2012
+AT12;30842;Obersiebenbrunn;13;5;8;2012
+AT12;30844;Orth an der Donau;18;9;9;2012
+AT12;30845;Palterndorf-Dobermannsdorf;13;7;6;2012
+AT12;30846;Parbasdorf;2;1;1;2012
+AT12;30848;Prottes;11;8;3;2012
+AT12;30849;Raasdorf;9;7;2;2012
+AT12;30850;Ringelsdorf-Niederabsdorf;13;5;8;2012
+AT12;30852;Schönkirchen-Reyersdorf;11;5;6;2012
+AT12;30854;Spannberg;9;4;5;2012
+AT12;30856;Strasshof an der Nordbahn;63;27;36;2012
+AT12;30857;Sulz im Weinviertel;10;2;8;2012
+AT12;30858;Untersiebenbrunn;9;5;4;2012
+AT12;30859;Velm-Götzendorf;12;5;7;2012
+AT12;30860;Weikendorf;12;4;8;2012
+AT12;30863;Zistersdorf;29;14;15;2012
+AT12;30865;Weiden an der March;5;3;2;2012
+AT12;30902;Amaliendorf-Aalfang;8;7;1;2012
+AT12;30903;Brand-Nagelberg;12;4;8;2012
+AT12;30904;Eggern;4;4;0;2012
+AT12;30906;Eisgarn;3;2;1;2012
+AT12;30908;Gmünd;39;23;16;2012
+AT12;30909;Großdietmanns;15;7;8;2012
+AT12;30910;Bad Großpertholz;8;4;4;2012
+AT12;30912;Großschönau;11;6;5;2012
+AT12;30913;Moorbad Harbach;4;2;2;2012
+AT12;30915;Haugschlag;3;2;1;2012
+AT12;30916;Heidenreichstein;30;16;14;2012
+AT12;30917;Hirschbach;2;1;1;2012
+AT12;30920;Hoheneich;12;4;8;2012
+AT12;30921;Kirchberg am Walde;10;3;7;2012
+AT12;30925;Litschau;10;5;5;2012
+AT12;30929;Reingers;5;3;2;2012
+AT12;30932;St. Martin;11;8;3;2012
+AT12;30935;Schrems;40;15;25;2012
+AT12;30939;Unserfrau-Altweitra;12;5;7;2012
+AT12;30940;Waldenstein;11;5;6;2012
+AT12;30942;Weitra;20;13;7;2012
+AT12;31001;Alberndorf im Pulkautal;4;3;1;2012
+AT12;31008;Göllersdorf;21;9;12;2012
+AT12;31009;Grabern;12;5;7;2012
+AT12;31014;Guntersdorf;13;6;7;2012
+AT12;31015;Hadres;14;8;6;2012
+AT12;31016;Hardegg;15;6;9;2012
+AT12;31018;Haugsdorf;9;6;3;2012
+AT12;31019;Heldenberg;12;7;5;2012
+AT12;31021;Hohenwarth-Mühlbach a. M.;15;5;10;2012
+AT12;31022;Hollabrunn;106;57;49;2012
+AT12;31025;Mailberg;4;1;3;2012
+AT12;31026;Maissau;8;4;4;2012
+AT12;31028;Nappersdorf-Kammersdorf;9;7;2;2012
+AT12;31033;Pernersdorf;7;3;4;2012
+AT12;31035;Pulkau;13;10;3;2012
+AT12;31036;Ravelsbach;18;9;9;2012
+AT12;31037;Retz;37;23;14;2012
+AT12;31038;Retzbach;1;1;0;2012
+AT12;31041;Schrattenthal;3;1;2;2012
+AT12;31042;Seefeld-Kadolz;6;3;3;2012
+AT12;31043;Sitzendorf an der Schmida;14;11;3;2012
+AT12;31051;Wullersdorf;12;6;6;2012
+AT12;31052;Zellerndorf;18;12;6;2012
+AT12;31053;Ziersdorf;25;15;10;2012
+AT12;31101;Altenburg;6;3;3;2012
+AT12;31102;Brunn an der Wild;7;5;2;2012
+AT12;31103;Burgschleinitz-Kühnring;10;4;6;2012
+AT12;31104;Drosendorf-Zissersdorf;6;1;5;2012
+AT12;31105;Eggenburg;33;16;17;2012
+AT12;31106;Gars am Kamp;34;22;12;2012
+AT12;31107;Geras;12;5;7;2012
+AT12;31109;Horn;64;34;30;2012
+AT12;31110;Irnfritz-Messern;15;9;6;2012
+AT12;31111;Japons;7;4;3;2012
+AT12;31113;Langau;0;0;0;2012
+AT12;31114;Meiseldorf;5;3;2;2012
+AT12;31117;Pernegg;4;1;3;2012
+AT12;31119;Röhrenbach;3;0;3;2012
+AT12;31120;Röschitz;6;5;1;2012
+AT12;31121;Rosenburg-Mold;10;7;3;2012
+AT12;31123;St. Bernhard-Frauenhofen;7;5;2;2012
+AT12;31124;Sigmundsherberg;15;11;4;2012
+AT12;31129;Weitersfeld;21;7;14;2012
+AT12;31130;Straning-Grafenberg;7;4;3;2012
+AT12;31201;Bisamberg;30;12;18;2012
+AT12;31202;Enzersfeld im Weinviertel;12;6;6;2012
+AT12;31203;Ernstbrunn;30;17;13;2012
+AT12;31204;Großmugl;18;11;7;2012
+AT12;31205;Großrußbach;13;7;6;2012
+AT12;31206;Hagenbrunn;13;11;2;2012
+AT12;31207;Harmannsdorf;40;17;23;2012
+AT12;31208;Hausleiten;20;11;9;2012
+AT12;31213;Korneuburg;114;58;56;2012
+AT12;31214;Langenzersdorf;61;28;33;2012
+AT12;31215;Leitzersdorf;13;8;5;2012
+AT12;31216;Leobendorf;37;13;24;2012
+AT12;31224;Rußbach;10;6;4;2012
+AT12;31226;Sierndorf;41;23;18;2012
+AT12;31227;Spillern;14;11;3;2012
+AT12;31228;Stetteldorf am Wagram;7;5;2;2012
+AT12;31229;Stetten;8;7;1;2012
+AT12;31230;Stockerau;126;59;67;2012
+AT12;31234;Niederhollabrunn;10;4;6;2012
+AT12;31301;Aggsbach;6;2;4;2012
+AT12;31302;Albrechtsberg an der Großen Krems;7;5;2;2012
+AT12;31303;Bergern im Dunkelsteinerwald;12;9;3;2012
+AT12;31304;Dürnstein;12;8;4;2012
+AT12;31308;Grafenegg;28;13;15;2012
+AT12;31309;Furth bei Göttweig;12;7;5;2012
+AT12;31310;Gedersdorf;13;6;7;2012
+AT12;31311;Gföhl;18;11;7;2012
+AT12;31315;Hadersdorf-Kammern;16;7;9;2012
+AT12;31319;Jaidhof;16;6;10;2012
+AT12;31321;Krumau am Kamp;7;3;4;2012
+AT12;31322;Langenlois;71;30;41;2012
+AT12;31323;Lengenfeld;8;2;6;2012
+AT12;31324;Lichtenau im Waldviertel;17;11;6;2012
+AT12;31326;Maria Laach am Jauerling;6;3;3;2012
+AT12;31327;Mautern an der Donau;36;22;14;2012
+AT12;31330;Mühldorf;9;3;6;2012
+AT12;31333;Paudorf;20;8;12;2012
+AT12;31336;Rastenfeld;13;7;6;2012
+AT12;31337;Rohrendorf bei Krems;14;10;4;2012
+AT12;31338;Rossatz-Arnsdorf;7;3;4;2012
+AT12;31340;St. Leonhard am Hornerwald;9;4;5;2012
+AT12;31343;Senftenberg;20;8;12;2012
+AT12;31344;Spitz;11;4;7;2012
+AT12;31346;Straß im Straßertale;9;6;3;2012
+AT12;31347;Stratzing;4;4;0;2012
+AT12;31350;Weinzierl am Walde;18;8;10;2012
+AT12;31351;Weißenkirchen in der Wachau;12;6;6;2012
+AT12;31355;Schönberg am Kamp;20;9;11;2012
+AT12;31356;Droß;7;4;3;2012
+AT12;31401;Annaberg;4;1;3;2012
+AT12;31402;Eschenau;15;5;10;2012
+AT12;31403;Hainfeld;28;12;16;2012
+AT12;31404;Hohenberg;11;6;5;2012
+AT12;31405;Kaumberg;9;5;4;2012
+AT12;31406;Kleinzell;10;6;4;2012
+AT12;31407;Lilienfeld;26;13;13;2012
+AT12;31408;Mitterbach am Erlaufsee;3;1;2;2012
+AT12;31409;Ramsau;14;10;4;2012
+AT12;31410;Rohrbach an der Gölsen;18;6;12;2012
+AT12;31411;St. Aegyd am Neuwalde;8;7;1;2012
+AT12;31412;St. Veit an der Gölsen;44;23;21;2012
+AT12;31413;Traisen;40;20;20;2012
+AT12;31414;Türnitz;14;5;9;2012
+AT12;31502;Artstetten-Pöbring;14;8;6;2012
+AT12;31503;Bergland;17;13;4;2012
+AT12;31504;Bischofstetten;10;5;5;2012
+AT12;31505;Blindenmarkt;28;11;17;2012
+AT12;31506;Dorfstetten;5;2;3;2012
+AT12;31507;Dunkelsteinerwald;16;9;7;2012
+AT12;31508;Erlauf;10;6;4;2012
+AT12;31509;Golling an der Erlauf;11;4;7;2012
+AT12;31511;Hofamt Priel;23;9;14;2012
+AT12;31513;Hürm;19;8;11;2012
+AT12;31514;Kilb;30;18;12;2012
+AT12;31515;Kirnberg an der Mank;14;8;6;2012
+AT12;31516;Klein-Pöchlarn;8;2;6;2012
+AT12;31517;Krummnußbaum;20;10;10;2012
+AT12;31519;Leiben;17;10;7;2012
+AT12;31520;Loosdorf;51;21;30;2012
+AT12;31521;Mank;27;15;12;2012
+AT12;31522;Marbach an der Donau;14;7;7;2012
+AT12;31523;Maria Taferl;4;2;2;2012
+AT12;31524;Melk;31;14;17;2012
+AT12;31525;Münichreith-Laimbach;17;7;10;2012
+AT12;31527;Neumarkt an der Ybbs;21;12;9;2012
+AT12;31528;Nöchling;18;5;13;2012
+AT12;31530;Persenbeug-Gottsdorf;17;5;12;2012
+AT12;31531;Petzenkirchen;17;8;9;2012
+AT12;31533;Pöchlarn;43;19;24;2012
+AT12;31534;Pöggstall;20;9;11;2012
+AT12;31535;Raxendorf;10;4;6;2012
+AT12;31537;Ruprechtshofen;16;11;5;2012
+AT12;31539;St. Leonhard am Forst;26;13;13;2012
+AT12;31540;St. Martin-Karlsbach;16;10;6;2012
+AT12;31541;St. Oswald;13;8;5;2012
+AT12;31542;Schönbühel-Aggsbach;3;2;1;2012
+AT12;31543;Schollach;11;5;6;2012
+AT12;31546;Weiten;10;4;6;2012
+AT12;31549;Ybbs an der Donau;46;22;24;2012
+AT12;31550;Zelking-Matzleinsdorf;9;4;5;2012
+AT12;31551;Texingtal;22;11;11;2012
+AT12;31552;Yspertal;16;9;7;2012
+AT12;31553;Emmersdorf an der Donau;17;10;7;2012
+AT12;31601;Altlichtenwarth;6;4;2;2012
+AT12;31603;Asparn an der Zaya;14;6;8;2012
+AT12;31604;Bernhardsthal;9;1;8;2012
+AT12;31605;Bockfließ;12;5;7;2012
+AT12;31606;Drasenhofen;9;3;6;2012
+AT12;31608;Falkenstein;1;1;0;2012
+AT12;31609;Fallbach;6;2;4;2012
+AT12;31611;Gaubitsch;9;4;5;2012
+AT12;31612;Gaweinstal;32;14;18;2012
+AT12;31613;Gnadendorf;3;2;1;2012
+AT12;31614;Großebersdorf;22;14;8;2012
+AT12;31615;Großengersdorf;19;10;9;2012
+AT12;31616;Großharras;5;3;2;2012
+AT12;31617;Großkrut;6;2;4;2012
+AT12;31620;Hausbrunn;4;2;2;2012
+AT12;31621;Herrnbaumgarten;10;6;4;2012
+AT12;31622;Hochleithen;8;4;4;2012
+AT12;31627;Kreuttal;7;5;2;2012
+AT12;31628;Kreuzstetten;11;4;7;2012
+AT12;31629;Laa an der Thaya;52;22;30;2012
+AT12;31630;Ladendorf;17;11;6;2012
+AT12;31633;Mistelbach;99;52;47;2012
+AT12;31634;Neudorf bei Staatz;15;9;6;2012
+AT12;31636;Niederleis;3;2;1;2012
+AT12;31642;Pillichsdorf;15;6;9;2012
+AT12;31644;Poysdorf;47;29;18;2012
+AT12;31645;Rabensburg;4;3;1;2012
+AT12;31646;Schrattenberg;8;2;6;2012
+AT12;31649;Staatz;8;4;4;2012
+AT12;31650;Stronsdorf;13;8;5;2012
+AT12;31651;Ulrichskirchen-Schleinbach;22;8;14;2012
+AT12;31652;Unterstinkenbrunn;6;3;3;2012
+AT12;31653;Wildendürnbach;11;8;3;2012
+AT12;31654;Wilfersdorf;18;13;5;2012
+AT12;31655;Wolkersdorf im Weinviertel;75;45;30;2012
+AT12;31658;Ottenthal;5;1;4;2012
+AT12;31701;Achau;13;7;6;2012
+AT12;31702;Biedermannsdorf;15;11;4;2012
+AT12;31703;Breitenfurt bei Wien;40;21;19;2012
+AT12;31704;Brunn am Gebirge;114;56;58;2012
+AT12;31706;Gaaden;13;4;9;2012
+AT12;31707;Gießhübl;16;4;12;2012
+AT12;31709;Gumpoldskirchen;31;17;14;2012
+AT12;31710;Guntramsdorf;76;38;38;2012
+AT12;31711;Hennersdorf;8;2;6;2012
+AT12;31712;Hinterbrühl;19;9;10;2012
+AT12;31713;Kaltenleutgeben;26;14;12;2012
+AT12;31714;Laab im Walde;6;3;3;2012
+AT12;31715;Laxenburg;16;10;6;2012
+AT12;31716;Maria Enzersdorf;69;43;26;2012
+AT12;31717;Mödling;178;97;81;2012
+AT12;31718;Münchendorf;38;22;16;2012
+AT12;31719;Perchtoldsdorf;119;67;52;2012
+AT12;31723;Vösendorf;45;25;20;2012
+AT12;31725;Wiener Neudorf;61;26;35;2012
+AT12;31726;Wienerwald;18;10;8;2012
+AT12;31801;Altendorf;2;2;0;2012
+AT12;31802;Aspang-Markt;17;13;4;2012
+AT12;31803;Aspangberg-St. Peter;17;5;12;2012
+AT12;31804;Breitenau;19;14;5;2012
+AT12;31805;Breitenstein;3;2;1;2012
+AT12;31806;Buchbach;2;1;1;2012
+AT12;31807;Edlitz;7;3;4;2012
+AT12;31808;Enzenreith;18;10;8;2012
+AT12;31809;Feistritz am Wechsel;9;5;4;2012
+AT12;31810;Gloggnitz;42;18;24;2012
+AT12;31811;Grafenbach-St.Valentin;17;7;10;2012
+AT12;31812;Grimmenstein;12;6;6;2012
+AT12;31813;Grünbach am Schneeberg;9;4;5;2012
+AT12;31814;Kirchberg am Wechsel;14;9;5;2012
+AT12;31815;Mönichkirchen;7;5;2;2012
+AT12;31817;Natschbach-Loipersbach;11;3;8;2012
+AT12;31818;Neunkirchen;132;65;67;2012
+AT12;31820;Otterthal;4;4;0;2012
+AT12;31821;Payerbach;16;8;8;2012
+AT12;31823;Pitten;16;6;10;2012
+AT12;31825;Prigglitz;2;1;1;2012
+AT12;31826;Puchberg am Schneeberg;20;6;14;2012
+AT12;31827;Raach am Hochgebirge;5;3;2;2012
+AT12;31829;Reichenau an der Rax;19;9;10;2012
+AT12;31830;St. Corona am Wechsel;9;6;3;2012
+AT12;31831;St. Egyden am Steinfeld;12;7;5;2012
+AT12;31832;Scheiblingkirchen-Thernberg;21;9;12;2012
+AT12;31833;Schottwien;11;6;5;2012
+AT12;31834;Schrattenbach;2;1;1;2012
+AT12;31835;Schwarzau am Steinfeld;16;7;9;2012
+AT12;31836;Schwarzau im Gebirge;7;4;3;2012
+AT12;31837;Seebenstein;14;8;6;2012
+AT12;31838;Semmering;1;0;1;2012
+AT12;31839;Ternitz;122;65;57;2012
+AT12;31840;Thomasberg;12;6;6;2012
+AT12;31841;Trattenbach;5;3;2;2012
+AT12;31842;Bürg-Vöstenhof;3;0;3;2012
+AT12;31843;Warth;12;4;8;2012
+AT12;31844;Wartmannstetten;14;7;7;2012
+AT12;31845;Willendorf;7;3;4;2012
+AT12;31846;Wimpassing im Schwarzatale;15;6;9;2012
+AT12;31847;Würflach;9;4;5;2012
+AT12;31848;Zöbern;7;5;2;2012
+AT12;31849;Höflein an der Hohen Wand;7;4;3;2012
+AT12;31901;Altlengbach;22;11;11;2012
+AT12;31902;Asperhofen;16;8;8;2012
+AT12;31903;Böheimkirchen;38;20;18;2012
+AT12;31904;Brand-Laaben;6;3;3;2012
+AT12;31905;Eichgraben;45;18;27;2012
+AT12;31906;Frankenfels;32;16;16;2012
+AT12;31907;Gerersdorf;6;3;3;2012
+AT12;31909;Hofstetten-Grünau;28;18;10;2012
+AT12;31910;Hafnerbach;12;5;7;2012
+AT12;31911;Haunoldstein;12;7;5;2012
+AT12;31912;Herzogenburg;66;32;34;2012
+AT12;31913;Inzersdorf-Getzersdorf;18;12;6;2012
+AT12;31915;Kapelln;18;9;9;2012
+AT12;31916;Karlstetten;12;7;5;2012
+AT12;31917;Kasten bei Böheimkirchen;13;5;8;2012
+AT12;31918;Kirchberg an der Pielach;26;12;14;2012
+AT12;31919;Kirchstetten;18;11;7;2012
+AT12;31920;Loich;2;0;2;2012
+AT12;31921;Maria-Anzbach;20;12;8;2012
+AT12;31922;Markersdorf-Haindorf;13;9;4;2012
+AT12;31923;Michelbach;8;4;4;2012
+AT12;31925;Neidling;9;5;4;2012
+AT12;31926;Neulengbach;72;39;33;2012
+AT12;31927;Neustift-Innermanzing;10;8;2;2012
+AT12;31928;Nußdorf ob der Traisen;12;9;3;2012
+AT12;31929;Ober-Grafendorf;28;18;10;2012
+AT12;31930;Obritzberg-Rust;16;7;9;2012
+AT12;31932;Prinzersdorf;15;8;7;2012
+AT12;31934;Pyhra;21;10;11;2012
+AT12;31935;Rabenstein an der Pielach;24;10;14;2012
+AT12;31938;St. Margarethen an der Sierning;10;7;3;2012
+AT12;31939;Schwarzenbach an der Pielach;1;0;1;2012
+AT12;31940;Statzendorf;16;10;6;2012
+AT12;31941;Stössing;5;2;3;2012
+AT12;31943;Traismauer;53;28;25;2012
+AT12;31945;Weinburg;10;4;6;2012
+AT12;31946;Weißenkirchen an der Perschling;7;3;4;2012
+AT12;31947;Wilhelmsburg;53;31;22;2012
+AT12;31948;Wölbling;19;8;11;2012
+AT12;32001;Gaming;20;10;10;2012
+AT12;32002;Göstling an der Ybbs;22;13;9;2012
+AT12;32003;Gresten;18;9;9;2012
+AT12;32004;Gresten-Land;15;5;10;2012
+AT12;32005;Lunz am See;13;8;5;2012
+AT12;32006;Oberndorf an der Melk;28;21;7;2012
+AT12;32007;Puchenstuben;4;4;0;2012
+AT12;32008;Purgstall an der Erlauf;51;32;19;2012
+AT12;32009;Randegg;22;13;9;2012
+AT12;32010;Reinsberg;10;7;3;2012
+AT12;32011;St. Anton an der Jeßnitz;13;7;6;2012
+AT12;32012;St. Georgen an der Leys;17;7;10;2012
+AT12;32013;Scheibbs;38;21;17;2012
+AT12;32014;Steinakirchen am Forst;20;8;12;2012
+AT12;32015;Wang;11;5;6;2012
+AT12;32016;Wieselburg;47;22;25;2012
+AT12;32017;Wieselburg-Land;33;18;15;2012
+AT12;32018;Wolfpassing;22;13;9;2012
+AT12;32101;Absdorf;18;6;12;2012
+AT12;32104;Atzenbrugg;28;11;17;2012
+AT12;32106;Fels am Wagram;21;14;7;2012
+AT12;32107;Grafenwörth;29;11;18;2012
+AT12;32109;Großriedenthal;11;5;6;2012
+AT12;32110;Großweikersdorf;22;11;11;2012
+AT12;32112;Judenau-Baumgarten;12;7;5;2012
+AT12;32114;Kirchberg am Wagram;34;17;17;2012
+AT12;32115;Königsbrunn am Wagram;12;6;6;2012
+AT12;32116;Königstetten;20;14;6;2012
+AT12;32119;Langenrohr;13;4;9;2012
+AT12;32120;Michelhausen;33;11;22;2012
+AT12;32131;Sieghartskirchen;52;33;19;2012
+AT12;32132;Sitzenberg-Reidling;11;6;5;2012
+AT12;32134;Tulbing;23;12;11;2012
+AT12;32135;Tulln an der Donau;130;63;67;2012
+AT12;32139;Würmla;9;6;3;2012
+AT12;32140;Zeiselmauer-Wolfpassing;15;6;9;2012
+AT12;32141;Zwentendorf an der Donau;35;20;15;2012
+AT12;32142;St. Andrä-Wördern;42;13;29;2012
+AT12;32143;Muckendorf-Wipfing;10;6;4;2012
+AT12;32202;Dietmanns;9;6;3;2012
+AT12;32203;Dobersberg;13;9;4;2012
+AT12;32206;Gastern;11;7;4;2012
+AT12;32207;Groß-Siegharts;17;8;9;2012
+AT12;32209;Karlstein an der Thaya;16;8;8;2012
+AT12;32210;Kautzen;7;4;3;2012
+AT12;32212;Ludweis-Aigen;7;4;3;2012
+AT12;32214;Pfaffenschlag bei Waidhofen an der Thaya;5;2;3;2012
+AT12;32216;Raabs an der Thaya;17;8;9;2012
+AT12;32217;Thaya;8;3;5;2012
+AT12;32219;Vitis;17;11;6;2012
+AT12;32220;Waidhofen an der Thaya;48;28;20;2012
+AT12;32221;Waidhofen an der Thaya-Land;15;7;8;2012
+AT12;32222;Waldkirchen an der Thaya;3;0;3;2012
+AT12;32223;Windigsteig;9;3;6;2012
+AT12;32301;Bad Fischau-Brunn;36;17;19;2012
+AT12;32302;Bad Schönau;12;7;5;2012
+AT12;32304;Ebenfurth;23;12;11;2012
+AT12;32305;Eggendorf;40;26;14;2012
+AT12;32306;Bad Erlach;15;6;9;2012
+AT12;32307;Felixdorf;26;11;15;2012
+AT12;32308;Gutenstein;6;5;1;2012
+AT12;32309;Hochneukirchen-Gschaidt;11;4;7;2012
+AT12;32310;Hochwolkersdorf;9;3;6;2012
+AT12;32311;Hohe Wand;13;4;9;2012
+AT12;32312;Hollenthon;15;7;8;2012
+AT12;32313;Katzelsdorf;23;11;12;2012
+AT12;32314;Kirchschlag in der Buckligen Welt;26;13;13;2012
+AT12;32315;Krumbach;21;6;15;2012
+AT12;32316;Lanzenkirchen;51;27;24;2012
+AT12;32317;Lichtenegg;11;6;5;2012
+AT12;32318;Lichtenwörth;22;11;11;2012
+AT12;32319;Markt Piesting;34;20;14;2012
+AT12;32320;Matzendorf-Hölles;14;6;8;2012
+AT12;32321;Miesenbach;7;3;4;2012
+AT12;32322;Muggendorf;4;1;3;2012
+AT12;32323;Pernitz;18;9;9;2012
+AT12;32324;Rohr im Gebirge;5;5;0;2012
+AT12;32325;Bromberg;12;6;6;2012
+AT12;32326;Schwarzenbach;9;5;4;2012
+AT12;32327;Sollenau;32;16;16;2012
+AT12;32330;Theresienfeld;18;6;12;2012
+AT12;32331;Waidmannsfeld;7;5;2;2012
+AT12;32332;Waldegg;20;8;12;2012
+AT12;32333;Walpersbach;7;3;4;2012
+AT12;32334;Weikersdorf am Steinfelde;6;4;2;2012
+AT12;32335;Wiesmath;15;5;10;2012
+AT12;32336;Winzendorf-Muthmannsdorf;14;6;8;2012
+AT12;32337;Wöllersdorf-Steinabrückl;53;31;22;2012
+AT12;32338;Zillingdorf;23;13;10;2012
+AT12;32401;Ebergassing;28;18;10;2012
+AT12;32402;Fischamend;40;19;21;2012
+AT12;32403;Gablitz;36;21;15;2012
+AT12;32404;Gerasdorf bei Wien;64;32;32;2012
+AT12;32405;Gramatneusiedl;32;13;19;2012
+AT12;32406;Himberg;66;32;34;2012
+AT12;32407;Klein-Neusiedl;4;0;4;2012
+AT12;32408;Klosterneuburg;214;111;103;2012
+AT12;32409;Lanzendorf;16;8;8;2012
+AT12;32410;Leopoldsdorf;53;24;29;2012
+AT12;32411;Maria-Lanzendorf;18;10;8;2012
+AT12;32412;Mauerbach;23;11;12;2012
+AT12;32413;Moosbrunn;17;5;12;2012
+AT12;32415;Pressbaum;63;35;28;2012
+AT12;32416;Purkersdorf;114;66;48;2012
+AT12;32417;Rauchenwarth;7;3;4;2012
+AT12;32418;Schwadorf;14;5;9;2012
+AT12;32419;Schwechat;157;80;77;2012
+AT12;32421;Tullnerbach;21;16;5;2012
+AT12;32423;Wolfsgraben;10;5;5;2012
+AT12;32424;Zwölfaxing;21;13;8;2012
+AT12;32501;Allentsteig;15;8;7;2012
+AT12;32502;Arbesbach;16;11;5;2012
+AT12;32503;Bärnkopf;3;2;1;2012
+AT12;32504;Echsenbach;12;8;4;2012
+AT12;32505;Göpfritz an der Wild;13;9;4;2012
+AT12;32506;Grafenschlag;9;3;6;2012
+AT12;32508;Groß Gerungs;37;21;16;2012
+AT12;32509;Großgöttfritz;17;8;9;2012
+AT12;32511;Gutenbrunn;1;0;1;2012
+AT12;32514;Kirchschlag;4;2;2;2012
+AT12;32515;Kottes-Purk;5;1;4;2012
+AT12;32516;Langschlag;17;9;8;2012
+AT12;32517;Martinsberg;12;4;8;2012
+AT12;32518;Ottenschlag;6;6;0;2012
+AT12;32519;Altmelon;10;7;3;2012
+AT12;32520;Pölla;6;4;2;2012
+AT12;32521;Rappottenstein;16;11;5;2012
+AT12;32522;Sallingberg;10;7;3;2012
+AT12;32523;Schönbach;10;5;5;2012
+AT12;32524;Schwarzenau;15;8;7;2012
+AT12;32525;Schweiggers;25;13;12;2012
+AT12;32528;Bad Traunstein;15;11;4;2012
+AT12;32529;Waldhausen;9;4;5;2012
+AT12;32530;Zwettl-Niederösterreich;83;37;46;2012
+AT12;30101;Krems an der Donau;205;111;94;2011
+AT12;30201;St. Pölten;463;245;218;2011
+AT12;30301;Waidhofen an der Ybbs;128;65;63;2011
+AT12;30401;Wiener Neustadt;439;221;218;2011
+AT12;30501;Allhartsberg;17;9;8;2011
+AT12;30502;Amstetten;218;114;104;2011
+AT12;30503;Ardagger;25;12;13;2011
+AT12;30504;Aschbach-Markt;41;20;21;2011
+AT12;30506;Behamberg;32;17;15;2011
+AT12;30507;Biberbach;30;16;14;2011
+AT12;30508;Ennsdorf;36;24;12;2011
+AT12;30509;Ernsthofen;16;6;10;2011
+AT12;30510;Ertl;11;5;6;2011
+AT12;30511;Euratsfeld;24;12;12;2011
+AT12;30512;Ferschnitz;18;7;11;2011
+AT12;30514;Haag;52;25;27;2011
+AT12;30515;Haidershofen;32;14;18;2011
+AT12;30516;Hollenstein an der Ybbs;19;7;12;2011
+AT12;30517;Kematen an der Ybbs;24;16;8;2011
+AT12;30520;Neuhofen an der Ybbs;33;21;12;2011
+AT12;30521;Neustadtl an der Donau;23;9;14;2011
+AT12;30522;Oed-Oehling;12;7;5;2011
+AT12;30524;Opponitz;17;9;8;2011
+AT12;30526;St. Georgen am Reith;2;2;0;2011
+AT12;30527;St. Georgen am Ybbsfelde;32;20;12;2011
+AT12;30529;St. Pantaleon-Erla;20;12;8;2011
+AT12;30530;St. Peter in der Au;50;25;25;2011
+AT12;30531;St. Valentin;65;36;29;2011
+AT12;30532;Seitenstetten;43;22;21;2011
+AT12;30533;Sonntagberg;34;14;20;2011
+AT12;30534;Strengberg;26;11;15;2011
+AT12;30536;Viehdorf;15;6;9;2011
+AT12;30538;Wallsee-Sindelburg;12;7;5;2011
+AT12;30539;Weistrach;19;6;13;2011
+AT12;30541;Winklarn;10;4;6;2011
+AT12;30542;Wolfsbach;15;8;7;2011
+AT12;30543;Ybbsitz;34;19;15;2011
+AT12;30544;Zeillern;25;10;15;2011
+AT12;30601;Alland;20;13;7;2011
+AT12;30602;Altenmarkt an der Triesting;20;5;15;2011
+AT12;30603;Bad Vöslau;99;50;49;2011
+AT12;30604;Baden;200;97;103;2011
+AT12;30605;Berndorf;76;44;32;2011
+AT12;30607;Ebreichsdorf;93;41;52;2011
+AT12;30608;Enzesfeld-Lindabrunn;44;21;23;2011
+AT12;30609;Furth an der Triesting;12;5;7;2011
+AT12;30612;Günselsdorf;11;6;5;2011
+AT12;30613;Heiligenkreuz;12;5;7;2011
+AT12;30614;Hernstein;11;3;8;2011
+AT12;30615;Hirtenberg;23;9;14;2011
+AT12;30616;Klausen-Leopoldsdorf;15;4;11;2011
+AT12;30618;Kottingbrunn;64;32;32;2011
+AT12;30620;Leobersdorf;55;29;26;2011
+AT12;30621;Mitterndorf an der Fischa;22;15;7;2011
+AT12;30623;Oberwaltersdorf;48;22;26;2011
+AT12;30625;Pfaffstätten;31;17;14;2011
+AT12;30626;Pottendorf;42;23;19;2011
+AT12;30627;Pottenstein;31;20;11;2011
+AT12;30629;Reisenberg;20;12;8;2011
+AT12;30631;Schönau an der Triesting;18;14;4;2011
+AT12;30633;Seibersdorf;12;6;6;2011
+AT12;30635;Sooß;11;5;6;2011
+AT12;30636;Tattendorf;7;1;6;2011
+AT12;30637;Teesdorf;12;6;6;2011
+AT12;30639;Traiskirchen;176;91;85;2011
+AT12;30641;Trumau;39;19;20;2011
+AT12;30645;Weissenbach an der Triesting;23;10;13;2011
+AT12;30646;Blumau-Neurißhof;16;11;5;2011
+AT12;30701;Au am Leithaberge;4;2;2;2011
+AT12;30702;Bad Deutsch-Altenburg;14;6;8;2011
+AT12;30703;Berg;4;1;3;2011
+AT12;30704;Bruck an der Leitha;53;33;20;2011
+AT12;30706;Enzersdorf an der Fischa;22;12;10;2011
+AT12;30708;Göttlesbrunn-Arbesthal;16;8;8;2011
+AT12;30709;Götzendorf an der Leitha;16;10;6;2011
+AT12;30710;Hainburg a. d. Donau;61;32;29;2011
+AT12;30711;Haslau-Maria Ellend;10;6;4;2011
+AT12;30712;Höflein;13;8;5;2011
+AT12;30713;Hof am Leithaberge;9;3;6;2011
+AT12;30715;Hundsheim;4;3;1;2011
+AT12;30716;Mannersdorf am Leithagebirge;29;11;18;2011
+AT12;30718;Petronell-Carnuntum;8;4;4;2011
+AT12;30719;Prellenkirchen;18;9;9;2011
+AT12;30721;Rohrau;14;11;3;2011
+AT12;30722;Scharndorf;13;8;5;2011
+AT12;30724;Sommerein;15;7;8;2011
+AT12;30726;Trautmannsdorf an der Leitha;26;13;13;2011
+AT12;30728;Wolfsthal;6;4;2;2011
+AT12;30801;Aderklaa;1;1;0;2011
+AT12;30802;Andlersdorf;-;-;-;2011
+AT12;30803;Angern an der March;31;18;13;2011
+AT12;30804;Auersthal;18;6;12;2011
+AT12;30805;Bad Pirawarth;14;8;6;2011
+AT12;30808;Deutsch-Wagram;51;32;19;2011
+AT12;30810;Drösing;3;2;1;2011
+AT12;30811;Dürnkrut;22;13;9;2011
+AT12;30812;Ebenthal;5;2;3;2011
+AT12;30813;Eckartsau;12;4;8;2011
+AT12;30814;Engelhartstetten;14;6;8;2011
+AT12;30817;Gänserndorf;115;57;58;2011
+AT12;30819;Glinzendorf;1;1;0;2011
+AT12;30821;Groß-Enzersdorf;63;34;29;2011
+AT12;30822;Großhofen;-;-;-;2011
+AT12;30824;Groß-Schweinbarth;9;6;3;2011
+AT12;30825;Haringsee;12;6;6;2011
+AT12;30826;Hauskirchen;10;6;4;2011
+AT12;30827;Hohenau an der March;14;7;7;2011
+AT12;30828;Hohenruppersdorf;8;6;2;2011
+AT12;30829;Jedenspeigen;8;6;2;2011
+AT12;30830;Lassee;21;10;11;2011
+AT12;30831;Leopoldsdorf im Marchfelde;21;14;7;2011
+AT12;30834;Mannsdorf an der Donau;2;2;0;2011
+AT12;30835;Marchegg;22;16;6;2011
+AT12;30836;Markgrafneusiedl;3;1;2;2011
+AT12;30838;Matzen-Raggendorf;25;16;9;2011
+AT12;30841;Neusiedl an der Zaya;11;3;8;2011
+AT12;30842;Obersiebenbrunn;9;3;6;2011
+AT12;30844;Orth an der Donau;15;9;6;2011
+AT12;30845;Palterndorf-Dobermannsdorf;10;7;3;2011
+AT12;30846;Parbasdorf;1;0;1;2011
+AT12;30848;Prottes;20;11;9;2011
+AT12;30849;Raasdorf;7;6;1;2011
+AT12;30850;Ringelsdorf-Niederabsdorf;9;3;6;2011
+AT12;30852;Schönkirchen-Reyersdorf;9;6;3;2011
+AT12;30854;Spannberg;8;4;4;2011
+AT12;30856;Strasshof an der Nordbahn;69;36;33;2011
+AT12;30857;Sulz im Weinviertel;5;3;2;2011
+AT12;30858;Untersiebenbrunn;8;5;3;2011
+AT12;30859;Velm-Götzendorf;8;7;1;2011
+AT12;30860;Weikendorf;17;9;8;2011
+AT12;30863;Zistersdorf;38;19;19;2011
+AT12;30865;Weiden an der March;11;7;4;2011
+AT12;30902;Amaliendorf-Aalfang;5;1;4;2011
+AT12;30903;Brand-Nagelberg;9;2;7;2011
+AT12;30904;Eggern;6;3;3;2011
+AT12;30906;Eisgarn;2;1;1;2011
+AT12;30908;Gmünd;41;19;22;2011
+AT12;30909;Großdietmanns;23;10;13;2011
+AT12;30910;Bad Großpertholz;13;6;7;2011
+AT12;30912;Großschönau;16;9;7;2011
+AT12;30913;Moorbad Harbach;9;6;3;2011
+AT12;30915;Haugschlag;5;4;1;2011
+AT12;30916;Heidenreichstein;24;9;15;2011
+AT12;30917;Hirschbach;6;3;3;2011
+AT12;30920;Hoheneich;10;6;4;2011
+AT12;30921;Kirchberg am Walde;15;8;7;2011
+AT12;30925;Litschau;10;5;5;2011
+AT12;30929;Reingers;6;3;3;2011
+AT12;30932;St. Martin;10;6;4;2011
+AT12;30935;Schrems;46;25;21;2011
+AT12;30939;Unserfrau-Altweitra;9;3;6;2011
+AT12;30940;Waldenstein;10;2;8;2011
+AT12;30942;Weitra;20;10;10;2011
+AT12;31001;Alberndorf im Pulkautal;6;1;5;2011
+AT12;31008;Göllersdorf;28;16;12;2011
+AT12;31009;Grabern;9;3;6;2011
+AT12;31014;Guntersdorf;10;4;6;2011
+AT12;31015;Hadres;11;4;7;2011
+AT12;31016;Hardegg;10;9;1;2011
+AT12;31018;Haugsdorf;14;10;4;2011
+AT12;31019;Heldenberg;11;5;6;2011
+AT12;31021;Hohenwarth-Mühlbach a. M.;5;0;5;2011
+AT12;31022;Hollabrunn;109;58;51;2011
+AT12;31025;Mailberg;5;2;3;2011
+AT12;31026;Maissau;11;7;4;2011
+AT12;31028;Nappersdorf-Kammersdorf;9;5;4;2011
+AT12;31033;Pernersdorf;6;2;4;2011
+AT12;31035;Pulkau;18;8;10;2011
+AT12;31036;Ravelsbach;12;7;5;2011
+AT12;31037;Retz;28;16;12;2011
+AT12;31038;Retzbach;7;3;4;2011
+AT12;31041;Schrattenthal;7;4;3;2011
+AT12;31042;Seefeld-Kadolz;8;6;2;2011
+AT12;31043;Sitzendorf an der Schmida;26;14;12;2011
+AT12;31051;Wullersdorf;22;10;12;2011
+AT12;31052;Zellerndorf;20;10;10;2011
+AT12;31053;Ziersdorf;29;12;17;2011
+AT12;31101;Altenburg;6;6;0;2011
+AT12;31102;Brunn an der Wild;6;2;4;2011
+AT12;31103;Burgschleinitz-Kühnring;8;2;6;2011
+AT12;31104;Drosendorf-Zissersdorf;11;8;3;2011
+AT12;31105;Eggenburg;27;18;9;2011
+AT12;31106;Gars am Kamp;21;11;10;2011
+AT12;31107;Geras;11;10;1;2011
+AT12;31109;Horn;55;20;35;2011
+AT12;31110;Irnfritz-Messern;8;5;3;2011
+AT12;31111;Japons;5;1;4;2011
+AT12;31113;Langau;-;-;-;2011
+AT12;31114;Meiseldorf;6;2;4;2011
+AT12;31117;Pernegg;8;7;1;2011
+AT12;31119;Röhrenbach;4;0;4;2011
+AT12;31120;Röschitz;5;2;3;2011
+AT12;31121;Rosenburg-Mold;6;5;1;2011
+AT12;31123;St. Bernhard-Frauenhofen;7;3;4;2011
+AT12;31124;Sigmundsherberg;18;7;11;2011
+AT12;31129;Weitersfeld;9;4;5;2011
+AT12;31130;Straning-Grafenberg;7;5;2;2011
+AT12;31201;Bisamberg;41;21;20;2011
+AT12;31202;Enzersfeld im Weinviertel;14;7;7;2011
+AT12;31203;Ernstbrunn;20;9;11;2011
+AT12;31204;Großmugl;18;9;9;2011
+AT12;31205;Großrußbach;20;9;11;2011
+AT12;31206;Hagenbrunn;16;7;9;2011
+AT12;31207;Harmannsdorf;32;13;19;2011
+AT12;31208;Hausleiten;27;13;14;2011
+AT12;31213;Korneuburg;104;56;48;2011
+AT12;31214;Langenzersdorf;67;38;29;2011
+AT12;31215;Leitzersdorf;7;6;1;2011
+AT12;31216;Leobendorf;32;16;16;2011
+AT12;31224;Rußbach;16;8;8;2011
+AT12;31226;Sierndorf;27;15;12;2011
+AT12;31227;Spillern;12;6;6;2011
+AT12;31228;Stetteldorf am Wagram;10;10;0;2011
+AT12;31229;Stetten;10;4;6;2011
+AT12;31230;Stockerau;140;69;71;2011
+AT12;31234;Niederhollabrunn;14;7;7;2011
+AT12;31301;Aggsbach;6;5;1;2011
+AT12;31302;Albrechtsberg an der Großen Krems;8;5;3;2011
+AT12;31303;Bergern im Dunkelsteinerwald;12;2;10;2011
+AT12;31304;Dürnstein;2;2;0;2011
+AT12;31308;Grafenegg;33;18;15;2011
+AT12;31309;Furth bei Göttweig;29;16;13;2011
+AT12;31310;Gedersdorf;21;9;12;2011
+AT12;31311;Gföhl;33;17;16;2011
+AT12;31315;Hadersdorf-Kammern;18;5;13;2011
+AT12;31319;Jaidhof;15;7;8;2011
+AT12;31321;Krumau am Kamp;9;4;5;2011
+AT12;31322;Langenlois;56;37;19;2011
+AT12;31323;Lengenfeld;9;7;2;2011
+AT12;31324;Lichtenau im Waldviertel;27;16;11;2011
+AT12;31326;Maria Laach am Jauerling;6;3;3;2011
+AT12;31327;Mautern an der Donau;34;14;20;2011
+AT12;31330;Mühldorf;6;3;3;2011
+AT12;31333;Paudorf;18;11;7;2011
+AT12;31336;Rastenfeld;12;6;6;2011
+AT12;31337;Rohrendorf bei Krems;20;12;8;2011
+AT12;31338;Rossatz-Arnsdorf;7;3;4;2011
+AT12;31340;St. Leonhard am Hornerwald;5;2;3;2011
+AT12;31343;Senftenberg;18;10;8;2011
+AT12;31344;Spitz;9;6;3;2011
+AT12;31346;Straß im Straßertale;16;10;6;2011
+AT12;31347;Stratzing;3;3;0;2011
+AT12;31350;Weinzierl am Walde;7;4;3;2011
+AT12;31351;Weißenkirchen in der Wachau;13;6;7;2011
+AT12;31355;Schönberg am Kamp;15;11;4;2011
+AT12;31356;Droß;9;6;3;2011
+AT12;31401;Annaberg;4;1;3;2011
+AT12;31402;Eschenau;17;11;6;2011
+AT12;31403;Hainfeld;29;18;11;2011
+AT12;31404;Hohenberg;10;7;3;2011
+AT12;31405;Kaumberg;5;3;2;2011
+AT12;31406;Kleinzell;7;2;5;2011
+AT12;31407;Lilienfeld;18;10;8;2011
+AT12;31408;Mitterbach am Erlaufsee;2;1;1;2011
+AT12;31409;Ramsau;9;4;5;2011
+AT12;31410;Rohrbach an der Gölsen;11;6;5;2011
+AT12;31411;St. Aegyd am Neuwalde;14;7;7;2011
+AT12;31412;St. Veit an der Gölsen;37;19;18;2011
+AT12;31413;Traisen;30;16;14;2011
+AT12;31414;Türnitz;10;3;7;2011
+AT12;31502;Artstetten-Pöbring;10;7;3;2011
+AT12;31503;Bergland;20;9;11;2011
+AT12;31504;Bischofstetten;12;5;7;2011
+AT12;31505;Blindenmarkt;36;20;16;2011
+AT12;31506;Dorfstetten;9;5;4;2011
+AT12;31507;Dunkelsteinerwald;25;14;11;2011
+AT12;31508;Erlauf;11;3;8;2011
+AT12;31509;Golling an der Erlauf;21;11;10;2011
+AT12;31511;Hofamt Priel;15;10;5;2011
+AT12;31513;Hürm;15;8;7;2011
+AT12;31514;Kilb;23;13;10;2011
+AT12;31515;Kirnberg an der Mank;12;8;4;2011
+AT12;31516;Klein-Pöchlarn;8;3;5;2011
+AT12;31517;Krummnußbaum;12;9;3;2011
+AT12;31519;Leiben;15;9;6;2011
+AT12;31520;Loosdorf;42;21;21;2011
+AT12;31521;Mank;35;22;13;2011
+AT12;31522;Marbach an der Donau;11;6;5;2011
+AT12;31523;Maria Taferl;8;4;4;2011
+AT12;31524;Melk;50;25;25;2011
+AT12;31525;Münichreith-Laimbach;15;8;7;2011
+AT12;31527;Neumarkt an der Ybbs;15;8;7;2011
+AT12;31528;Nöchling;18;11;7;2011
+AT12;31530;Persenbeug-Gottsdorf;15;10;5;2011
+AT12;31531;Petzenkirchen;11;7;4;2011
+AT12;31533;Pöchlarn;43;18;25;2011
+AT12;31534;Pöggstall;18;11;7;2011
+AT12;31535;Raxendorf;8;7;1;2011
+AT12;31537;Ruprechtshofen;14;5;9;2011
+AT12;31539;St. Leonhard am Forst;30;19;11;2011
+AT12;31540;St. Martin-Karlsbach;14;7;7;2011
+AT12;31541;St. Oswald;10;7;3;2011
+AT12;31542;Schönbühel-Aggsbach;10;5;5;2011
+AT12;31543;Schollach;3;3;0;2011
+AT12;31546;Weiten;10;3;7;2011
+AT12;31549;Ybbs an der Donau;50;26;24;2011
+AT12;31550;Zelking-Matzleinsdorf;11;7;4;2011
+AT12;31551;Texingtal;23;10;13;2011
+AT12;31552;Yspertal;19;10;9;2011
+AT12;31553;Emmersdorf an der Donau;15;6;9;2011
+AT12;31601;Altlichtenwarth;6;4;2;2011
+AT12;31603;Asparn an der Zaya;17;7;10;2011
+AT12;31604;Bernhardsthal;3;2;1;2011
+AT12;31605;Bockfließ;12;6;6;2011
+AT12;31606;Drasenhofen;5;2;3;2011
+AT12;31608;Falkenstein;2;0;2;2011
+AT12;31609;Fallbach;3;1;2;2011
+AT12;31611;Gaubitsch;12;6;6;2011
+AT12;31612;Gaweinstal;28;11;17;2011
+AT12;31613;Gnadendorf;6;4;2;2011
+AT12;31614;Großebersdorf;20;8;12;2011
+AT12;31615;Großengersdorf;13;5;8;2011
+AT12;31616;Großharras;6;4;2;2011
+AT12;31617;Großkrut;16;10;6;2011
+AT12;31620;Hausbrunn;5;2;3;2011
+AT12;31621;Herrnbaumgarten;9;3;6;2011
+AT12;31622;Hochleithen;7;4;3;2011
+AT12;31627;Kreuttal;10;5;5;2011
+AT12;31628;Kreuzstetten;12;5;7;2011
+AT12;31629;Laa an der Thaya;43;26;17;2011
+AT12;31630;Ladendorf;12;5;7;2011
+AT12;31633;Mistelbach;101;62;39;2011
+AT12;31634;Neudorf bei Staatz;9;7;2;2011
+AT12;31636;Niederleis;6;1;5;2011
+AT12;31642;Pillichsdorf;10;4;6;2011
+AT12;31644;Poysdorf;40;26;14;2011
+AT12;31645;Rabensburg;9;5;4;2011
+AT12;31646;Schrattenberg;6;2;4;2011
+AT12;31649;Staatz;18;6;12;2011
+AT12;31650;Stronsdorf;19;11;8;2011
+AT12;31651;Ulrichskirchen-Schleinbach;20;9;11;2011
+AT12;31652;Unterstinkenbrunn;6;6;0;2011
+AT12;31653;Wildendürnbach;19;12;7;2011
+AT12;31654;Wilfersdorf;23;15;8;2011
+AT12;31655;Wolkersdorf im Weinviertel;59;32;27;2011
+AT12;31658;Ottenthal;3;2;1;2011
+AT12;31701;Achau;15;11;4;2011
+AT12;31702;Biedermannsdorf;25;14;11;2011
+AT12;31703;Breitenfurt bei Wien;32;16;16;2011
+AT12;31704;Brunn am Gebirge;114;67;47;2011
+AT12;31706;Gaaden;15;11;4;2011
+AT12;31707;Gießhübl;21;12;9;2011
+AT12;31709;Gumpoldskirchen;42;26;16;2011
+AT12;31710;Guntramsdorf;66;44;22;2011
+AT12;31711;Hennersdorf;9;2;7;2011
+AT12;31712;Hinterbrühl;29;17;12;2011
+AT12;31713;Kaltenleutgeben;22;14;8;2011
+AT12;31714;Laab im Walde;11;7;4;2011
+AT12;31715;Laxenburg;29;13;16;2011
+AT12;31716;Maria Enzersdorf;63;32;31;2011
+AT12;31717;Mödling;190;94;96;2011
+AT12;31718;Münchendorf;27;11;16;2011
+AT12;31719;Perchtoldsdorf;101;47;54;2011
+AT12;31723;Vösendorf;46;22;24;2011
+AT12;31725;Wiener Neudorf;68;38;30;2011
+AT12;31726;Wienerwald;23;12;11;2011
+AT12;31801;Altendorf;4;2;2;2011
+AT12;31802;Aspang-Markt;12;8;4;2011
+AT12;31803;Aspangberg-St. Peter;20;11;9;2011
+AT12;31804;Breitenau;10;5;5;2011
+AT12;31805;Breitenstein;2;2;0;2011
+AT12;31806;Buchbach;2;2;0;2011
+AT12;31807;Edlitz;4;2;2;2011
+AT12;31808;Enzenreith;13;8;5;2011
+AT12;31809;Feistritz am Wechsel;8;1;7;2011
+AT12;31810;Gloggnitz;50;25;25;2011
+AT12;31811;Grafenbach-St.Valentin;28;17;11;2011
+AT12;31812;Grimmenstein;6;5;1;2011
+AT12;31813;Grünbach am Schneeberg;9;6;3;2011
+AT12;31814;Kirchberg am Wechsel;15;4;11;2011
+AT12;31815;Mönichkirchen;3;1;2;2011
+AT12;31817;Natschbach-Loipersbach;7;6;1;2011
+AT12;31818;Neunkirchen;114;51;63;2011
+AT12;31820;Otterthal;4;0;4;2011
+AT12;31821;Payerbach;13;7;6;2011
+AT12;31823;Pitten;17;7;10;2011
+AT12;31825;Prigglitz;4;3;1;2011
+AT12;31826;Puchberg am Schneeberg;17;7;10;2011
+AT12;31827;Raach am Hochgebirge;5;2;3;2011
+AT12;31829;Reichenau an der Rax;24;13;11;2011
+AT12;31830;St. Corona am Wechsel;4;2;2;2011
+AT12;31831;St. Egyden am Steinfeld;21;10;11;2011
+AT12;31832;Scheiblingkirchen-Thernberg;12;1;11;2011
+AT12;31833;Schottwien;7;5;2;2011
+AT12;31834;Schrattenbach;5;3;2;2011
+AT12;31835;Schwarzau am Steinfeld;15;7;8;2011
+AT12;31836;Schwarzau im Gebirge;5;3;2;2011
+AT12;31837;Seebenstein;12;5;7;2011
+AT12;31838;Semmering;6;5;1;2011
+AT12;31839;Ternitz;138;72;66;2011
+AT12;31840;Thomasberg;12;9;3;2011
+AT12;31841;Trattenbach;5;4;1;2011
+AT12;31842;Bürg-Vöstenhof;3;1;2;2011
+AT12;31843;Warth;13;6;7;2011
+AT12;31844;Wartmannstetten;10;6;4;2011
+AT12;31845;Willendorf;8;7;1;2011
+AT12;31846;Wimpassing im Schwarzatale;14;9;5;2011
+AT12;31847;Würflach;14;8;6;2011
+AT12;31848;Zöbern;22;8;14;2011
+AT12;31849;Höflein an der Hohen Wand;5;3;2;2011
+AT12;31901;Altlengbach;26;16;10;2011
+AT12;31902;Asperhofen;25;14;11;2011
+AT12;31903;Böheimkirchen;44;21;23;2011
+AT12;31904;Brand-Laaben;9;5;4;2011
+AT12;31905;Eichgraben;27;15;12;2011
+AT12;31906;Frankenfels;24;10;14;2011
+AT12;31907;Gerersdorf;15;8;7;2011
+AT12;31909;Hofstetten-Grünau;29;15;14;2011
+AT12;31910;Hafnerbach;13;7;6;2011
+AT12;31911;Haunoldstein;5;3;2;2011
+AT12;31912;Herzogenburg;67;29;38;2011
+AT12;31913;Inzersdorf-Getzersdorf;18;7;11;2011
+AT12;31915;Kapelln;11;9;2;2011
+AT12;31916;Karlstetten;27;17;10;2011
+AT12;31917;Kasten bei Böheimkirchen;11;7;4;2011
+AT12;31918;Kirchberg an der Pielach;29;15;14;2011
+AT12;31919;Kirchstetten;18;10;8;2011
+AT12;31920;Loich;3;2;1;2011
+AT12;31921;Maria-Anzbach;23;11;12;2011
+AT12;31922;Markersdorf-Haindorf;13;9;4;2011
+AT12;31923;Michelbach;8;4;4;2011
+AT12;31925;Neidling;22;9;13;2011
+AT12;31926;Neulengbach;76;36;40;2011
+AT12;31927;Neustift-Innermanzing;11;4;7;2011
+AT12;31928;Nußdorf ob der Traisen;13;8;5;2011
+AT12;31929;Ober-Grafendorf;29;16;13;2011
+AT12;31930;Obritzberg-Rust;10;6;4;2011
+AT12;31932;Prinzersdorf;22;12;10;2011
+AT12;31934;Pyhra;27;16;11;2011
+AT12;31935;Rabenstein an der Pielach;19;10;9;2011
+AT12;31938;St. Margarethen an der Sierning;9;4;5;2011
+AT12;31939;Schwarzenbach an der Pielach;4;2;2;2011
+AT12;31940;Statzendorf;12;5;7;2011
+AT12;31941;Stössing;8;2;6;2011
+AT12;31943;Traismauer;56;26;30;2011
+AT12;31945;Weinburg;16;9;7;2011
+AT12;31946;Weißenkirchen an der Perschling;10;3;7;2011
+AT12;31947;Wilhelmsburg;53;27;26;2011
+AT12;31948;Wölbling;19;12;7;2011
+AT12;32001;Gaming;29;12;17;2011
+AT12;32002;Göstling an der Ybbs;17;9;8;2011
+AT12;32003;Gresten;22;10;12;2011
+AT12;32004;Gresten-Land;17;10;7;2011
+AT12;32005;Lunz am See;20;10;10;2011
+AT12;32006;Oberndorf an der Melk;31;15;16;2011
+AT12;32007;Puchenstuben;2;1;1;2011
+AT12;32008;Purgstall an der Erlauf;53;28;25;2011
+AT12;32009;Randegg;10;5;5;2011
+AT12;32010;Reinsberg;6;3;3;2011
+AT12;32011;St. Anton an der Jeßnitz;11;5;6;2011
+AT12;32012;St. Georgen an der Leys;12;7;5;2011
+AT12;32013;Scheibbs;30;10;20;2011
+AT12;32014;Steinakirchen am Forst;27;20;7;2011
+AT12;32015;Wang;13;9;4;2011
+AT12;32016;Wieselburg;32;14;18;2011
+AT12;32017;Wieselburg-Land;42;20;22;2011
+AT12;32018;Wolfpassing;13;7;6;2011
+AT12;32101;Absdorf;20;11;9;2011
+AT12;32104;Atzenbrugg;19;11;8;2011
+AT12;32106;Fels am Wagram;20;9;11;2011
+AT12;32107;Grafenwörth;29;18;11;2011
+AT12;32109;Großriedenthal;3;0;3;2011
+AT12;32110;Großweikersdorf;25;13;12;2011
+AT12;32112;Judenau-Baumgarten;16;9;7;2011
+AT12;32114;Kirchberg am Wagram;30;14;16;2011
+AT12;32115;Königsbrunn am Wagram;8;5;3;2011
+AT12;32116;Königstetten;22;12;10;2011
+AT12;32119;Langenrohr;26;12;14;2011
+AT12;32120;Michelhausen;17;5;12;2011
+AT12;32131;Sieghartskirchen;60;34;26;2011
+AT12;32132;Sitzenberg-Reidling;12;6;6;2011
+AT12;32134;Tulbing;14;4;10;2011
+AT12;32135;Tulln an der Donau;160;96;64;2011
+AT12;32139;Würmla;14;7;7;2011
+AT12;32140;Zeiselmauer-Wolfpassing;17;11;6;2011
+AT12;32141;Zwentendorf an der Donau;29;13;16;2011
+AT12;32142;St. Andrä-Wördern;52;27;25;2011
+AT12;32143;Muckendorf-Wipfing;10;6;4;2011
+AT12;32202;Dietmanns;3;0;3;2011
+AT12;32203;Dobersberg;19;10;9;2011
+AT12;32206;Gastern;14;8;6;2011
+AT12;32207;Groß-Siegharts;20;13;7;2011
+AT12;32209;Karlstein an der Thaya;8;4;4;2011
+AT12;32210;Kautzen;8;4;4;2011
+AT12;32212;Ludweis-Aigen;8;3;5;2011
+AT12;32214;Pfaffenschlag bei Waidhofen an der Thaya;5;3;2;2011
+AT12;32216;Raabs an der Thaya;20;7;13;2011
+AT12;32217;Thaya;13;8;5;2011
+AT12;32219;Vitis;29;14;15;2011
+AT12;32220;Waidhofen an der Thaya;35;14;21;2011
+AT12;32221;Waidhofen an der Thaya-Land;7;3;4;2011
+AT12;32222;Waldkirchen an der Thaya;2;1;1;2011
+AT12;32223;Windigsteig;6;2;4;2011
+AT12;32301;Bad Fischau-Brunn;28;15;13;2011
+AT12;32302;Bad Schönau;10;4;6;2011
+AT12;32304;Ebenfurth;38;15;23;2011
+AT12;32305;Eggendorf;38;17;21;2011
+AT12;32306;Bad Erlach;20;6;14;2011
+AT12;32307;Felixdorf;38;18;20;2011
+AT12;32308;Gutenstein;11;7;4;2011
+AT12;32309;Hochneukirchen-Gschaidt;16;12;4;2011
+AT12;32310;Hochwolkersdorf;5;3;2;2011
+AT12;32311;Hohe Wand;14;5;9;2011
+AT12;32312;Hollenthon;8;3;5;2011
+AT12;32313;Katzelsdorf;17;10;7;2011
+AT12;32314;Kirchschlag in der Buckligen Welt;33;15;18;2011
+AT12;32315;Krumbach;13;7;6;2011
+AT12;32316;Lanzenkirchen;33;17;16;2011
+AT12;32317;Lichtenegg;9;2;7;2011
+AT12;32318;Lichtenwörth;25;11;14;2011
+AT12;32319;Markt Piesting;33;19;14;2011
+AT12;32320;Matzendorf-Hölles;14;9;5;2011
+AT12;32321;Miesenbach;9;9;0;2011
+AT12;32322;Muggendorf;1;0;1;2011
+AT12;32323;Pernitz;19;6;13;2011
+AT12;32324;Rohr im Gebirge;3;1;2;2011
+AT12;32325;Bromberg;14;9;5;2011
+AT12;32326;Schwarzenbach;5;2;3;2011
+AT12;32327;Sollenau;36;22;14;2011
+AT12;32330;Theresienfeld;36;17;19;2011
+AT12;32331;Waidmannsfeld;17;7;10;2011
+AT12;32332;Waldegg;12;9;3;2011
+AT12;32333;Walpersbach;5;3;2;2011
+AT12;32334;Weikersdorf am Steinfelde;10;5;5;2011
+AT12;32335;Wiesmath;15;4;11;2011
+AT12;32336;Winzendorf-Muthmannsdorf;19;10;9;2011
+AT12;32337;Wöllersdorf-Steinabrückl;34;24;10;2011
+AT12;32338;Zillingdorf;16;10;6;2011
+AT12;32401;Ebergassing;37;22;15;2011
+AT12;32402;Fischamend;36;10;26;2011
+AT12;32403;Gablitz;34;22;12;2011
+AT12;32404;Gerasdorf bei Wien;85;37;48;2011
+AT12;32405;Gramatneusiedl;31;18;13;2011
+AT12;32406;Himberg;43;15;28;2011
+AT12;32407;Klein-Neusiedl;3;3;0;2011
+AT12;32408;Klosterneuburg;200;108;92;2011
+AT12;32409;Lanzendorf;7;6;1;2011
+AT12;32410;Leopoldsdorf;46;21;25;2011
+AT12;32411;Maria-Lanzendorf;21;12;9;2011
+AT12;32412;Mauerbach;35;18;17;2011
+AT12;32413;Moosbrunn;11;5;6;2011
+AT12;32415;Pressbaum;69;36;33;2011
+AT12;32416;Purkersdorf;97;52;45;2011
+AT12;32417;Rauchenwarth;5;4;1;2011
+AT12;32418;Schwadorf;15;6;9;2011
+AT12;32419;Schwechat;131;69;62;2011
+AT12;32421;Tullnerbach;18;10;8;2011
+AT12;32423;Wolfsgraben;13;8;5;2011
+AT12;32424;Zwölfaxing;10;6;4;2011
+AT12;32501;Allentsteig;18;10;8;2011
+AT12;32502;Arbesbach;12;7;5;2011
+AT12;32503;Bärnkopf;-;-;-;2011
+AT12;32504;Echsenbach;9;5;4;2011
+AT12;32505;Göpfritz an der Wild;18;11;7;2011
+AT12;32506;Grafenschlag;13;7;6;2011
+AT12;32508;Groß Gerungs;44;25;19;2011
+AT12;32509;Großgöttfritz;7;3;4;2011
+AT12;32511;Gutenbrunn;4;2;2;2011
+AT12;32514;Kirchschlag;5;4;1;2011
+AT12;32515;Kottes-Purk;14;6;8;2011
+AT12;32516;Langschlag;19;12;7;2011
+AT12;32517;Martinsberg;10;4;6;2011
+AT12;32518;Ottenschlag;3;0;3;2011
+AT12;32519;Altmelon;11;4;7;2011
+AT12;32520;Pölla;9;2;7;2011
+AT12;32521;Rappottenstein;8;5;3;2011
+AT12;32522;Sallingberg;18;10;8;2011
+AT12;32523;Schönbach;4;3;1;2011
+AT12;32524;Schwarzenau;14;5;9;2011
+AT12;32525;Schweiggers;23;9;14;2011
+AT12;32528;Bad Traunstein;18;9;9;2011
+AT12;32529;Waldhausen;11;4;7;2011
+AT12;32530;Zwettl-Niederösterreich;108;58;50;2011
