@@ -1,4 +1,6 @@
+import traceback
 from analyser import AnalyserEngine, Analyser
+from structure_analyser import StructureAnalyser
 import tablemagician
 
 __author__ = 'sebastian'
@@ -23,6 +25,22 @@ class MyTestCase(unittest.TestCase):
         engine.process(analyser_table)
 
         self.assertEqual(len(analyser_table.analysers), 2)
+
+
+    def test_structure_analyser(self):
+        # build analyser table
+        data_tables = tablemagician.from_path('testdata/39.csv')
+        analyser_table = data_tables[0].process(max_lines=100)
+        data_tables[0].close()
+
+        # test structure analysers
+        a = StructureAnalyser()
+
+        analyser_chain = [a]
+        # build engine
+        engine = AnalyserEngine(analyser_chain)
+        # feed with analyser table
+        engine.process(analyser_table)
 
 
 if __name__ == '__main__':
