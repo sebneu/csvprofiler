@@ -6,10 +6,8 @@ __author__ = 'sebastian'
 
 import tablemagician
 
-#path = 'resources/cities.csv'
-url = 'http://data.wu.ac.at/dataset/3e4e505f-85cd-4f4c-af43-b547b51fc287/resource/9c2f7b09-f2da-447c-83cd-ea1df37d8e4f/download/allcourses15s.csv'
-rootdir = '/home/sebastian/Repositories/tablemagician/resources/wwdagvat'
-testfile = '/home/sebastian/Repositories/tablemagician/resources/wwdagvat/4359.csv'
+#url = 'http://data.wu.ac.at/dataset/3e4e505f-85cd-4f4c-af43-b547b51fc287/resource/9c2f7b09-f2da-447c-83cd-ea1df37d8e4f/download/allcourses15s.csv'
+rootdir = 'testdata/nuts'
 
 # Load a path:
 for subdir, dirs, files in os.walk(rootdir):
