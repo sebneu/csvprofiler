@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 __author__ = 'sebastian'
 
 
-def _build_datatables(handle, name):
+def _build_datatables(handle, name, date_parser):
     table_set = any_tableset(handle)
 
     tables = []
@@ -35,11 +35,14 @@ def _build_datatables(handle, name):
         # guess column types:
         messytables.types.BoolType.true_values = ['true', 'True', 'TRUE']
         messytables.types.BoolType.false_values = ['false', 'False', 'FALSE']
-        types = type_guess(row_set.sample, types=[messytables.types.StringType,
-                                                  messytables.types.DecimalType,
-                                                  messytables.types.IntegerType,
-                                                  messytables.types.DateUtilType,
-                                                  messytables.types.BoolType]
+        selected_types = [messytables.types.StringType,
+                          messytables.types.DecimalType,
+                          messytables.types.IntegerType,
+                          messytables.types.BoolType]
+        if date_parser:
+            selected_types.append(messytables.types.DateUtilType)
+
+        types = type_guess(row_set.sample, types=selected_types
                            #strict=True
                            )
         logger.debug('types: %s', types)
@@ -55,27 +58,29 @@ def _build_datatables(handle, name):
     return tables
 
 
-def from_path(path):
+def from_path(path, date_parser=False):
     """
 
     :param path: The local file name of the resource
     :return: A DataTable object
+    :param date_parser: if true, the type detection will parse for dates
     """
     f = open(path, 'rb')
     # Load a file object
     logger.debug('parse file from local path: %s', path)
-    datatables = _build_datatables(f, path)
+    datatables = _build_datatables(f, path, date_parser)
     return datatables
 
 
-def from_url(url):
+def from_url(url, date_parser=False):
     """
 
     :param url: The URL of the resource
+    :param date_parser: if true, the type detection will parse for dates
     :return: A DataTable object
     """
     # TODO add max num of lines to download
     response = urllib2.urlopen(url)
     f = StringIO(response.read())
-    datatables = _build_datatables(f, url)
+    datatables = _build_datatables(f, url, date_parser)
     return datatables
