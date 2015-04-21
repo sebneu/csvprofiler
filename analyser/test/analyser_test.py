@@ -1,7 +1,5 @@
-import traceback
 from analyser import AnalyserEngine, Analyser
 from complex_type_analyser.extract_datatypes import ComplexTypeAnalyser
-from entity_analyser import EntityAnalyser
 from structure_analyser import StructureAnalyser
 import tablemagician
 
@@ -36,21 +34,6 @@ class MyTestCase(unittest.TestCase):
 
         # test structure analysers
         a = StructureAnalyser()
-
-        analyser_chain = [a]
-        # build engine
-        engine = AnalyserEngine(analyser_chain)
-        # feed with analyser table
-        engine.process(analyser_table)
-
-    def test_entity_analyser(self):
-        # build analyser table
-        data_tables = tablemagician.from_path('../parser/testdata/horror/211.csv')
-        analyser_table = data_tables[0].process(max_lines=50)
-        data_tables[0].close()
-
-        # test structure analysers
-        a = EntityAnalyser()
 
         analyser_chain = [a]
         # build engine

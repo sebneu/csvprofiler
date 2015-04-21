@@ -4,9 +4,9 @@ import celltype_analyzer
 __author__ = 'jumbrich'
 
 
-
-
 class ComplexTypeAnalyser(Analyser):
+    name = 'ComplexTypeAnalyser'
+
     def process(self, analyser_table):
         vals = detect_datatypes(analyser_table)
         a = 0
@@ -15,6 +15,8 @@ class ComplexTypeAnalyser(Analyser):
             if len(s) > 1:
                 ss = '_'.join(sorted(s))
                 print('COLTYPES  %s %s' % (ss, str(a)))
+
+        analyser_table.analysers[ComplexTypeAnalyser.name] = vals
 
 
 def detect_datatypes(table):
