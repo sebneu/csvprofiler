@@ -88,3 +88,4 @@ def from_url(url, date_parser=False):
 
 def from_file_object(file, name=None, date_parser=False):
     datatables = _build_datatables(file, name, date_parser)
+    return datatables
