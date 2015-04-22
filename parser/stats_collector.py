@@ -9,8 +9,8 @@ from collections import defaultdict, Counter
 
 __author__ = 'sebastian'
 
-#rootdir = '/data/csv'
-rootdir = 'resources/wwdagvat'
+rootdir = '/data/csv'
+#rootdir = 'testdata/nuts/match'
 MAX_ROWS = 50
 
 
@@ -125,10 +125,10 @@ def main(args):
             f.write(str(r) + ',' + str(num_of_columns[r]) + '\n')
 
     with io.open('header.csv', 'wt') as f:
-        f.write('header,count\n')
+        f.write(u'header,count\n')
         for r in sorted(header, key=header.get, reverse=True):
             try:
-                f.write(str(r) + ',' + str(header[r]) + '\n')
+                f.write(unicode(r) + ',' + unicode(header[r]) + u'\n')
             except Exception as e:
                 print e
 
