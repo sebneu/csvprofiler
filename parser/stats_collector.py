@@ -6,6 +6,7 @@ import os
 import traceback
 import tablemagician
 from collections import defaultdict, Counter
+import gzip
 
 __author__ = 'sebastian'
 
@@ -84,29 +85,36 @@ def main(args):
             try:
                 filename = os.path.join(rootdir, file)
 
-                # count all lines
-                start_row_counting = time.time()
-                number_lines = sum(1 for _ in open(filename))
-                end_row_counting = time.time()
-                row_counting_time += end_row_counting - start_row_counting
-                num_of_rows[number_lines] += 1
+                # unzip files
+                if filename.endswith('.gz'):
 
-                # read first rows of table
-                tables = tablemagician.from_path(filename)
-                for table in tables:
-                    #analyser_table = table.process(max_lines=MAX_ROWS)
+                    f = gzip.open(filename, 'rb')
+                    # count all lines
+                    start_row_counting = time.time()
+                    number_lines = sum(1 for _ in f)
+                    end_row_counting = time.time()
+                    row_counting_time += end_row_counting - start_row_counting
+                    num_of_rows[number_lines] += 1
+                    f.close()
 
-                    # columns
-                    num_of_columns[len(table.headers)] += 1
-                    # header
-                    for h in table.headers:
-                        header[h.lower()] += 1
 
-                    table_type = type_classification([t.result_type for t in table.types], column_types)
-                    types[table_type] += 1
+                    # open again after iteration
+                    f = gzip.open(filename, 'rb')
+                    # read first rows of table
+                    tables = tablemagician.from_file_object(f, filename)
+                    for table in tables:
+                        #analyser_table = table.process(max_lines=MAX_ROWS)
 
-                table.close()
-                i += 1
+                        # columns
+                        num_of_columns[len(table.headers)] += 1
+                        # header
+                        for h in table.headers:
+                            header[h.lower()] += 1
+
+                        table_type = type_classification([t.result_type for t in table.types], column_types)
+                        types[table_type] += 1
+                    table.close()
+                    i += 1
             except Exception as e:
                 traceback.print_exc()
                 print e

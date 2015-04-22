@@ -84,3 +84,7 @@ def from_url(url, date_parser=False):
     f = StringIO(response.read())
     datatables = _build_datatables(f, url, date_parser)
     return datatables
+
+
+def from_file_object(file, name=None, date_parser=False):
+    datatables = _build_datatables(file, name, date_parser)
