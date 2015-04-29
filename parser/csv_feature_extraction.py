@@ -56,7 +56,7 @@ def feature_extraction(filename):
         # add feature
         f.close()
         return [num_of_columns, number_lines, numeric, strings]
-    raise ValueError('No table')
+    raise ValueError('No table: %s', filename)
 
 
 def features_from_dir(rootdir):
@@ -68,10 +68,10 @@ def features_from_dir(rootdir):
                 filename = os.path.join(rootdir, file)
                 feature = feature_extraction(filename)
                 features.append(feature)
+                i += 1
             except Exception as e:
                 traceback.print_exc()
                 print e
-            i += 1
             if 0 < MAX_FEATURES < i:
                 print 'max features', MAX_FEATURES
                 break
@@ -92,10 +92,10 @@ def features_from_url_file(urls_file):
         try:
             feature = [url, domain] + feature_extraction(filename)
             features.append(feature)
+            i += 1
         except Exception as e:
             traceback.print_exc()
             print e
-        i += 1
         if 0 < MAX_FEATURES < i:
             print 'max features', MAX_FEATURES
             break
