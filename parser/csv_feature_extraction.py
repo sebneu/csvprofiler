@@ -26,15 +26,6 @@ def arg_parser():
 
 
 def feature_extraction(filename):
-    # unzip files
-    if filename.endswith('.gz'):
-        f = gzip.open(filename, 'rb')
-    else:
-        f = open(filename, 'rb')
-
-    number_lines = sum(1 for _ in f)
-
-    # open again after iteration
     if filename.endswith('.gz'):
         f = gzip.open(filename, 'rb')
     else:
@@ -42,6 +33,8 @@ def feature_extraction(filename):
 
     # read first rows of table
     tables = tablemagician.from_file_object(f, filename)
+    if len(tables) == 0:
+        raise ValueError('No table: %s', filename)
     for table in tables:
         #analyser_table = table.process(max_lines=MAX_ROWS)
 
@@ -55,8 +48,17 @@ def feature_extraction(filename):
         strings = types.count(basestring)
         # add feature
         f.close()
-        return [num_of_columns, number_lines, numeric, strings]
-    raise ValueError('No table: %s', filename)
+        feature = [num_of_columns, numeric, strings]
+        break
+
+    # reopen file after iteration
+    if filename.endswith('.gz'):
+        f = gzip.open(filename, 'rb')
+    else:
+        f = open(filename, 'rb')
+    number_lines = sum(1 for _ in f)
+    f.close()
+    return [number_lines] + feature
 
 
 def features_from_dir(rootdir):
