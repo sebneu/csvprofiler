@@ -7,12 +7,21 @@ import traceback
 import tablemagician
 from collections import defaultdict, Counter
 import gzip
+import argparse
+import shutil
 
 __author__ = 'sebastian'
-
-rootdir = '/data/csv'
-#rootdir = 'testdata/nuts/match'
 MAX_ROWS = 50
+
+
+def arg_parser():
+    parser = argparse.ArgumentParser(description='Collect stats about a folder of csv files.')
+    parser.add_argument('-i', '--in-dir', help='in directory of files', default='/data/csv')
+    parser.add_argument('-o', '--out-dir', help='out directory for files', default='.')
+    parser.add_argument('--filter', help='filter files and copy to other directory', action='store_true')
+
+    args = parser.parse_args()
+    return args
 
 
 def type_classification(header_types, column_types):
@@ -68,8 +77,61 @@ def type_classification(header_types, column_types):
     return 'unknown'
 
 
+def filter_out_files(rootdir, outdir):
+    for subdir, dirs, files in os.walk(rootdir):
+        for file in files:
+            try:
+                filename = os.path.join(rootdir, file)
+                # unzip files
+                if filename.endswith('.gz'):
 
-def main(args):
+                    f = gzip.open(filename, 'rb')
+                    # count all lines
+                    number_lines = sum(1 for _ in f)
+                    f.close()
+
+                    # open again after iteration
+                    f = gzip.open(filename, 'rb')
+                    # read first rows of table
+                    tables = tablemagician.from_file_object(f, filename)
+                    for table in tables:
+                        #analyser_table = table.process(max_lines=MAX_ROWS)
+
+                        # columns
+                        num_of_columns = len(table.headers)
+                        # types
+                        types = [t.result_type for t in table.types]
+
+                        # filter criteria, bigger sized tables
+                        if number_lines > 50 and num_of_columns > 6:
+                            if len(types) == types.count(basestring):
+                                # pure string tables
+                                str_dir = os.path.join(outdir, 'all_string')
+                                if not os.path.exists(str_dir):
+                                    os.mkdir(str_dir)
+                                shutil.copyfile(filename, os.path.join(str_dir, file))
+                            elif basestring in types and (types.count(int) + types.count(decimal.Decimal)) >= len(types)/2:
+                                # containing a string column and multiple numerical columns
+                                num_dir = os.path.join(outdir, 'some_numeric')
+                                if not os.path.exists(num_dir):
+                                    os.mkdir(num_dir)
+                                shutil.copyfile(filename, os.path.join(num_dir, file))
+
+                    table.close()
+            except Exception as e:
+                traceback.print_exc()
+                print e
+
+
+def main():
+    args = arg_parser()
+
+    rootdir = args.in_dir
+    outdir = args.out_dir
+
+    if args.filter:
+        filter_out_files(rootdir, outdir)
+
     num_of_rows = defaultdict(int)
     num_of_columns = defaultdict(int)
     header = defaultdict(int)
@@ -156,4 +218,4 @@ def main(args):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()
