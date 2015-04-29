@@ -19,7 +19,7 @@ def arg_parser():
     parser.add_argument('-i', '--in-dir', help='in directory of files')
     parser.add_argument('-l', '--list', help='list of all urls + files', default='/data/csv/url_csv.csv')
     parser.add_argument('-f', '--features', help='csv file with features')
-    parser.add_argument('--max', help='max number of files', default=-1)
+    parser.add_argument('--max', help='max number of files', default=-1, type=int)
 
     args = parser.parse_args()
     return args
