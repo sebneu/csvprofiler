@@ -20,6 +20,7 @@ def arg_parser():
     parser.add_argument('-l', '--list', help='list of all urls + files', default='/data/csv/url_csv.csv')
     parser.add_argument('-f', '--features', help='csv file with features')
     parser.add_argument('--max', help='max number of files', default=-1, type=int)
+    parser.add_argument('--plot', help='store a plot', action='store_true')
 
     args = parser.parse_args()
     return args
@@ -69,7 +70,7 @@ def features_from_dir(rootdir):
             try:
                 filename = os.path.join(rootdir, file)
                 feature = feature_extraction(filename)
-                features.append([filename] + feature)
+                features.append([filename, ''] + feature)
                 i += 1
             except Exception as e:
                 traceback.print_exc()
@@ -159,11 +160,9 @@ if __name__ == '__main__':
     else:
         if args.in_dir:
             features = features_from_dir(args.in_dir)
-            plot_fts = [[x[1], x[2]] for x in features]
         else:
             f = open(args.list, 'rb')
             features = features_from_url_file(f)
-            plot_fts = [[x[2], x[3]] for x in features]
 
         with open('features.csv', 'w') as f:
             for values in features:
@@ -174,5 +173,7 @@ if __name__ == '__main__':
                     traceback.print_exc()
                     print e
 
-    fts = np.array(plot_fts)
-    plot_mean_shift(fts)
+    if args.plot:
+        plot_fts = [[x[2], x[3]] for x in features]
+        fts = np.array(plot_fts)
+        plot_mean_shift(fts)
