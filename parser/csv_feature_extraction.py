@@ -69,7 +69,7 @@ def features_from_dir(rootdir):
             try:
                 filename = os.path.join(rootdir, file)
                 feature = feature_extraction(filename)
-                features.append(feature)
+                features.append([filename] + feature)
                 i += 1
             except Exception as e:
                 traceback.print_exc()
@@ -147,21 +147,23 @@ if __name__ == '__main__':
     MAX_FEATURES = args.max
 
     if args.features:
-        features = []
+        plot_fts = []
         with open(args.features, 'rb') as f:
             csvf = csv.reader(f)
             for row in csvf:
                 try:
-                    features.append([int(x) for x in row])
+                    plot_fts.append([int(x) for x in row])
                 except Exception as e:
                     traceback.print_exc()
                     print e
     else:
         if args.in_dir:
             features = features_from_dir(args.in_dir)
+            plot_fts = [[x[1], x[2]] for x in features]
         else:
             f = open(args.list, 'rb')
             features = features_from_url_file(f)
+            plot_fts = [[x[2], x[3]] for x in features]
 
         with open('features.csv', 'w') as f:
             for values in features:
@@ -172,5 +174,5 @@ if __name__ == '__main__':
                     traceback.print_exc()
                     print e
 
-    fts = np.array(features)
+    fts = np.array(plot_fts)
     plot_mean_shift(fts)
