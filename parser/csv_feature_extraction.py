@@ -34,7 +34,7 @@ def feature_extraction(filename):
     # read first rows of table
     tables = tablemagician.from_file_object(f, filename)
     if len(tables) == 0:
-        raise ValueError('No table: %s', filename)
+        raise ValueError('No table: ' + filename)
     for table in tables:
         #analyser_table = table.process(max_lines=MAX_ROWS)
 
@@ -87,6 +87,8 @@ def features_from_url_file(urls_file):
     for row in csvf:
         url = row[0]
         filename = row[1]
+        if filename.endswith('xml.gz'):
+            continue
 
         parsed_uri = urlparse(url)
         domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
