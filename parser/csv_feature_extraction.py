@@ -119,7 +119,7 @@ def plot_mean_shift(features):
     labels = ms.labels_
     cluster_centers = ms.cluster_centers_
 
-    labels_unique = np.unique(labels)
+    labels_unique, counts = np.unique(labels, return_counts=True)
     n_clusters_ = len(labels_unique)
 
     print("number of estimated clusters : %d" % n_clusters_)
@@ -129,17 +129,24 @@ def plot_mean_shift(features):
     import matplotlib.pyplot as plt
     from itertools import cycle
 
-    plt.figure(1)
-    plt.clf()
+    fig = plt.figure()
+    ax = plt.subplot(111)
 
+    #centers = []
     colors = cycle('bgrcmykbgrcmykbgrcmykbgrcmyk')
     for k, col in zip(range(n_clusters_), colors):
         my_members = labels == k
         cluster_center = cluster_centers[k]
-        plt.plot(features[my_members, 0], features[my_members, 1], col + '.')
-        plt.plot(cluster_center[0], cluster_center[1], 'o', markerfacecolor=col,
-                 markeredgecolor='k', markersize=14)
-    plt.title('Estimated number of clusters: %d' % n_clusters_)
+        ax.plot(features[my_members, 0], features[my_members, 1], col + '.')
+        c, = ax.plot(cluster_center[0], cluster_center[1], 'o', markerfacecolor=col,
+                 markeredgecolor='k', markersize=14, label=str(counts[k]))
+        #centers.append(c)
+
+    # Shrink current axis by 20%
+    box = ax.get_position()
+    ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+    ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.title(str(len(features)) + ' values. Estimated number of clusters: %d' % n_clusters_)
     plt.savefig('clustering.pdf')
 
 
@@ -174,6 +181,9 @@ if __name__ == '__main__':
                     print e
 
     if args.plot:
-        plot_fts = [[int(x[2]), int(x[3])] for x in features]
+        max_x = 20000.0
+        max_y = 30.0
+        print max_x, 'x', max_y
+        plot_fts = [[int(x[2])/max_x, int(x[3])/max_y] for x in features if int(x[2]) < max_x and int(x[3]) < max_y]
         fts = np.array(plot_fts)
         plot_mean_shift(fts)

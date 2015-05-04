@@ -1,3 +1,5 @@
+from column_stats_analyser import ColumnStatsAnalyser
+
 __author__ = 'sebastian'
 
 import unittest
@@ -13,20 +15,15 @@ class ComplexTypeTest(unittest.TestCase):
         self.analyser_table = data_tables[0].process(max_lines=50)
         data_tables[0].close()
 
-        # test structure analysers
         a = ComplexTypeAnalyser()
+        b = ColumnStatsAnalyser()
 
-        analyser_chain = [a]
+        analyser_chain = [a, b]
         # build engine
         engine = AnalyserEngine(analyser_chain)
         # feed with analyser table
         engine.process(self.analyser_table)
 
-
-    def test_complextype_analyser(self):
-
-        for column in self.analyser_table.analysers[ComplexTypeAnalyser.name]:
-            print 'ColTypes:', column
 
     def test_type_detection(self):
         columns = self.analyser_table.analysers[ComplexTypeAnalyser.name]
@@ -36,6 +33,10 @@ class ComplexTypeTest(unittest.TestCase):
             self.assertTrue(t.startswith('NUMALPHA'))
         for t in columns[2]:
             self.assertTrue(t.startswith('ALPHANUM'))
+
+        for stats in self.analyser_table.analysers[ColumnStatsAnalyser.name]:
+            print 'ColStats:', stats
+
 
 
 if __name__ == '__main__':

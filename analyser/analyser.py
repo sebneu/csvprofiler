@@ -23,3 +23,7 @@ class Analyser:
 
     def process(self, analyser_table):
         pass
+
+
+class AnalyserException(Exception):
+    pass

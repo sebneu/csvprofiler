@@ -327,3 +327,31 @@ class DatatypeTest(unittest.TestCase):
 #
 #         return True
     pass
+
+
+# parsing functions
+def parse_float(cell):
+    """
+    Float parser, used for converting strings to float values using the type classification of ComplexTypeAnalyser
+    :param cell: A string which is considered as NUMBER or FLOAT by the ComplexTypeAnalyser
+    :return: 0.0 on an empty input, the parsed float, or throws a ValueError
+    """
+    try:
+        value = float(cell)
+        return value
+    except Exception as e:
+        pass
+    cell = str(cell).replace(" ", "")
+    if "," in cell:
+        if "." in cell:
+            if cell.rfind(".") > cell.rfind(", "):
+                cell = cell.replace(".", "")
+                cell = cell.replace(",", ".")
+                return parse_float(cell)
+            else:
+                cell = cell.replace(",", "")
+                return parse_float(cell)
+        else:
+            cell = cell.replace(",", ".")
+            return parse_float(cell)
+    raise ValueError(cell + ': cannot convert to numeric')

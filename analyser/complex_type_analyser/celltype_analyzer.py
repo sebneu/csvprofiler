@@ -47,8 +47,8 @@ def detectCellType(cell):
     cell = cell.strip()
 
     # EMPTY, simple case, empty
-    if cell is None or len(cell) == 0 or cell == 'null':
-        return  "EMPTY"
+    if cell is None or len(cell) == 0 or cell == 'null' or cell == 'None':
+        return "EMPTY"
     else:
 
         #contains ALPHA?
