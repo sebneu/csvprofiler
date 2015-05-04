@@ -9,13 +9,6 @@ class ComplexTypeAnalyser(Analyser):
 
     def process(self, analyser_table):
         vals = detect_datatypes(analyser_table)
-        a = 0
-        for s in vals:
-            a += 1
-            if len(s) > 1:
-                ss = '_'.join(sorted(s))
-                print('COLTYPES  %s %s' % (ss, str(a)))
-
         analyser_table.analysers[ComplexTypeAnalyser.name] = vals
 
 

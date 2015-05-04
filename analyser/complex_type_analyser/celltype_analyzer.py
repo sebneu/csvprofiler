@@ -52,7 +52,7 @@ def detectCellType(cell):
     else:
 
         #contains ALPHA?
-        if text_utils.contains_alpha(cell):
+        if text_utils.contains_alpha(cell) or text_utils.contains_unit_symbol(cell):
             #we have at least one character in the cell
             # check for email, url, date and text
 
@@ -80,6 +80,36 @@ def detectCellType(cell):
                 except TypeError:
                     pass
                     #print "TypeERROR",cell
+
+                #NUMALPHA (e.g. 12cm or 12 cm)
+                numalpha = True
+                num = ''
+                ending = ''
+                for s in cell:
+                    if s.isdigit() or text_utils.contains_commas(s):
+                        if len(ending) > 0:
+                            numalpha = False
+                            break
+                        num += s
+                    else:
+                        ending += s
+                if numalpha and len(num) > 0 and len(ending.strip().split(" ")) == 1:
+                    return 'NUMALPHA/'+contains_number(num)+':ALPHA+/'+str(len(ending.strip()))
+
+                # ALPHANUM ending with numbers (e.g., $ 4.50, % 30)
+                alphnum = True
+                num = ''
+                leading = ''
+                for s in cell:
+                    if s.isdigit() or text_utils.contains_commas(s):
+                        num += s
+                    else:
+                        if len(num) > 0:
+                            alphnum = False
+                            break
+                        leading += s
+                if alphnum and len(num) > 0 and len(leading.strip().split(" ")) == 1:
+                    return 'ALPHANUM/'+'ALPHA+/'+str(len(leading.strip()))+':'+contains_number(num)
 
                 #TOKENS
                 if " " in cell:
@@ -111,46 +141,47 @@ def detectCellType(cell):
                 return "ALPHA+"
 
         elif text_utils.contains_number(cell):
-            #numbers and maybe special charaters
-            if "/" in cell or "-" in cell:
-                try:
-                    dateutil.parser.parse(cell)
-                    return "DATE"
-                except ValueError:
-                    pass
-                except TypeError:
-                    print cell
-
-            #TODO Time
-
-            if text_utils.contains_commas(cell) :
-                #FLOAT DOUBLE
-                #we have digits and commas
-
-                type = detectFloat(cell)
-                if type: return type
-
-                #remove any whitespaces
-
-            if cell.isdigit():
-                cell = long(cell)
-
-                p="+"
-                if cell <0:
-                    cell = math.fabs(cell)
-                    p="-"
-
-                magnitude = 1 if cell == 0 else int(math.log10(cell)) + 1
-                return "NUMBER/"+str(magnitude)+p
-
-            #no alphas
-            return "NUMERIC+"
-
-
+            return contains_number(cell)
 
     return "UNKNOWN"
 
 
+def contains_number(cell):
+    #numbers and maybe special charaters
+    if "/" in cell or "-" in cell:
+        try:
+            dateutil.parser.parse(cell)
+            return "DATE"
+        except ValueError:
+            pass
+        except TypeError:
+            print cell
+
+    #TODO Time
+
+    if text_utils.contains_commas(cell) :
+        #FLOAT DOUBLE
+        #we have digits and commas
+
+        type = detectFloat(cell)
+        if type:
+            return type
+
+        #remove any whitespaces
+
+    if cell.isdigit():
+        cell = long(cell)
+
+        p="+"
+        if cell <0:
+            cell = math.fabs(cell)
+            p="-"
+
+        magnitude = 1 if cell == 0 else int(math.log10(cell)) + 1
+        return "NUMBER/"+str(magnitude)+p
+
+    #no alphas
+    return "NUMERIC+"
 
 
 

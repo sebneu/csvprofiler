@@ -66,6 +66,9 @@ def contains_commas(inputString):
 def contains_ampersand(inputString):
     return any(char == '@' for char in inputString)
 
+def contains_unit_symbol(inputString):
+    return any(char in [u'%', u'$', u'€'] for char in inputString)
+
 def contains_resource(inputString):
     for item in resource:
         if item in inputString:

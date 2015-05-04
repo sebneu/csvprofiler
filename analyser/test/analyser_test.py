@@ -41,21 +41,6 @@ class MyTestCase(unittest.TestCase):
         # feed with analyser table
         engine.process(analyser_table)
 
-    def test_complextype_analyser(self):
-        # build analyser table
-        data_tables = tablemagician.from_path('../parser/testdata/nuts/101.csv')
-        analyser_table = data_tables[0].process(max_lines=50)
-        data_tables[0].close()
-
-        # test structure analysers
-        a = ComplexTypeAnalyser()
-
-        analyser_chain = [a]
-        # build engine
-        engine = AnalyserEngine(analyser_chain)
-        # feed with analyser table
-        engine.process(analyser_table)
-
 
 if __name__ == '__main__':
     unittest.main()

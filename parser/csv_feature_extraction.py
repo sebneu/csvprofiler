@@ -148,12 +148,12 @@ if __name__ == '__main__':
     MAX_FEATURES = args.max
 
     if args.features:
-        plot_fts = []
+        features = []
         with open(args.features, 'rb') as f:
             csvf = csv.reader(f)
             for row in csvf:
                 try:
-                    plot_fts.append([int(x) for x in row])
+                    features.append([x for x in row])
                 except Exception as e:
                     traceback.print_exc()
                     print e
@@ -174,6 +174,6 @@ if __name__ == '__main__':
                     print e
 
     if args.plot:
-        plot_fts = [[x[2], x[3]] for x in features]
+        plot_fts = [[int(x[2]), int(x[3])] for x in features]
         fts = np.array(plot_fts)
         plot_mean_shift(fts)
