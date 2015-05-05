@@ -355,3 +355,7 @@ def parse_float(cell):
             cell = cell.replace(",", ".")
             return parse_float(cell)
     raise ValueError(cell + ': cannot convert to numeric')
+
+
+def is_none_type(cell):
+    return cell is None or len(cell) == 0 or cell == 'null' or cell == 'None'

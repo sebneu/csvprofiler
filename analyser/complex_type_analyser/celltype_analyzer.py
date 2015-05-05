@@ -47,7 +47,7 @@ def detectCellType(cell):
     cell = cell.strip()
 
     # EMPTY, simple case, empty
-    if cell is None or len(cell) == 0 or cell == 'null' or cell == 'None':
+    if text_utils.is_none_type(cell):
         return "EMPTY"
     else:
 

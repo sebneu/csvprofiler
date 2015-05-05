@@ -29,10 +29,13 @@ class ColumnStatsAnalyser(Analyser):
             col_stats['top-5'] = sorted_values[:5]
 
             # count all rows which are numbers or floats in the current column of the complex type analyser
-            num_rows = sum(1 for t in compl_types[i] if t.startswith('NUMBER') or t.startswith('FLOAT') or t == 'EMPTY')
+            num_types = sum(1 for t in compl_types[i] if t.startswith('NUMBER') or t.startswith('FLOAT'))
+            total_types = len(compl_types)
+            if 'EMPTY' in compl_types:
+                total_types -= 1
             # check if all rows (except empty ones) are numbers or floats
-            if len(compl_types[i]) == num_rows:
-                num_array = np.array([text_utils.parse_float(str(cell)) for cell in col if cell])
+            if total_types == num_types > 0:
+                num_array = np.array([text_utils.parse_float(cell) for cell in col if not text_utils.is_none_type(str(cell).strip())])
                 # collect descriptive stats
                 col_stats['descriptive'] = {
                     'min': np.min(num_array),
