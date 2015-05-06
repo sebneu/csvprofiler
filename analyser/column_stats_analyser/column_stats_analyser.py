@@ -29,7 +29,7 @@ class ColumnStatsAnalyser(Analyser):
             col_stats['top-5'] = sorted_values[:5]
 
             # count all rows which are numbers or floats in the current column of the complex type analyser
-            num_types = sum(1 for t in compl_types[i] if t.startswith('NUMBER') or t.startswith('FLOAT'))
+            num_types = sum(1 for t in compl_types[i] if t.startswith('NUMBER'))
             total_types = len(compl_types)
             if 'EMPTY' in compl_types:
                 total_types -= 1
