@@ -27,7 +27,7 @@ def detectCellType(cell):
     Detect the type of a cell value
     Basic idea is:
         1) 1.1 (EMPTY): test for empty or null values
-        2) check if the cell contains characters or not
+        2) check if the cell contains characters or not (+ some extra symbols for unit measures)
             2.1) contains characters
                 2.1.1 (EMAIL) contains @ -> prop for EMAIL
                 2.1.2 (URL) contains / or . -> prop for URL
@@ -37,11 +37,11 @@ def detectCellType(cell):
 
 
     @param cell:
-    @return:
-    '''
-    '''
-    @param cell:
-    @return:
+    @return: BASETYPE:len/SUBTYPE1:len-SUBTYPE2:len
+             The BASETYPE can be EMPTY, EMAIL, URL, DATE, NUMBER, ALPHA, ALPHANUM, NUMALPHA
+             A + at the end of a basetype indicates special characters
+             The length of the BASETYPE is separated by : and is optionally given
+             Some types have SUBTYPEs, e.g., NUMBER/INT:4+ (the plus indicates greater zero), or NUMALPHA/NUMBER/FLOAT:3.1-ALPHA+:3
     '''
     #basic cleaning
     cell = cell.strip()
@@ -50,27 +50,24 @@ def detectCellType(cell):
     if text_utils.is_none_type(cell):
         return "EMPTY"
     else:
+        # check for email, url, date and text (because it could contain a number as well)
+        #EMAIL?
+        if text_utils.contains_ampersand(cell):
+            #ampersand -> email?
+            if text_utils.is_email(cell):
+                return "EMAIL"
+        #URL?
+        if "/" in cell or ".":
+            # / or . -> URL?
+            if url_regex.match(cell):
+                return "URL"
 
         #contains ALPHA?
         if text_utils.contains_alpha(cell) or text_utils.contains_unit_symbol(cell):
             #we have at least one character in the cell
-            # check for email, url, date and text
 
-            #EMAIL?
-            if text_utils.contains_ampersand(cell):
-                #ampersand -> email?
-                if text_utils.is_email(cell):
-                    return "EMAIL"
-
-            #URL?
-            if "/" in cell or ".":
-                # / or . -> URL?
-                if url_regex.match(cell):
-                    return "URL"
-
-            #contains numbers ? ALPHANUM
+            #contains numbers ? ALPHANUM, NUMALPHA
             if text_utils.contains_number(cell):
-
                 #DATE
                 try:
                     dateutil.parser.parse(cell)
@@ -93,8 +90,13 @@ def detectCellType(cell):
                         num += s
                     else:
                         ending += s
-                if numalpha and len(num) > 0 and len(ending.strip().split(" ")) == 1:
-                    return 'NUMALPHA/'+contains_number(num)+':ALPHA+/'+str(len(ending.strip()))
+                ending = ending.strip()
+                if numalpha and len(num) > 0 and len(ending.split(" ")) == 1:
+                    is_alph = ''
+                    if not ending.isalpha():
+                        is_alph = '+'
+                    return 'NUMALPHA/'+contains_number(num)+'-ALPHA' + is_alph + \
+                           ':'+str(len(ending))
 
                 # ALPHANUM ending with numbers (e.g., $ 4.50, % 30)
                 alphnum = True
@@ -108,8 +110,13 @@ def detectCellType(cell):
                             alphnum = False
                             break
                         leading += s
-                if alphnum and len(num) > 0 and len(leading.strip().split(" ")) == 1:
-                    return 'ALPHANUM/'+'ALPHA+/'+str(len(leading.strip()))+':'+contains_number(num)
+                leading = leading.strip()
+                if alphnum and len(num) > 0 and len(leading.split(" ")) == 1:
+                    is_alph = ''
+                    if not leading.isalpha():
+                        is_alph = '+'
+                    return 'ALPHANUM/ALPHA' + is_alph + ':'+str(len(leading))+\
+                           '-'+contains_number(num)
 
                 #TOKENS
                 if " " in cell:
@@ -159,13 +166,13 @@ def contains_number(cell):
 
     #TODO Time
 
-    if text_utils.contains_commas(cell) :
+    if text_utils.contains_commas(cell):
         #FLOAT DOUBLE
         #we have digits and commas
 
         type = detectFloat(cell)
         if type:
-            return type
+            return 'NUMBER/'+type
 
         #remove any whitespaces
 
@@ -178,10 +185,10 @@ def contains_number(cell):
             p="-"
 
         magnitude = 1 if cell == 0 else int(math.log10(cell)) + 1
-        return "NUMBER/"+str(magnitude)+p
+        return "NUMBER/INT:"+str(magnitude)+p
 
     #no alphas
-    return "NUMERIC+"
+    return "NUMBER+"
 
 
 
@@ -196,7 +203,7 @@ def detectFloat(cell):
         a= len(t[0]) if len(t[0])<4 else "*"
         b= len(t[1]) if len(t[1])<4 else "*"
 
-        return "FLOAT/"+str(a)+"."+str(b)
+        return "FLOAT:"+str(a)+"."+str(b)
     except Exception as e:
 
         pass
