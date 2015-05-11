@@ -1,7 +1,5 @@
-import copy
 from messytables import any_tableset, headers_guess, headers_processor, offset_processor, type_guess, types_processor
 import messytables
-import time
 from tablemagician.data_table import DataTable
 import urllib2
 from cStringIO import StringIO

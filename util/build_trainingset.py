@@ -5,12 +5,12 @@ import tablemagician
 from collections import defaultdict
 import gzip
 import shutil
+import sys
 
 __author__ = 'sebastian'
-rootdir = '/home/sebastian/Repositories/csvprofiler/parser/testdata/nuts'
 
 
-def header_frequency():
+def header_frequency(rootdir):
     header = defaultdict(int)
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
@@ -41,7 +41,7 @@ def header_frequency():
                 print(traceback.format_exc())
 
 
-def build_by_header(header_set, dest_dir):
+def build_by_header(header_set, rootdir, dest_dir):
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
             try:
@@ -61,5 +61,20 @@ def build_by_header(header_set, dest_dir):
                 print(file + ' - ' + str(e))
                 print(traceback.format_exc())
 
+
 if __name__ == '__main__':
-    header_frequency()
+    if len(sys.argv) >= 4 and sys.argv[1] == '-d':
+        directory = sys.argv[2]
+        if sys.argv[3] == '-c':
+            header_frequency(directory)
+            exit()
+        elif sys.argv[3] == '-b' and len(sys.argv) >= 7:
+            dest = sys.argv[4]
+            if sys.argv[5] == '-s':
+                headers = sys.argv[6:]
+                build_by_header(headers, directory, dest)
+                exit()
+    print('wrong arguments')
+    print('-d DIR -c: counts the total number of different header strings and writes it in header_frequency.csv')
+    print('-d DIR -b DEST -s HEADER1 HEADER2 ...: builds folder in DEST containing files with given headers')
+    exit(-1)
