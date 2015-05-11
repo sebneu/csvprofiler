@@ -123,29 +123,29 @@ def detectCellType(cell):
                     for token in cell.split(" "):
                         if not token.isalnum():
 
-                            return "ALPHANUM+/TOKENS"
-                    return "ALPHANUM/TOKENS"
+                            return "ALPHANUM+/TOKENS:" + str(len(cell.split(" ")))
+                    return "ALPHANUM/TOKENS:" + str(len(cell.split(" ")))
 
                 #ok alpha +num and not a date
                 if cell.isalnum():
-                    return "ALPHANUM"
+                    return "ALPHANUM:" + str(len(cell))
                 else:
                     #alpha + numbers + something
-                    return "ALPHANUM+"
+                    return "ALPHANUM+:" + str(len(cell))
 
             elif " " in cell:
                 #no numbers
                 for token in cell.split(" "):
                     if not token.isalpha():
-                        return "ALPHA+/TOKENS"
-                return "ALPHA/TOKENS"
+                        return "ALPHA+/TOKENS:" + str(len(cell.split(" ")))
+                return "ALPHA/TOKENS:" + str(len(cell.split(" ")))
 
             elif cell.isalpha():
                 #we have only alphas
-                return "ALPHA"
+                return "ALPHA:" + str(len(cell))
             else:
                 # ok we have alpha and special characters
-                return "ALPHA+"
+                return "ALPHA+:" + str(len(cell))
 
         elif text_utils.contains_number(cell):
             return contains_number(cell)
@@ -191,17 +191,15 @@ def contains_number(cell):
     return "NUMBER+"
 
 
-
-
 def detectFloat(cell):
-    cell = cell.replace(" ","")
+    cell = cell.replace(" ", "")
     try:
         float(cell)
 
-        t= cell.split(".")
+        t = cell.split(".")
 
-        a= len(t[0]) if len(t[0])<4 else "*"
-        b= len(t[1]) if len(t[1])<4 else "*"
+        a = len(t[0]) if len(t[0])<4 else "*"
+        b = len(t[1]) if len(t[1])<4 else "*"
 
         return "FLOAT:"+str(a)+"."+str(b)
     except Exception as e:
@@ -210,14 +208,14 @@ def detectFloat(cell):
     if "," in cell:
         if "." in cell:
             if cell.rfind(".") > cell.rfind(", "):
-                cell = cell.replace(".","")
-                cell = cell.replace(",",".")
+                cell = cell.replace(".", "")
+                cell = cell.replace(",", ".")
                 return detectFloat(cell)
             else:
-                cell = cell.replace(",","")
+                cell = cell.replace(",", "")
                 return detectFloat(cell)
         else:
-            cell = cell.replace(",",".")
+            cell = cell.replace(",", ".")
             return detectFloat(cell)
 
     return None
