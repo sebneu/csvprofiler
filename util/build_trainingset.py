@@ -13,7 +13,7 @@ def build_by_header(header_set, rootdir, dest_dir):
         for file in files:
             try:
                 filename = os.path.join(rootdir, file)
-                # unzip files
+                # unzip filesq
                 if filename.endswith('.gz'):
                     f = gzip.open(filename, 'rb')
                     datatables = tablemagician.from_file_object(f, file)
