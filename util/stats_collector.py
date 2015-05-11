@@ -171,7 +171,7 @@ def main():
                         num_of_columns[len(table.headers)] += 1
                         # header
                         for h in table.headers:
-                            header[h.lower()] += 1
+                            header[h.lower().strip()] += 1
 
                         table_type = type_classification([t.result_type for t in table.types], column_types)
                         types[table_type] += 1
