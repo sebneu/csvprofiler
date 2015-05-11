@@ -19,7 +19,7 @@ def build_by_header(header_set, rootdir, dest_dir):
                     datatables = tablemagician.from_file_object(f, file)
                     for dt in datatables:
                         intersec = set(header_set) & set([h.lower() for h in dt.headers])
-                        if intersec > 0:
+                        if len(intersec) > 0:
                             train_dir = os.path.join(dest_dir, intersec.pop())
                             if not os.path.exists(train_dir):
                                 os.mkdir(train_dir)
