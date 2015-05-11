@@ -10,16 +10,22 @@ import tablemagician
 from os.path import join
 import pickle
 
+
+HAM = 'ham'
+SPAM = 'spam'
+
  
-def build_data_frame(train_sets):
+def build_data_frame(train_sets, key):
     rows = []
     index = []
     for classification in train_sets:
         for column in train_sets[classification]:
             col_string = ' '.join([str(c.value) for c in column['values'] if c.value])
-            rows.append({'text': col_string, 'class': classification})
+            if classification == key:
+                rows.append({'text': col_string, 'class': HAM})
+            else:
+                rows.append({'text': col_string, 'class': SPAM})
             index.append(column['name'])
- 
     data_frame = DataFrame(rows, index=index)
     return data_frame
 
@@ -33,19 +39,23 @@ if __name__ == '__main__':
         with open(join(path, h + '.pkl'), 'rb') as handle:
             train_sets[h] = pickle.load(handle)
 
-    data = build_data_frame(train_sets)
+    data = build_data_frame(train_sets, headers[0])
     data = data.reindex(numpy.random.permutation(data.index))
     pipeline = Pipeline([
         ('count_vectorizer',   CountVectorizer(ngram_range=(1, 2))),
         ('classifier',         MultinomialNB())
     ])
+
     pipeline.fit(data['text'].values, data['class'].values)
 
     # build example data
-    dts = tablemagician.from_path('/home/sebastian/Repositories/csvprofiler/parser/testdata/nuts/4659.csv')
+    # country
+    ex = 'https%3A%2F%2Fcommondatastorage.googleapis.com%2Fckannet-storage%2F2012-04-17T212635%2Fcommitments-export-final.csv.gz'
+
+    dts = tablemagician.from_path(join('/home/neumaier/csv_stats/groups/country', ex))
     for dt in dts:
         at = dt.process(max_lines=100)
-        col_str = ' '.join([str(c.value) for c in at.columns[at.headers.index('SEX')] if c.value])
+        col_str = ' '.join([str(c.value) for c in at.columns[at.headers.index('country')] if c.value])
         print col_str
 
     predictions = pipeline.predict([col_str])
