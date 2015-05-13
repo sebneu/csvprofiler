@@ -1,7 +1,10 @@
+import logging
 from analyser import Analyser, AnalyserException
 from complex_type_analyser import ComplexTypeAnalyser
 from complex_type_analyser.text import text_utils
 import numpy as np
+
+logger = logging.getLogger(__name__)
 
 __author__ = 'sebastian'
 
@@ -34,13 +37,16 @@ class ColumnStatsAnalyser(Analyser):
             if 'EMPTY' in compl_types[i]:
                 total_types -= 1            # check if all rows (except empty ones) are numbers or floats
             if total_types == num_types > 0:
-                num_array = np.array([text_utils.parse_float(cell) for cell in col if not text_utils.is_none_type(str(cell).strip())])
-                # collect descriptive stats
-                col_stats['descriptive'] = _descriptive_analysis(num_array)
-                # monotonic in/decreasing
-                reg = _regression_analysis(num_array)
-                if reg:
-                    col_stats['regression'] = reg
+                try:
+                    num_array = np.array([text_utils.parse_float(cell) for cell in col if not text_utils.is_none_type(str(cell).strip())])
+                    # collect descriptive stats
+                    col_stats['descriptive'] = _descriptive_analysis(num_array)
+                    # monotonic in/decreasing
+                    reg = _regression_analysis(num_array)
+                    if reg:
+                        col_stats['regression'] = reg
+                except ValueError:
+                    logger.error(analyser_table.name + '/column ' + str(i) + ': cannot parse number')
             stats.append(col_stats)
 
         analyser_table.analysers[ColumnStatsAnalyser.name] = stats
