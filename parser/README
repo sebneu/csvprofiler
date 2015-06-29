@@ -5,9 +5,6 @@ Create a virtualenv or use an existing one:
 $ virtualenv csvparser
 $ . csvparser/bin/activate
 
-Install messytables:
-$ pip install messytables
-
 Check out the git repository:
 $ git clone git@git.ai.wu.ac.at:umbrich/csvprofiler.git
 $ cd csvprofiler/parser
