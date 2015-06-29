@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='tablemagician',
@@ -8,5 +8,12 @@ setup(
     license='',
     author='sebastian',
     author_email='',
-    description='A simple CSV parser based on messytables', requires=['messytables', 'ftfy']
+    description='A simple CSV parser based on messytables',
+    long_description=open('README').read(),
+    requires=['messytables', 'ftfy'],
+    entry_points={
+        'console_scripts': [
+            'tablemagician = tablemagician.main:main'
+        ]
+    }
 )

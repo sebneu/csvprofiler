@@ -1,0 +1,8 @@
+This is a simple CSV validator and parser based on messytables (https://messytables.readthedocs.org/).
+
+INSTALL
+python install setup.py
+
+
+EXAMPLE
+tablemagician -rfc test.csv
