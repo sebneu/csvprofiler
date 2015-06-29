@@ -10,7 +10,7 @@ setup(
     author_email='',
     description='A simple CSV parser based on messytables',
     long_description=open('README').read(),
-    requires=['messytables', 'ftfy'],
+    install_requires=['messytables', 'ftfy'],
     entry_points={
         'console_scripts': [
             'tablemagician = tablemagician.main:main'

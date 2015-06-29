@@ -157,6 +157,10 @@ def main():
         break
 
 
+if __name__ == '__main__':
+    main()
+
+
 class UnicodeWriter:
     """
     A CSV writer which will write rows to CSV file "f",
