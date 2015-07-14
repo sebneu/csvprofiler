@@ -13,8 +13,12 @@ import os
 import codecs
 
 # load the logging configuration
-
-logging.config.fileConfig(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../logging.ini'))
+if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../logging.ini')):
+    logging.config.fileConfig(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../logging.ini'))
+else:
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s - %(levelname)s - %(name)s:%(lineno)d  - %(message)s',
+                        datefmt="%Y-%m-%dT%H:%M:%S")
 logger = logging.getLogger(__name__)
 
 __author__ = 'sebastian'
