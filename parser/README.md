@@ -3,11 +3,11 @@ This is a simple CSV validator and parser based on messytables (https://messytab
 
 ### INSTALL
 ##### Create a virtualenv or use an existing one:
-$ virtualenv csvparser
+$ virtualenv csvparser   
 $ . csvparser/bin/activate
 
 ##### Check out the git repository:
-$ git clone git@github.com:sebneu/csvprofiler.git
+$ git clone git@github.com:sebneu/csvprofiler.git   
 $ cd csvprofiler/parser
 
 ##### Install the parser into the virtualenv:
@@ -25,6 +25,6 @@ $ tablemagician -h
 $ tablemagician -rfc test.csv
 
 ##### Process all files in a directory:
-$ for f in *.csv;
-$   do tablemagician --rfc $f -o ~/test/$f ;
+$ for f in *.csv;   
+$   do tablemagician --rfc $f -o ~/test/$f ;   
 $ done
