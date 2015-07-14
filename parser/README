@@ -6,7 +6,7 @@ $ virtualenv csvparser
 $ . csvparser/bin/activate
 
 Check out the git repository:
-$ git clone git@git.ai.wu.ac.at:umbrich/csvprofiler.git
+$ git clone git@github.com:sebneu/csvprofiler.git
 $ cd csvprofiler/parser
 
 Install the parser into the virtualenv:
